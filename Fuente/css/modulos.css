@@ -1,0 +1,19 @@
+@import url(./basicas.css);
+@import url(./layout.css);
+@import url(./estados.css);
+/* MENU NAVEGACION */
+/* Separo Inicio de Sesion hacia la derecha */
+nav a.separado{
+    margin-left: 20rem;
+}
+/* Le doy un estilo a los enlaces del menu. Negrita, Tamaño, Mayuscula, Centrado, Color Blanco,
+    en disposicion bloque y un ancho */
+nav a{
+    font-weight: bold;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--color-Neutro-Blanco);
+    display: block;
+    padding: 1.25rem;
+}

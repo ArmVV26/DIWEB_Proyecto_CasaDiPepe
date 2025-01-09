@@ -1,0 +1,24 @@
+@import url(./basicas.css);
+@import url(./layout.css);
+@import url(./modulos.css);
+
+/* CABECERA */
+/* Efecto al poner el raton encima */
+.logo-img:hover{
+    width: 10rem;
+    height: 10rem;
+    margin: 0.5rem 0.75rem 0.5rem 10rem;
+    transition: all 0.5s; /* Para que lo hago poco a poco*/
+}
+
+/* Efecto para que logo rote ligeramente al hacer mantener
+    el clic*/
+.logo-img:active{
+    transform: scale(0.83) skew(-3deg);
+}
+
+/* MENU */
+/* Añado un estilo al Hover del menu */
+nav a:hover{
+    color: var(--color-Secundario-Light);
+}

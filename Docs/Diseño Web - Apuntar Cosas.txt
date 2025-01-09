@@ -1,0 +1,67 @@
+--- IMAGENES ---
+Pagina Principal -> Logotipo, Hero Image, Imagen Decorativa (redes sociales tmb), Iconos de Redes Sociales
+Sobre Nosotros -> Logotipo, Hero Image, Imagen Decorativa (todo), Iconos de Redes Sociales
+Carta -> Logotipo, Hero Image, Imagen de Producto, Iconos de Redes Sociales
+Tienda -> Logotipo, Hero Image, Imagen de Producto, Iconos de Redes Sociales 
+Reservar -> Logotipo, Hero Image, Iconos de Redes Sociales
+Inicio de Sesion -> Logotipo, Iconos de Redes Sociales
+Formulario de Registro -> Logotipo, Iconos de Redes Sociales
+Cuenta -> Logotipo, Iconos de Redes Sociales
+
+
+Logotipo -> SVG y PNG
+Hero Image -> WebP, JPEG y AVIF
+Imagen de Producto -> WebP, JPEG y PNG
+Imagen Decorativa -> WebP, JPEG y SVG
+Iconos de Redes Sociales -> SVG y PNG
+
+SVG -> No resolucion fija, escala infinitamente sin perdes calidad.
+PNG -> 
+	Iconos -> 32x32, 64x64 y 128x128
+	Logotipos -> 800x600 y 1920x1080
+	Imagen Decorativa -> 1920x1080 (Full HD) y 3840x2160 (4K)
+WebP ->
+	Imagen de Producto -> 800x600 y 1024x768
+	Hero Image -> 1920x1080, 2560x1440 y 3840x2160 (4K)
+JPEG ->
+	Imagen Decorativa -> 1920x1080 (Full HD) y 3840x2160 (4K)
+	Hero Image -> 1920x1080, 2560x1440 y 3840x2160 (4K)
+AVIF ->
+	Hero Image -> 1920x1080, 2560x1440 y 3840x2160 (4K)
+
+--- TEXTO ---
+Pagina Principal -> Textos de Navegación, Encabezado Principal, CTA, Textos Informativos y Texto del Pie de Pagina
+Sobre Nosotros -> Textos de Navegación, Encabezado Principal, CTA, Textos Informativos y Texto del Pie de Pagina
+Carta -> Textos de Navegación, Encabezado Principal, CTA, Textos Informativos y Texto del Pie de Pagina
+Tienda -> Textos de Navegación, Encabezado Principal, CTA, Textos Informativos y Texto del Pie de Pagina
+Reservar -> Textos de Navegación, Encabezado Principal, CTA, Texto de los Formularios y Texto del Pie de Pagina
+Inicio de Sesion -> Textos de Navegación, CTA, Texto de los Formularios y Texto del Pie de Pagina
+Formulario de Registro -> Textos de Navegación, CTA, Texto de los Formularios y Texto del Pie de Pagina
+Cuenta -> Textos de Navegacion, CTA, Texto de los Formularios y Texto del Pie de Pagina
+
+--- ESTRUCTURA GENERAL ---
+1. Recursos Necesarios
+1.1. Descripcion General
+1.2. Listado de Recursos
+1.2.1. Descripcion General de las Paginas de la Web
+1.2.2. Recursos Visuales y Textuales: Imagenes y Texto
+1.3. Prototipos: Pagina Principal, Carta y Formulario de Registro
+
+2. Obtencion de Recursos: Introducción
+2.1. Imágenes
+2.1.1. Fuentes de obtención y licencia
+2.1.2. Proceso de conversión y herramientas
+2.1.3. Compatibilidad con navegadores
+2.2. Texto
+2.2.1. Tipografía utilizada
+2.2.2. Cómo se obtuvieron los textos
+2.2.3. Organización de los textos por páginas o por tipos
+
+3. Prototipo Final
+
+--- PREGUNTA ---
+Vale, ahora quiero que me generes un ejemplo de como seria el apartado de imagenes dentro de la seccion "Obtencion de Recursos". Pero quiero que tengas en cuenta:
+- Añade una breve descripcion, pero no digas nada de "las imagenes han sido seleccionadas para encajar con el diseño" o algo por el estilo, ya que este texto ya lo he indicado con anterioridad y ponerlo otra vez creo que seria repetitivo.
+- Quiero que comiences indicando primero de que webs he obtenido los recursos (imagenes) y que licencia ofrece cada una.
+- Cuando vayas a indicar como los he convertido a los formatos indicados, quiero que digas que lo he hecho usando el programa imagemagick y expliques el funcionamiento. Las imagenes se descargan en JPEG y tengo que convertirlas a SVG, WebP, PNG y AVIF.
+- Por ultimo, para indicar la compatibilidad con otros navegadores lo que voy a hacer es mostrar un grafico de la web "https://caniuse.com/", para cada formato.
