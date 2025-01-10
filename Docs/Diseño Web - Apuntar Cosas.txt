@@ -8,27 +8,6 @@ Inicio de Sesion -> Logotipo, Iconos de Redes Sociales
 Formulario de Registro -> Logotipo, Iconos de Redes Sociales
 Cuenta -> Logotipo, Iconos de Redes Sociales
 
-
-Logotipo -> SVG y PNG
-Hero Image -> WebP, JPEG y AVIF
-Imagen de Producto -> WebP, JPEG y PNG
-Imagen Decorativa -> WebP, JPEG y SVG
-Iconos de Redes Sociales -> SVG y PNG
-
-SVG -> No resolucion fija, escala infinitamente sin perdes calidad.
-PNG -> 
-	Iconos -> 32x32, 64x64 y 128x128
-	Logotipos -> 800x600 y 1920x1080
-	Imagen Decorativa -> 1920x1080 (Full HD) y 3840x2160 (4K)
-WebP ->
-	Imagen de Producto -> 800x600 y 1024x768
-	Hero Image -> 1920x1080, 2560x1440 y 3840x2160 (4K)
-JPEG ->
-	Imagen Decorativa -> 1920x1080 (Full HD) y 3840x2160 (4K)
-	Hero Image -> 1920x1080, 2560x1440 y 3840x2160 (4K)
-AVIF ->
-	Hero Image -> 1920x1080, 2560x1440 y 3840x2160 (4K)
-
 --- TEXTO ---
 Pagina Principal -> Textos de Navegación, Encabezado Principal, CTA, Textos Informativos y Texto del Pie de Pagina
 Sobre Nosotros -> Textos de Navegación, Encabezado Principal, CTA, Textos Informativos y Texto del Pie de Pagina
@@ -99,6 +78,26 @@ Cuenta -> Textos de Navegacion, CTA, Texto de los Formularios y Texto del Pie de
 _________________________________
 Total = 45 Imagenes en Total 
 	3 Formatos cada una serian = 135 Imagenes en Total
+
+* Logotipo -> SVG y PNG
+* Hero Image -> WebP, JPEG y AVIF
+* Imagen de Producto -> WebP, JPEG y PNG
+* Imagen Decorativa -> WebP, JPEG y SVG
+* Iconos de Redes Sociales -> SVG y PNG
+
+- SVG -> No resolucion fija, escala infinitamente sin perdes calidad.
+- PNG -> 
+	Iconos -> 32x32, 64x64 y 128x128
+	Logotipos -> 800x600 y 1920x1080
+	Imagen Decorativa -> 1920x1080 (Full HD) y 3840x2160 (4K)
+- WebP ->
+	Imagen de Producto -> 800x600 y 1024x768
+	Hero Image -> 1920x1080, 2560x1440 y 3840x2160 (4K)
+- JPEG ->
+	Imagen Decorativa -> 1920x1080 (Full HD) y 3840x2160 (4K)
+	Hero Image -> 1920x1080, 2560x1440 y 3840x2160 (4K)
+- AVIF ->
+	Hero Image -> 1920x1080, 2560x1440 y 3840x2160 (4K)
 
 ------------------------------------------------------------------
 
