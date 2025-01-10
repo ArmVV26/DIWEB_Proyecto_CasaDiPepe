@@ -58,10 +58,52 @@ Cuenta -> Textos de Navegacion, CTA, Texto de los Formularios y Texto del Pie de
 2.2.3. Organización de los textos por páginas o por tipos
 
 3. Prototipo Final
+-----------------------------------------------------------------------
 
---- PREGUNTA ---
-Vale, ahora quiero que me generes un ejemplo de como seria el apartado de imagenes dentro de la seccion "Obtencion de Recursos". Pero quiero que tengas en cuenta:
-- Añade una breve descripcion, pero no digas nada de "las imagenes han sido seleccionadas para encajar con el diseño" o algo por el estilo, ya que este texto ya lo he indicado con anterioridad y ponerlo otra vez creo que seria repetitivo.
-- Quiero que comiences indicando primero de que webs he obtenido los recursos (imagenes) y que licencia ofrece cada una.
-- Cuando vayas a indicar como los he convertido a los formatos indicados, quiero que digas que lo he hecho usando el programa imagemagick y expliques el funcionamiento. Las imagenes se descargan en JPEG y tengo que convertirlas a SVG, WebP, PNG y AVIF.
-- Por ultimo, para indicar la compatibilidad con otros navegadores lo que voy a hacer es mostrar un grafico de la web "https://caniuse.com/", para cada formato.
+--- ¿QUE IMAGENES NECESITO? ---
+
+- Header y Footer ->
+	2 x Logotipo (2 Formas)
+	1 x Logotipo Patrocinador
+	4 x Logotipo Redes Sociales
+
+- Pagina Principal -> 
+	1 x Hero Image
+	4 x Img-Decorativa
+	3 x Img-Rojo-Instragram
+
+- Carta ->
+	1 x Hero Image
+	9 x Img-Producto
+
+- Registro ->
+	1 x Logotipo (Blanco)
+
+- Cuenta ->
+	-
+
+- Sobre Nosotros ->
+	1 x Hero Image
+	5 x Img-Decorativa
+
+- Reserva ->
+	1 x Hero Image
+
+- Tienda ->
+	1 x Hero Image	
+	1 x Logotipo (Blanco)
+	9 x Img-Decorativa
+
+- Inicio de Sesion
+	1 x Logotipo (Blanco)
+_________________________________
+Total = 45 Imagenes en Total 
+	3 Formatos cada una serian = 135 Imagenes en Total
+
+------------------------------------------------------------------
+
+--- PAGINAS PARA IMAGENES ---
+https://unsplash.com/es
+https://www.pexels.com/es-es/
+https://pixabay.com/es/
+https://www.flaticon.com/
