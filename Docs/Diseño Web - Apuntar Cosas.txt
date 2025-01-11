@@ -42,48 +42,48 @@ Cuenta -> Textos de Navegacion, CTA, Texto de los Formularios y Texto del Pie de
 --- ¿QUE IMAGENES NECESITO? ---
 
 - Header y Footer ->
-	2 x Logotipo (2 Formas)
-	1 x Logotipo Patrocinador
-	4 x Logotipo Redes Sociales
+	✔ - 2 x Logotipo (2 Formas)
+	✔ - 1 x Logotipo Patrocinador
+	✔ - 4 x Logotipo Redes Sociales
 
 - Pagina Principal -> 
-	1 x Hero Image
-	4 x Img-Decorativa
-	3 x Img-Rojo-Instragram
+	✔ - 1 x Hero Image
+	✔ - 4 x Img-Decorativa
+	✔ - 1 x Img-Rojo-Instragram
 
 - Carta ->
-	1 x Hero Image
-	9 x Img-Producto
+	✔ - 1 x Hero Image
+	✔ - 9 x Img-Producto
 
 - Registro ->
-	1 x Logotipo (Blanco)
+	✔ - 1 x Logotipo (Blanco)
 
 - Cuenta ->
 	-
 
 - Sobre Nosotros ->
-	1 x Hero Image
-	5 x Img-Decorativa
+	✔ - 1 x Hero Image
+	✔ - 5 x Img-Decorativa
 
 - Reserva ->
-	1 x Hero Image
+	✔ - 1 x Hero Image
 
 - Tienda ->
-	1 x Hero Image	
-	1 x Logotipo (Blanco)
-	9 x Img-Decorativa
+	✔ - 1 x Hero Image	
+	✔ - 1 x Logotipo (Blanco)
+	✔ - 9 x Img-Producto
 
 - Inicio de Sesion
-	1 x Logotipo (Blanco)
+	✔ - 1 x Logotipo (Blanco)
 _________________________________
 Total = 45 Imagenes en Total 
 	3 Formatos cada una serian = 135 Imagenes en Total
 
-* Logotipo -> SVG y PNG
-* Hero Image -> WebP, JPEG y AVIF
-* Imagen de Producto -> WebP, JPEG y PNG
-* Imagen Decorativa -> WebP, JPEG y SVG
-* Iconos de Redes Sociales -> SVG y PNG
+* Logotipo -> SVG y PNG -> 2
+* Hero Image -> WebP, JPG y AVIF -> 5
+* Imagen de Producto -> WebP, JPG y PNG -> 18
+* Imagen Decorativa -> WebP, JPG y SVG -> 9
+* Iconos de Redes Sociales -> SVG y PNG -> 5
 
 - SVG -> No resolucion fija, escala infinitamente sin perdes calidad.
 - PNG -> 
@@ -93,7 +93,7 @@ Total = 45 Imagenes en Total
 - WebP ->
 	Imagen de Producto -> 800x600 y 1024x768
 	Hero Image -> 1920x1080, 2560x1440 y 3840x2160 (4K)
-- JPEG ->
+- JPG ->
 	Imagen Decorativa -> 1920x1080 (Full HD) y 3840x2160 (4K)
 	Hero Image -> 1920x1080, 2560x1440 y 3840x2160 (4K)
 - AVIF ->
@@ -106,3 +106,7 @@ https://unsplash.com/es
 https://www.pexels.com/es-es/
 https://pixabay.com/es/
 https://www.flaticon.com/
+
+--- MAGICK IMAGE ---
+magick producto-tienda-*.webp producto-tienda-%d.jpg
+magick producto-tienda-*.webp -background white -alpha remove -alpha off producto-tienda-%d.jpg
