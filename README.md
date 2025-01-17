@@ -1,4 +1,5 @@
 # DIWEB_Proyecto_CasaDiPepe
+> ---
 > ## Descripción del Repositorio
 > Este repositorio contiene el proyecto **Casa di Pepe**, desarrollado para la asignatura **Diseño de Interfaces Web** como parte del curso de **2º DAW**.
 > 
