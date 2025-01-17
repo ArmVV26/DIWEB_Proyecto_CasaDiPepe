@@ -20,14 +20,19 @@ Contiene todos los documentos explicativos del desarrollo de la página web. Inc
 Contiene todos los archivos necesarios para implementar el proyecto web. Esta carpeta está organizada de la siguiente manera:  
 
 ### 2.1. Estructura Interna
-- **css/**: Contiene las hojas de estilo (CSS) usadas para diseñar la web.
-- **fonts/**: Incluye las tipografías usadas en el proyecto.
 - **html/**: Contiene los archivos HTML correspondientes a cada página de la web.
-- **img/**: Almacena todas las imagenes usdas en el proyecto, organizadas por tipo:
-  - hero-image (avif, jpg, webp).
-  - ico-redes-sociales (png, svg).
-  - img-decorativa (jpg, svg, webp).
-  - img-producto (jpg, png, webp).
-  - logotipo (png, svg).
-- **js/**: Contiene los scripts.
+- **media/**: Carpeta que contiene las carpetas *img* y *fonts*.
+  + **fonts/**: Incluye las tipografías usadas en el proyecto.
+  + **img/**: Almacena todas las imagenes usadas en el proyecto, organizadas por tipo:
+    - hero-image (avif, jpg, webp).
+    - ico-redes-sociales (png, svg).
+    - img-decorativa (jpg, svg, webp).
+    - img-producto (jpg, png, webp).
+    - logotipo (png, svg).
+> La nomenclatura de las imagenes es: *nombreimg-resolucion(AxB).extensión*.
+- **scripts/**: Carpeta que contiene los scripts.
+  + **js/**: Contiene los scripts JS usados para el diseño de la web.
+- **style/**: Carpeta que contiene las carpetas de estilo CSS y SASS.
+  + **css/**: Contiene las hojas de estilo (CSS) usadas para diseñar la web.
+  + **sass/**: Contiene los archivos con el contenidos SASS usados para el diseño de la web.
 - **index.html**: Archivo principal que actúa como punto de entrada a la web.
