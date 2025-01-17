@@ -136,3 +136,19 @@ Logotipo Patrocinador -> (2 - 1) x 6 = 6
 Logotipo Redes Sociales -> (10 - 5) x 6 = 30
 
 TOTAL = (suma total de img-resolucion) + (img-svg) = 516 + 18 = 534 img
+
+--- RESOLUCIONES USADAS ---
+- 320px
+- 640px
+- 960px
+- 1600px
+- 2240px
+- 3200px
+
+- 32x32px
+- 64x64px
+- 128x128px
+
+- 128x128px
+- 256x256px
+- 512x512px
