@@ -1,5 +1,6 @@
-for %%F in (*.avif) do (    
+for %%F in (*) do (    
     for %%S in (480 768 1200 1920 2560 3200) do (
-        magick "%%F" -resize %%Sx "%%~nF-%%Spx.avif"
+        magick "%%F" -resize %%Sx "%%~nF-%%Spx%%~xF"
+        echo Imagen redimensionada: %%~nF-%%Spx%%~xF
     )
 )
