@@ -29,7 +29,7 @@ Contiene todos los archivos necesarios para implementar el proyecto web. Esta ca
     - img-decorativa (jpg, svg, webp).
     - img-producto (jpg, png, webp).
     - logotipo (png, svg).
-> La nomenclatura de las imagenes es: *nombreimg-resolucion(AxB).extensión*.
+> La nomenclatura de las imagenes es: *tipoImg-nombreImg-resolucion(AxB).extensión*.
 - **scripts/**: Carpeta que contiene los scripts.
   + **js/**: Contiene los scripts JS usados para el diseño de la web.
 - **style/**: Carpeta que contiene las carpetas de estilo CSS y SASS.
