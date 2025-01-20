@@ -18,12 +18,12 @@
     guardadas en la carpeta Fonts*/
 @font-face {
     font-family: 'Lato';
-    src: url(../fonts/Lato-Regular.ttf);
+    src: url(../../media/fonts/Lato-Regular.ttf);
 }
 
 @font-face {
     font-family: 'Questrial';
-    src: url(../fonts/Questrial-Regular.ttf);
+    src: url(../../media/fonts/Questrial-Regular.ttf);
 }
 
 /* Hago un reset basico para eliminar los estilos predeterminados
@@ -200,7 +200,7 @@ a:hover{
 /* Añado la imagen le doy una altura y una anchura, y le indico a los elementos de 
     dentro un flex */
 .introduccion{
-    background: url(../img/introduccion/Cabecera-PaginaPrincipal.jpg);
+    background: url(../../media/img/hero-image/webp/hero-PaginaPrincipal-3200px.webp);
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -248,7 +248,7 @@ a:hover{
 }
 /* Como en el apartado anterior le indico una imagen, tamaño y posicion */
 .cont-img{
-    background: url(../img/index/Apartado-SobreNosotros.jpg);
+    background: url(../../media/img/img-decorativa/svg/decorativa-PaginaPrincipal.svg);
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -327,17 +327,17 @@ a:hover{
 }
 /* Le asigno imagenes a cada articulo de las redes sociales */
 .redes-img article:nth-child(1){
-    background: url(../img/index/Apartado-RedesSociales.jpg);
+    background: url(../../media/img/img-decorativa/svg/decorativa-PaginaPrincipa-RS-1.svg);
     background-size: cover;
     background-position: center;
 }
 .redes-img article:nth-child(2){
-    background: url(../img/index/Apartado-RedesSociales-2.jpg);
+    background: url(../../media/img/img-decorativa/svg/decorativa-PaginaPrincipa-RS-2.svg);
     background-size: cover;
     background-position: center;
 }
 .redes-img article:last-child{
-    background: url(../img/index/Apartado-RedesSociales-3.jpg);
+    background: url(../../media/img/img-decorativa/svg/decorativa-PaginaPrincipa-RS-3.svg);
     background-size: cover;
     background-position: center;
 }
