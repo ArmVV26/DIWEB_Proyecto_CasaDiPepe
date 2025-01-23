@@ -1,3 +1,6 @@
+// Importo las variables
+@use '../utils/variables';
+
 // Fuentes que voy a usar en mi proyecto web
 
 @font-face {
@@ -10,3 +13,33 @@
     src: url(../../../media/fonts/Questrial-Regular.ttf);
 }
 
+// Variable usada para el tamaño de las fuentes y el interlineado
+$font-size: 2rem;
+$line-height: 1.6;
+
+body {
+    font-family: $font-Secondary;
+    font-size: $font-size / 2;
+    line-height: $line-height;
+}
+
+h1 {
+    font-family: $font-Main;
+    font-size: $font-size * 2.4;
+    color: $color-Neutro-Blanco;
+    line-height: $line-height - 0.4;
+}
+
+h2 {
+    font-family: $font-Main;
+    font-size: $font-size * 1.75;
+    color: $color-Secundario;
+    line-height: $line-height - 0.4;
+}
+
+h3 {
+    font-family: $font-Secondary;
+    font-size: $font-size;
+    color: $color-Neutro-Negro;
+    line-height: $line-height - 0.4;
+}
