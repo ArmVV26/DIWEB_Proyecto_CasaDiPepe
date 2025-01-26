@@ -1,0 +1,14 @@
+{
+  "name": "sass",
+  "version": "1.0.0",
+  "description": "Generar el CSS a partir de SCSS",
+  "main": "index.js",
+  "scripts": {
+    "generar-sass": "sass styles/sass/main.scss styles/css/main.css"
+  },
+  "author": "Armando Vaquero",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.83.4"
+  }
+}

@@ -1,0 +1,76 @@
+body {
+  background-color: #F1E7E7;
+  padding-top: 10rem;
+}
+
+a {
+  text-decoration: none;
+  font-family: "Lato";
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  color: #F1E7E7;
+  font-size: 1.5rem;
+  display: inline-block;
+  padding: 1.25rem;
+}
+a:hover {
+  color: #F1A2A2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  font-size: 100%;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url(../../../media/fonts/Lato-Regular.ttf);
+}
+@font-face {
+  font-family: "Questrial";
+  src: url(../../../media/fonts/Questrial-Regular.ttf);
+}
+body {
+  font-family: "Questrial";
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+h1 {
+  font-family: "Lato";
+  font-size: 4.8rem;
+  color: #F1E7E7;
+  line-height: 1.2;
+}
+
+h2 {
+  font-family: "Lato";
+  font-size: 3.5rem;
+  font-style: italic;
+  color: #B03B3B;
+  line-height: 1.2;
+}
+
+h3 {
+  font-family: "Questrial";
+  font-size: 2rem;
+  color: #222222;
+  line-height: 1.2;
+}
+
+p {
+  font-family: "Questrial";
+  font-size: 1.25rem;
+  color: #222222;
+  text-align: justify;
+  font-size: 1.25rem;
+  text-indent: 2rem;
+}
+
+/*# sourceMappingURL=main.css.map */

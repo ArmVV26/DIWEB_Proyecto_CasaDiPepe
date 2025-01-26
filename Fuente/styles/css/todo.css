@@ -63,6 +63,7 @@ footer{
     background-color: var(--color-Neutro-Marron);
     width: 100%;
     padding: 2rem 0; /* Con esto le asigno la altura */
+    box-shadow: 0 -5px 5px 0 var(--color-Neutro-Negro-rgba);
 }
 
 /* Le asigno un estilo a los enlaces para que todos tenga la misma estructura:
@@ -108,24 +109,24 @@ p{
 
 /* LOGO CABECERA */
 /* Le asigno al logo del header un tamaño y unos margenes */
-.logo-img{
+.img-logoHeader{
     width: 9rem;
     height: 9rem;
     margin: 0.5rem 0 0.5rem 5rem;
 }
 
 /* Efecto al poner el raton encima */
-a .logo-img:hover{
-    width: 8.5rem;
-    height: 8.5rem;
-    margin-right: 0.5rem;
+a .img-logoHeader:hover{
+    width: 8.75rem;
+    height: 8.75rem;
+    margin-right: 0.25rem;
     transition: all 0.5s; /* Para que lo hago poco a poco*/
 }
 
 /* Efecto para que logo rote ligeramente al hacer mantener
     el clic*/
-a .logo-img:active{
-    transform: scale(0.83) skew(-3deg);
+a .img-logoHeader:active{
+    transform: scale(0.90) skew(-2deg);
 }
 
 /* MENU */
@@ -159,6 +160,7 @@ a:hover{
     border: 2px solid var(--color-Neutro-Blanco);
     border-radius: 1rem;
     box-shadow: 0px 0px 5px 5px var(--color-Neutro-Negro-rgba);
+    transition: all 0.25s ease;
 }
 /* Le indico que cuando este encima el raton cambie el fondo en 0.25s */
 .boton-inicio:hover{
@@ -172,6 +174,7 @@ a:hover{
     border: 2px solid var(--color-Neutro-Blanco);
     border-radius: 1rem;
     box-shadow: 0px 0px 5px 5px var(--color-Neutro-Negro-rgba);
+    transition: all 0.25s ease;
 }
 /* Le indico que cuando este enciam el raton cambie el fondo en 0.25s */
 .boton-pred:hover{
@@ -184,8 +187,8 @@ a:hover{
     background-color: var(--color-Principal);
     border: 2px solid var(--color-Neutro-Blanco);
     border-radius: 0.5rem;
-
     padding: 0.75rem;
+    transition: all 0.25s ease;
 }
 /* Le indico un estilo que se modifique cuando el raton este encima */
 .boton-footer:hover{
@@ -200,13 +203,10 @@ a:hover{
 /* Añado la imagen le doy una altura y una anchura, y le indico a los elementos de 
     dentro un flex */
 .introduccion{
-    background: url(../../media/img/hero-image/webp/hero-PaginaPrincipal-3200px.webp);
-    background-size: cover;
-    background-position: center;
+    position: relative;
     width: 100%;
     height: 32rem;
-    position: relative;
-    z-index: 1;
+    overflow: hidden;
 
     display: flex;
     justify-content: center;
@@ -215,13 +215,32 @@ a:hover{
     
     box-shadow: 0 10px 5px 0 var(--color-Neutro-Negro-rgba);
 }
-/* Alieno el texto al centro */
+
+    /* Alieno el texto al centro */
+.img-header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../../media/img/hero-image/webp/hero-PaginaPrincipal-3200px.webp);
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+
+    filter: brightness(0.75) contrast(120%) saturate(110%) sepia(25%);  
+}
+
 .intro-texto{
+    position: relative;
+    z-index: 1;
     text-align: center;
 }
 /* Le indico a los botones que se dispongan en fila y con espacio entre medias
     Ademas le digo que ocupen un 55% del tamaño total*/
 .intro-botones{
+    position: relative;
+    z-index: 1;
     margin-top: 5rem;
     display: flex;
     justify-content: space-between;
@@ -239,6 +258,10 @@ a:hover{
     gap: 1.5rem;
     text-align: right;
 }
+/* Modifico el h2 para que se ponga a la derecha */
+.contenido h2{
+    text-align: left;
+}
 /* Le indico unos margenes superiores para que se se centre el texto y el boton */
 .cont-texto{
     margin-top: 1.5rem;
@@ -248,29 +271,42 @@ a:hover{
 }
 /* Como en el apartado anterior le indico una imagen, tamaño y posicion */
 .cont-img{
-    background: url(../../media/img/img-decorativa/svg/decorativa-PaginaPrincipal.svg);
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 20rem;
     position: relative;
+    z-index: 1;
 
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
     align-items: center;
 
+    box-shadow: 0px 0px 5px 5px var(--color-Neutro-Negro-rgba);
     border: 2px solid var(--color-Principal);
     border-radius: 1rem;
-    box-shadow: 0px 0px 5px 5px var(--color-Neutro-Negro-rgba);
 }
-/* Le doy un estilo a la cita de la imagen del index*/
+
+.img-deco{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../../media/img/img-decorativa/svg/decorativa-PaginaPrincipal.svg);
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    border-radius: 0.85rem;
+
+    filter: brightness(0.75) contrast(115%) saturate(140%) sepia(45%);  
+}
+
 .cita{
+    position: relative;
+    z-index: 1;
+    text-align: center;
     color: var(--color-Neutro-Blanco);
     font-weight: bolder;
     font-style: italic;
-    text-shadow: 2px 2px 2px var(--color-Neutro-Negro); /* Le añado una sombra al texto para que se vea mejor*/
-    margin-bottom: 0.25rem;
+    text-shadow: 2px 2px 2px var(--color-Principal); /* Le añado una sombra al texto para que se vea mejor*/
 }
 
 /* ANUNCIO - Index */
@@ -280,7 +316,8 @@ a:hover{
     width: 75%;
     margin: auto auto 2.5rem;
     padding: 1.5rem;
-    background: linear-gradient(90deg, rgba(150,19,22,1) 0%, rgba(241,231,231,1) 50%, rgba(150,19,22,1) 100%);
+    background-color: var(--color-Secundario-Light);
+    /* background: linear-gradient(90deg, rgba(150,19,22,1) 0%, rgba(241,231,231,1) 50%, rgba(150,19,22,1) 100%); */
     border-radius: 1rem;
     border: 2px solid var(--color-Secundario);
 }
@@ -290,7 +327,7 @@ a:hover{
     font-weight: bolder;
     font-size: 1.5rem;
     text-indent: 0;
-    color: var(--color-Neutro-Negro);
+    color: var(--color-Principal);
 }
 
 /* REDES - Index */
@@ -311,83 +348,114 @@ a:hover{
     gap: 1rem;
 }
 /* Le asigno un estilo al contendor de los articulos de las imagenes de las redes sociales*/
-.redes-img article{
-    width: 100%;
-    height: 20rem;
+.redes-img picture{
     position: relative;
+    width: 25rem;
+    max-width: 30rem;
+    height: 20rem;
 
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
     align-items: flex-end;
 
-    width: 30rem;
     border: 4px solid var(--color-Principal);
     border-radius: 1rem;
 }
 /* Le asigno imagenes a cada articulo de las redes sociales */
-.redes-img article:nth-child(1){
+.redes-img picture:nth-child(1){
     background: url(../../media/img/img-decorativa/svg/decorativa-PaginaPrincipa-RS-1.svg);
     background-size: cover;
     background-position: center;
+    filter: brightness(0.75) contrast(120%) saturate(120%) sepia(15%);  
 }
-.redes-img article:nth-child(2){
+.redes-img picture:nth-child(2){
     background: url(../../media/img/img-decorativa/svg/decorativa-PaginaPrincipa-RS-2.svg);
     background-size: cover;
     background-position: center;
+    filter: brightness(0.75) contrast(120%) saturate(120%) sepia(15%);  
 }
-.redes-img article:last-child{
+.redes-img picture:last-child{
     background: url(../../media/img/img-decorativa/svg/decorativa-PaginaPrincipa-RS-3.svg);
     background-size: cover;
     background-position: center;
+    filter: brightness(0.75) contrast(120%) saturate(120%) sepia(15%);  
+}
+/* Resalto la imagen cuando pongo el raton encima */
+.redes-img picture:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    filter: brightness(0.80);
+    transition: all 0.5s;
 }
 /* Modifco la imagen del logo de instagram de las redes sociales */
 .insta-img{
-    margin: 0.5rem;
     width: 3rem;
     height: 3rem;
+    margin: 0.5rem;
+    background-color: var(--color-Secundario);
+    border: 3px solid var(--color-Neutro-Negro);
+    border-radius: 0.5rem;
 }
 
 /* FOOTER */
+/* Reformulo el footer */
+footer{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
 /* Le doy un tamaño y una disposicion al pie de pagina*/
-.pie-pagina{
-    width: 75%;
+.fila-superior{
+    width: 80%;
     margin: auto;
- 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
-    justify-content: center;
+    gap: 1.5rem;
 }
-/* Le doy un tamaño al logo del footer */
-.logo-img-footer{
-    width: 8.5rem;
-    height: 8.5rem;
+/* Modificamos el logo del footer */
+.img-logoFooter{
+    width: 9rem;
+    height: 9rem;
+    justify-self: start;
 }
-/* Le doy un tamaño al logo de la guia */
-.logo-img-guia{
+/* Modificamos el logo del Patrocinador */
+.img-logoPatrocinador{
     width: 10rem;
     height: 10rem;
+    justify-self: center;
 }
 /* Estilo y disposicion de la seccion del boton, de las redes sociales y de los enlaces*/
-.pie-seccion{
+.cta-redes{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 0.5rem ;
+    gap: 1rem ;
 }
 /* Cambio la disposicion de las imagenes de las redes sociales del Footer*/
 .img-redes{
     display: flex;
-    justify-self: center;
-    align-items: center;
-    gap: 1.25rem;
+    gap: 1rem;
 }
-/* Le cambio el estilo de las imagenes de las redes sociales */
-.logo-redes{
+/* Modifico las imagenes de las redes sociales del footer */
+.img-logoRedes {
     width: 3rem;
     height: 3rem;
+    padding: 0.5rem;
+    background-color: var(--color-Principal);
+    box-shadow: 0 0 0 0.2rem var(--color-Secundario-Light);
+    border-radius: 1.75rem;
+}
+/* Configuracion de la segunda fila */
+.fila-inferior{
+    width: 70%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 0.5rem;
 }
 /* Modifico la lista desordenanda del nav del footer */
 .menu-footer ul{
@@ -396,9 +464,9 @@ a:hover{
 }
 /* Le indico una disposicion a la lista desordenada del footer */
 .menu-footer ul{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 1rem;
+   display: flex;
+   justify-content: flex-end;
+   gap: 1.5rem;
 }
 /* Modifico el estilos de los enlaces del menu del footer */
 .menu-footer a{
@@ -415,9 +483,10 @@ a:hover{
     color: var(--color-Secundario-Light);
 }
 /* Modifico el estilo del texto de copyright del final */
-.copy p{
+.copy{
     color: var(--color-Neutro-Blanco);
-    position: left;
+    opacity: 60%;
+    margin-top: 2rem;
 }
 
 /* MEDIA QUERIES */
