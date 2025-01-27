@@ -11,6 +11,23 @@ header {
     z-index: 5;
     box-shadow: 0 10px 5px 0 variables.$color-Neutro-Negro-rgba;
 
+    .img-logoHeader {
+        width: 9rem;
+        height: 9rem;
+        margin: 0.5rem 0 0.5rem 5rem;
+
+        &:hover {
+            width: 8.75rem;
+            height: 8.75rem;
+            margin-right: 0.25rem;
+            transition: all 0.5s;
+        }
+
+        &:active {
+            transform: scale(0.90) skew(-2deg);
+        }
+    }
+
     .menu {
         display: flex;
         justify-content: space-between;

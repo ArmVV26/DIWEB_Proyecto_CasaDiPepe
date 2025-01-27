@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="media/img/logotipo/logo-Web.ico">
-  <!-- <link rel="stylesheet" href="styles/css/todo.css"> -->
-  <link rel="stylesheet" href="styles/css/main.css">
+  <link rel="stylesheet" href="styles/css/todo.css">
+  <!-- <link rel="stylesheet" href="styles/css/main.css"> -->
   <title>Casa di Pepe</title>
 </head>
 
@@ -48,7 +48,7 @@
   <main>
 
     <section class="introduccion">
-      <div class="img-header"></div>
+      <div class="img-header-pred img-index"></div>
       <div class="intro-texto">
         <h1>CASA DI PEPE</h1>
         <h3>EL CORAZÓN DE LA TOSCANA</h3>
@@ -74,10 +74,44 @@
         </p>
         <a href="#" class="boton-pred">Saber Mas</a> 
       </article>
-      <div class="cont-img">
-        <div class="img-deco"></div>
-        <p class="cita">"Sapori di Casa"</p>
-      </div>
+
+      <picture>
+        <source srcset="media/img/img-decorativa/svg/decorativa-PaginaPrincipal.svg" type="image/svg+xml">
+        <source 
+          srcset="
+            media/img/img-decorativa/svg/decorativa-PaginaPrincipal-320px.jpg 320w,
+            media/img/img-decorativa/svg/decorativa-PaginaPrincipal-640px.jpg 640w,
+            media/img/img-decorativa/svg/decorativa-PaginaPrincipal-960px.jpg 960w,
+            media/img/img-decorativa/svg/decorativa-PaginaPrincipal-1600px.jpg 1600w,
+            media/img/img-decorativa/svg/decorativa-PaginaPrincipal-2240px.jpg 2240w,
+            media/img/img-decorativa/svg/decorativa-PaginaPrincipal-3200px.jpg 3200w,
+          "
+          sizes=" (max-width: 320px) 320px, 
+                  (max-width: 640px) 640px, 
+                  (max-width: 960px) 960px, 
+                  (max-width: 1600px) 1600px, 
+                  (max-width: 2240px) 2240px, 
+                  3200px"
+          type="image/jpg">
+
+          <source 
+          srcset="
+            media/img/img-decorativa/svg/decorativa-PaginaPrincipal-320px.webp 320w,
+            media/img/img-decorativa/svg/decorativa-PaginaPrincipal-640px.webp 640w,
+            media/img/img-decorativa/svg/decorativa-PaginaPrincipal-960px.webp 960w,
+            media/img/img-decorativa/svg/decorativa-PaginaPrincipal-1600px.webp 1600w,
+            media/img/img-decorativa/svg/decorativa-PaginaPrincipal-2240px.webp 2240w,
+            media/img/img-decorativa/svg/decorativa-PaginaPrincipal-3200px.webp 3200w,
+          "
+          sizes=" (max-width: 320px) 320px, 
+                  (max-width: 640px) 640px, 
+                  (max-width: 960px) 960px, 
+                  (max-width: 1600px) 1600px, 
+                  (max-width: 2240px) 2240px, 
+                  3200px"
+          type="image/webp">
+        <img class="img-deco-index" loading="lazy" src="media/img/img-decorativa/svg/decorativa-PaginaPrincipal-3200px.webp" alt="Imagen de Decoracion">
+      </picture>
     </section>
 
     <aside class="anuncio">

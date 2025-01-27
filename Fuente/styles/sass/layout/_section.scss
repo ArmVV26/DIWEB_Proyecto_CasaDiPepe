@@ -1,0 +1,33 @@
+// Importo las Variables y las funciones map de sass
+@use '../utils/variables';
+
+// Estilo de la parte de la cabecera del main
+.introduccion {
+    position: relative;
+    width: 100%;
+    height: 32rem;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    box-shadow: 0 10px 5px 0 variables.$color-Neutro-Negro-rgba;
+
+    .intro-texto {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        color: variables.$color-Neutro-Blanco;
+    }
+
+    .intro-botones {
+        position: relative;
+        z-index: 1;
+        margin-top: 5rem;
+        display: flex;
+        justify-content: space-between;
+        width: 55%;
+    }
+}
