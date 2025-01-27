@@ -1,0 +1,50 @@
+// Importo las Variables
+@use '../utils/variables';
+
+// Estilos de los Botones
+@mixin boton-base($background-color, $hover-background-color, $border-color, $box-shadow) {
+    background-color: $background-color;
+    border: 2px solid ($border-color);
+    border-radius: 1rem;
+    box-shadow: $box-shadow;
+    transition: all 0.25s ease;
+
+    &:hover {
+        background-color: $hover-background-color;
+        transition: all 0.25s;
+    }
+}
+
+/* Boton de Iniciar Sesion */
+.boton-inicio {
+    @include boton-base(
+                variables.$color-Secundario,
+                variables.$color-Neutro-Marron,
+                variables.$color-Neutro-Blanco,
+                0px 0px 5px 5px variables.$color-Neutro-Negro-rgba);
+}
+
+/* Boton Predeterminado */
+.boton-pred {
+    @include boton-base(
+                variables.$color-Principal,
+                variables.$color-Neutro-Marron,
+                variables.$color-Neutro-Blanco,
+                0px 0px 5px 5px variables.$color-Neutro-Negro-rgba);
+}
+
+/* Boton Footer */
+.boton-footer {
+    @include boton-base(
+                variables.$color-Principal,
+                variables.$color-Neutro-Blanco,
+                variables.$color-Neutro-Blanco,
+                none);
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    
+    &:hover {
+        color: variables.$color-Neutro-Negro;
+        border: 2px solid variables.$color-Principal;
+    }
+}
