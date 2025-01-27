@@ -1,0 +1,40 @@
+// Importo las Variables
+@use '../utils/variables';
+
+// Diseño del Header
+header {
+    background-color: variables.$color-Principal;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    min-height: 10rem;
+    z-index: 5;
+    box-shadow: 0 10px 5px 0 variables.$color-Neutro-Negro-rgba;
+
+    .menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 10rem;
+
+        .enlaces {
+            ul {
+                display: flex;
+                list-style: none;
+
+                a {
+                    font-size: 1.5rem;
+                    padding: 1.25rem;
+
+                    &:hover {
+                        color: variables.$color-Terciario;
+                    }
+                }
+            }
+        }
+
+        .separado {
+            margin-right: 5rem;
+        }
+    }
+}
