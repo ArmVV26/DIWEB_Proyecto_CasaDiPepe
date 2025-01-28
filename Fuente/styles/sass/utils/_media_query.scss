@@ -1,0 +1,21 @@
+// Declaro los Media Querires para que mi web sea resposive
+// Mapa de Breakpoints
+$breakpoints: (
+    small: 320px,       // Moviles Pequeños
+    medium: 480px,      // Moviles Medianos
+    tablet: 768px,      // Tablets
+    laptop: 1024px,     // Portailes Pequeños
+    normal: 1200px,     // Monitor Normal 
+    large: 1600px,      // Monitor Grande
+);
+
+// Mixin para hacer las media queries 
+@mixin media-queries($key) {
+    @if map-has-key($breakpoints, $key) {
+        @media (min-width: map-get($breakpoints, $key)) {
+            @content;
+        }
+    } @else {
+        @error "El breakpoint `#{$key}` no existe en el mapa de breakpoints.";
+    }
+}

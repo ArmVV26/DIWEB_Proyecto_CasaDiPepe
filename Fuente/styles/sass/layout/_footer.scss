@@ -1,6 +1,7 @@
-// Importo las Variables y las funciones map de sass
+// Importo las Variables, las funciones map de sass y las media-querires
 @use '../utils/variables';
 @use 'sass:map';
+@import '../utils/media_query';
 
 // Diseño del Footer
 // Creo un mapa y luego hago una funcion para obtener los valores correspondientes
@@ -27,6 +28,29 @@ footer {
         grid-template-columns: 1fr 1fr 1fr;
         gap: 1.5rem;
 
+        @include media-queries(small) {
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+        }
+        @include media-queries(tablet) {
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+        }
+        @include media-queries(laptop) {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            align-items: center;
+            gap: 0rem;
+        }
+        @include media-queries(normal) {
+            gap: 1.5rem;
+        }
+        @include media-queries(large) {
+            width: 80%;
+        }
+
         .img-logoFooter {
             width: 9rem;
             height: 9rem;
@@ -48,12 +72,14 @@ footer {
 
             .img-redes {
                 display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
                 gap: 1rem;
 
                 .img-logoRedes {
-                    width: 3rem;
-                    height: 3rem;
-                    padding: 1rem;
+                    width: 2.75rem;
+                    height: 2.75rem;
+                    padding: 0.5rem;
                     background-color: map.get($footer-colors, "main");
                     box-shadow: 0 0 0 0.2rem map.get($footer-colors, "hover");
                     border-radius: 1.75rem;
@@ -65,15 +91,16 @@ footer {
     .fila-inferior {
         width: 70%;
         margin: auto;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: column-reverse;
         gap: 0.5rem;
 
         .menu-footer {
             ul {
                 display: flex;
-                justify-content: flex-end;
+                justify-content: center;
+                flex-wrap: wrap;
                 list-style: none;
                 gap: 1.5rem;
 
@@ -94,8 +121,10 @@ footer {
         }
 
         .copy {
+            align-self: flex-start;
             color: map.get($footer-colors, "text");
             opacity: 60%;
+            margin-top: 2rem;
         }
     }
 }

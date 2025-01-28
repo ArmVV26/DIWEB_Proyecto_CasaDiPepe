@@ -271,7 +271,7 @@ a:hover{
     margin-top: 1.5rem;
 }
 .cont-texto a{
-    margin-top: 4.5rem;
+    margin-top: 2.5rem;
 }
 
 .img-deco-index {
@@ -402,12 +402,13 @@ footer{
 /* Cambio la disposicion de las imagenes de las redes sociales del Footer*/
 .img-redes{
     display: flex;
-    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 /* Modifico las imagenes de las redes sociales del footer */
 .img-logoRedes {
-    width: 3rem;
-    height: 3rem;
+    width: 2.75rem;
+    height: 2.75rem;
     padding: 0.5rem;
     background-color: var(--color-Principal);
     box-shadow: 0 0 0 0.2rem var(--color-Secundario-Light);
@@ -417,21 +418,17 @@ footer{
 .fila-inferior{
     width: 70%;
     margin: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse;
     gap: 0.5rem;
 }
 /* Modifico la lista desordenanda del nav del footer */
 .menu-footer ul{
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     list-style: none;
-}
-/* Le indico una disposicion a la lista desordenada del footer */
-.menu-footer ul{
-   display: flex;
-   justify-content: flex-end;
-   gap: 1.5rem;
 }
 /* Modifico el estilos de los enlaces del menu del footer */
 .menu-footer a{
@@ -441,7 +438,6 @@ footer{
     text-align: center;
     color: var(--color-Neutro-Blanco);
     display: inline-block;
-    padding: 0;
 }
 /* Le indico que cuando este el raton encima cambie el color*/
 .menu-footer a:hover{
@@ -449,12 +445,13 @@ footer{
 }
 /* Modifico el estilo del texto de copyright del final */
 .copy{
+    align-self: flex-start;
     color: var(--color-Neutro-Blanco);
     opacity: 60%;
     margin-top: 2rem;
 }
 
-/* MEDIA QUERIES */
+/* MEDIA QUERIES
 /* Moviles pequeños */
 @media (min-width: 320px) {
     body {
@@ -524,7 +521,7 @@ footer{
 
     .redes-img{
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
     }
     .img-Instagram {
         width: 1.5rem;
@@ -536,23 +533,10 @@ footer{
         display: flex;
         flex-direction: column;
     }
-    .img-redes {
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 0;
-    }
     .fila-inferior {
         width: 90%;
-        display: flex;
-        justify-content: center;
-        flex-direction: column-reverse;
-    }
-    .menu-footer ul {
-        justify-content: center;
-        flex-wrap: wrap;
     }
     .copy {
-        align-self: flex-start;
         font-size: 0.55rem;
     }
 }
@@ -582,11 +566,160 @@ footer{
         width: 6.75rem;
         height: 6.75rem;
     }
+
+    .img-deco-index-redes {
+        aspect-ratio: 16/9;
+    }
     
     .copy {
         font-size: 0.75rem;
     }
 }
+
+/* Tablets */
+@media (min-width: 768px) {
+    h1{
+        font-size: 4.8rem;
+    }
+    h3 {
+        font-size: 2rem;
+    }
+    a {
+        font-size: 1.25rem;
+    }
+    
+    .img-Instagram {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .fila-superior {
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .copy {
+        font-size: 1rem;
+    }
+}
+
+/* Portatiles Pequeños */
+@media (min-width: 1024px) {
+    header {
+        position: fixed;
+    }
+    h2 {
+        font-size: 3.5rem;
+    }
+    a .img-logoHeader:hover {
+        margin: 0.15rem;
+    }
+    .enlaces {
+        display: block;
+    }
+    
+    .redes-img{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .img-deco-index-redes {
+        aspect-ratio: 1/1;
+    }
+
+    .fila-superior {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        gap: 0rem;
+    }
+    .img-logoRedes {
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+}
+
+/* Monitores Normales */
+@media (min-width: 1200px) {
+    body {
+        padding-top: 10rem;
+    }
+    header {
+        min-height: 10rem;
+    }
+    .menu {
+        height: 10rem;
+    }
+    .img-logoHeader {
+        width: 9rem;
+        height: 9rem;
+        margin: 0.5rem 0 0.5rem 5rem;
+    }
+    a .img-logoHeader:hover {
+        width: 8.75rem;
+        height: 8.75rem;
+        margin-right: 0.25rem;
+    }
+    .separado{
+        margin-right: 5rem;
+    }
+
+    .intro-botones {
+        width: 55%;
+    }
+
+    .contenido {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        text-align: left;
+    }
+    .contenido h2 {
+        text-align: left;
+        margin-bottom: 1.5rem;
+    }
+    .cont-texto{
+        margin-top: 1.5rem;
+    }
+    .cont-texto a{
+        margin-top: 2.5rem;
+    }
+    .anuncio-texto {
+        font-size: 1.5rem;
+    }
+
+    .fila-superior {
+        gap: 1.5rem;
+    }
+    .img-logoRedes {
+        width: 1.75rem;
+        height: 1.75rem;
+    }
+    .fila-inferior {
+        width: 70%;
+    }
+    .copy {
+        font-size: 1.25rem;
+    }
+}
+
+/* Monitor Grande */
+@media (min-width: 1600px) {
+    a {
+        font-size: 1.5rem;
+    }
+    
+    .img-Instagram {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .fila-superior {
+        width: 80%;
+    }
+    .img-logoRedes {
+        width: 2.75rem;
+        height: 2.75rem;
+    }
+} 
 
 /* Eliminado */
 

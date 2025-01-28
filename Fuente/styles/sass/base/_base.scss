@@ -1,5 +1,6 @@
-// Importo las variables
+// Importo las variables y las media-querires
 @use '../utils/variables';
+@import '../utils/media_query';
 
 // Estilos base generales
 $size-rem: 2rem;
@@ -7,7 +8,17 @@ $size-rem: 2rem;
 body {
     background-color: variables.$color-Neutro-Blanco;
     padding-top: $size-rem * 5;
-}
+
+    @include media-queries(small) {
+        padding-top: $size-rem + 3;
+    }
+    @include media-queries(medium) {
+        padding-top: $size-rem * 4;
+    }
+    @include media-queries(normal) {
+        padding-top: $size-rem * 5;
+    }
+}   
 
 a {
     text-decoration: none;
@@ -23,5 +34,19 @@ a {
 
     &:hover {
         color: variables.$color-Terciario;
+    }
+
+    @include media-queries(small) {
+        font-size: $size-rem - 1;
+        padding: $size-rem - 1.5;
+    }
+    @include media-queries(medium) {
+        padding: $size-rem - 1;
+    }
+    @include media-queries(tablet) {
+        font-size: $size-rem - 0.75;
+    }
+    @include media-queries(large) {
+        font-size: $size-rem - 0.5;
     }
 }
