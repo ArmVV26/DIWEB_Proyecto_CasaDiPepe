@@ -48,7 +48,6 @@ p {
   font-size: 1.25rem;
   color: #222222;
   text-align: justify;
-  font-size: 1.25rem;
   text-indent: 2rem;
 }
 
@@ -267,7 +266,7 @@ footer .fila-inferior .copy {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2.5rem;
-  text-align: right;
+  text-align: left;
   align-items: center;
 }
 .contenido h2 {
@@ -458,4 +457,4 @@ footer .fila-inferior .copy {
   }
 }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=index.css.map */

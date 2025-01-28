@@ -216,7 +216,7 @@ a:hover{
     box-shadow: 0 10px 5px 0 var(--color-Neutro-Negro-rgba);
 }
 
-/* Alieno el texto al centro */
+/* Alineo el texto al centro */
 .img-header-pred{
     position: absolute;
     top: 0;
@@ -258,11 +258,11 @@ a:hover{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2.5rem;
-    text-align: right;
+    text-align: left;
     align-items: center;
 }
 /* Modifico el h2 para que se ponga a la derecha */
-.contenido h2{
+.cont-texto h2{
     text-align: left;
     margin-bottom: 1.5rem;
 }
@@ -455,45 +455,136 @@ footer{
 }
 
 /* MEDIA QUERIES */
-@media (max-width: 1520px){
-    /* Modificar el estilo del apartado de redes sociales del main*/
-    .redes-img article:last-child{
+/* Moviles pequeños */
+@media (min-width: 320px) {
+    body {
+        padding-top: 5rem;
+    }
+    header {
+        position: absolute;
+        min-height: 5rem;
+    }
+    h1{
+        font-size: 3.8rem;
+    }
+    h2 {
+        text-align: center;
+        font-size: 2rem;
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
+    a {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+    .menu {
+        height: 5rem;
+    }
+    .img-logoHeader {
+        width: 4rem;
+        height: 4rem;
+        margin: 0;
+    }
+    a .img-logoHeader:hover {
+        width: 3.75rem;
+        height: 3.75rem;
+        margin: 0;
+    }
+    .enlaces {
         display: none;
     }
-    .redes-img{
-        grid-template-columns: 1fr 1fr;
+    .separado{
+        margin-right: 0.5rem;
     }
-}
 
-@media (max-width: 1335px){
-    /* Modifico el estilo del boton saber mas del main */
-    .cont-texto a{
-        margin-top: 1rem;
+    .intro-botones {
+        width: 90%;
     }
-    /* Modifico la disposion del footer */
-    .pie-pagina{
-        width: 95%;
-    }
-}
 
-@media (max-width: 1277px){
-    /* Modifico el estilo del tamaño de los enlaces del menu*/
-    a{
+    .contenido {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .contenido h2 {
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+    .cont-texto {
+        margin-top: 0.5rem ;
+    }
+    .cont-texto a {
+        margin-top: 2rem;
+    }
+
+    .anuncio-texto {
         font-size: 1.25rem;
+    }
+
+    .redes-img{
+        display: flex;
+        flex-direction: column;
+    }
+    .img-Instagram {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .fila-superior {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+    }
+    .img-redes {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0;
+    }
+    .fila-inferior {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column-reverse;
+    }
+    .menu-footer ul {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .copy {
+        align-self: flex-start;
+        font-size: 0.55rem;
+    }
+}
+
+/* Moviles medianos */
+@media (min-width: 480px) {
+    body {
+        padding-top: 8rem;
+    }
+    header {
+        min-height: 8rem;
+    }
+    h2 {
+        font-size: 2.5rem;
+    }
+    a {
         padding: 1rem;
     }
-    .logo-img{
-        margin: 0.5rem 0 0.5rem 2.5rem;
+    .menu {
+        height: 8rem;
     }
-    .separado{
-        margin-right: 2.5rem;
+    .img-logoHeader {
+        width: 7rem;
+        height: 7rem;
     }
-}
-
-@media (max-width: 1038px){
-    /* Modifico el estilo del tamaño de los enlaces del menu*/
-    h2{
-        font-size: 2.5rem;
+    a .img-logoHeader:hover {
+        width: 6.75rem;
+        height: 6.75rem;
+    }
+    
+    .copy {
+        font-size: 0.75rem;
     }
 }
 
