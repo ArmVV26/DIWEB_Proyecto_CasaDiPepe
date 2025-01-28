@@ -324,7 +324,7 @@ a:hover{
     gap: 1rem;
 }
 /* Le asigno un estilo al contendor de los articulos de las imagenes de las redes sociales*/
-.redes-img picture{
+.img-deco-index-redes{
     position: relative;
     width: 25rem;
     max-width: 30rem;
@@ -338,25 +338,7 @@ a:hover{
     border: 4px solid var(--color-Principal);
     border-radius: 1rem;
 }
-/* Le asigno imagenes a cada articulo de las redes sociales */
-.redes-img picture:nth-child(1){
-    background: url(../../media/img/img-decorativa/svg/decorativa-PaginaPrincipa-RS-1.svg);
-    background-size: cover;
-    background-position: center;
-    filter: brightness(0.75) contrast(115%) saturate(140%) sepia(45%);  
-}
-.redes-img picture:nth-child(2){
-    background: url(../../media/img/img-decorativa/svg/decorativa-PaginaPrincipa-RS-2.svg);
-    background-size: cover;
-    background-position: center;
-    filter: brightness(0.75) contrast(115%) saturate(140%) sepia(45%);  
-}
-.redes-img picture:last-child{
-    background: url(../../media/img/img-decorativa/svg/decorativa-PaginaPrincipa-RS-3.svg);
-    background-size: cover;
-    background-position: center;
-    filter: brightness(0.75) contrast(115%) saturate(140%) sepia(45%);  
-}
+
 /* Resalto la imagen cuando pongo el raton encima */
 .redes-img picture:hover{
     cursor: pointer;
