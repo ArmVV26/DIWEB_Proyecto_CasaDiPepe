@@ -22,8 +22,8 @@
 //  Con cada @each itero sobre cada formato y resolucion (Como un for).
 //  Genero una regla @media para añadir las imagenes en funcion de la resolucion.
 @mixin add-media-img($file, $name, $formats, $resolutions) {
-    @each $resolution in $resolutions {
-        @each $format in $formats {
+    @each $format in $formats {
+        @each $resolution in $resolutions {
             @media (min-width: $resolution) {
                 background-image: url("../../media/img/#{$file}/#{$format}/#{$name}-#{$resolution}.#{$format}");
             }
@@ -36,7 +36,7 @@
     @include add-media-img(
         "hero-image",
         "hero-PaginaPrincipal",
-        ("avif", "webp", "jpg"),
+        ("webp", "jpg", "avif"),
         (320px, 640px, 960px, 1600px, 2240px, 3200px)
     );
 }

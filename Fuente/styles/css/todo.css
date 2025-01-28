@@ -356,9 +356,10 @@ a:hover{
     right: 1rem;
     width: 3rem;
     height: 3rem;
+    padding: 0.25rem;
     background-color: var(--color-Secundario);
     border: 3px solid var(--color-Neutro-Negro);
-    border-radius: 0.5rem;
+    border-radius: 1rem;
     z-index: 10;
 }
 

@@ -199,7 +199,7 @@ footer .fila-superior .cta-redes .img-redes {
 footer .fila-superior .cta-redes .img-redes .img-logoRedes {
   width: 3rem;
   height: 3rem;
-  padding: 0.5rem;
+  padding: 1rem;
   background-color: #961316;
   box-shadow: 0 0 0 0.2rem #F1A2A2;
   border-radius: 1.75rem;
@@ -259,109 +259,6 @@ footer .fila-inferior .copy {
   display: flex;
   justify-content: space-between;
   width: 55%;
-}
-
-.img-header-pred {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  z-index: 0;
-  filter: brightness(0.75) contrast(120%) saturate(110%) sepia(25%);
-}
-
-@media (min-width: 320px) {
-  .img-index {
-    background-image: url("../../media/img/hero-image/avif/hero-PaginaPrincipal-320px.avif");
-  }
-}
-@media (min-width: 320px) {
-  .img-index {
-    background-image: url("../../media/img/hero-image/webp/hero-PaginaPrincipal-320px.webp");
-  }
-}
-@media (min-width: 320px) {
-  .img-index {
-    background-image: url("../../media/img/hero-image/jpg/hero-PaginaPrincipal-320px.jpg");
-  }
-}
-@media (min-width: 640px) {
-  .img-index {
-    background-image: url("../../media/img/hero-image/avif/hero-PaginaPrincipal-640px.avif");
-  }
-}
-@media (min-width: 640px) {
-  .img-index {
-    background-image: url("../../media/img/hero-image/webp/hero-PaginaPrincipal-640px.webp");
-  }
-}
-@media (min-width: 640px) {
-  .img-index {
-    background-image: url("../../media/img/hero-image/jpg/hero-PaginaPrincipal-640px.jpg");
-  }
-}
-@media (min-width: 960px) {
-  .img-index {
-    background-image: url("../../media/img/hero-image/avif/hero-PaginaPrincipal-960px.avif");
-  }
-}
-@media (min-width: 960px) {
-  .img-index {
-    background-image: url("../../media/img/hero-image/webp/hero-PaginaPrincipal-960px.webp");
-  }
-}
-@media (min-width: 960px) {
-  .img-index {
-    background-image: url("../../media/img/hero-image/jpg/hero-PaginaPrincipal-960px.jpg");
-  }
-}
-@media (min-width: 1600px) {
-  .img-index {
-    background-image: url("../../media/img/hero-image/avif/hero-PaginaPrincipal-1600px.avif");
-  }
-}
-@media (min-width: 1600px) {
-  .img-index {
-    background-image: url("../../media/img/hero-image/webp/hero-PaginaPrincipal-1600px.webp");
-  }
-}
-@media (min-width: 1600px) {
-  .img-index {
-    background-image: url("../../media/img/hero-image/jpg/hero-PaginaPrincipal-1600px.jpg");
-  }
-}
-@media (min-width: 2240px) {
-  .img-index {
-    background-image: url("../../media/img/hero-image/avif/hero-PaginaPrincipal-2240px.avif");
-  }
-}
-@media (min-width: 2240px) {
-  .img-index {
-    background-image: url("../../media/img/hero-image/webp/hero-PaginaPrincipal-2240px.webp");
-  }
-}
-@media (min-width: 2240px) {
-  .img-index {
-    background-image: url("../../media/img/hero-image/jpg/hero-PaginaPrincipal-2240px.jpg");
-  }
-}
-@media (min-width: 3200px) {
-  .img-index {
-    background-image: url("../../media/img/hero-image/avif/hero-PaginaPrincipal-3200px.avif");
-  }
-}
-@media (min-width: 3200px) {
-  .img-index {
-    background-image: url("../../media/img/hero-image/webp/hero-PaginaPrincipal-3200px.webp");
-  }
-}
-@media (min-width: 3200px) {
-  .img-index {
-    background-image: url("../../media/img/hero-image/jpg/hero-PaginaPrincipal-3200px.jpg");
-  }
 }
 
 .contenido {
@@ -451,10 +348,114 @@ footer .fila-inferior .copy {
   right: 1rem;
   width: 3rem;
   height: 3rem;
+  padding: 0.25rem;
   background-color: #B03B3B;
   border: 3px solid #222222;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   z-index: 10;
+}
+
+.img-header-pred {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  filter: brightness(0.75) contrast(120%) saturate(110%) sepia(25%);
+}
+
+@media (min-width: 320px) {
+  .img-index {
+    background-image: url("../../media/img/hero-image/webp/hero-PaginaPrincipal-320px.webp");
+  }
+}
+@media (min-width: 640px) {
+  .img-index {
+    background-image: url("../../media/img/hero-image/webp/hero-PaginaPrincipal-640px.webp");
+  }
+}
+@media (min-width: 960px) {
+  .img-index {
+    background-image: url("../../media/img/hero-image/webp/hero-PaginaPrincipal-960px.webp");
+  }
+}
+@media (min-width: 1600px) {
+  .img-index {
+    background-image: url("../../media/img/hero-image/webp/hero-PaginaPrincipal-1600px.webp");
+  }
+}
+@media (min-width: 2240px) {
+  .img-index {
+    background-image: url("../../media/img/hero-image/webp/hero-PaginaPrincipal-2240px.webp");
+  }
+}
+@media (min-width: 3200px) {
+  .img-index {
+    background-image: url("../../media/img/hero-image/webp/hero-PaginaPrincipal-3200px.webp");
+  }
+}
+@media (min-width: 320px) {
+  .img-index {
+    background-image: url("../../media/img/hero-image/jpg/hero-PaginaPrincipal-320px.jpg");
+  }
+}
+@media (min-width: 640px) {
+  .img-index {
+    background-image: url("../../media/img/hero-image/jpg/hero-PaginaPrincipal-640px.jpg");
+  }
+}
+@media (min-width: 960px) {
+  .img-index {
+    background-image: url("../../media/img/hero-image/jpg/hero-PaginaPrincipal-960px.jpg");
+  }
+}
+@media (min-width: 1600px) {
+  .img-index {
+    background-image: url("../../media/img/hero-image/jpg/hero-PaginaPrincipal-1600px.jpg");
+  }
+}
+@media (min-width: 2240px) {
+  .img-index {
+    background-image: url("../../media/img/hero-image/jpg/hero-PaginaPrincipal-2240px.jpg");
+  }
+}
+@media (min-width: 3200px) {
+  .img-index {
+    background-image: url("../../media/img/hero-image/jpg/hero-PaginaPrincipal-3200px.jpg");
+  }
+}
+@media (min-width: 320px) {
+  .img-index {
+    background-image: url("../../media/img/hero-image/avif/hero-PaginaPrincipal-320px.avif");
+  }
+}
+@media (min-width: 640px) {
+  .img-index {
+    background-image: url("../../media/img/hero-image/avif/hero-PaginaPrincipal-640px.avif");
+  }
+}
+@media (min-width: 960px) {
+  .img-index {
+    background-image: url("../../media/img/hero-image/avif/hero-PaginaPrincipal-960px.avif");
+  }
+}
+@media (min-width: 1600px) {
+  .img-index {
+    background-image: url("../../media/img/hero-image/avif/hero-PaginaPrincipal-1600px.avif");
+  }
+}
+@media (min-width: 2240px) {
+  .img-index {
+    background-image: url("../../media/img/hero-image/avif/hero-PaginaPrincipal-2240px.avif");
+  }
+}
+@media (min-width: 3200px) {
+  .img-index {
+    background-image: url("../../media/img/hero-image/avif/hero-PaginaPrincipal-3200px.avif");
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
