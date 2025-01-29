@@ -118,38 +118,47 @@ header {
   z-index: 5;
   box-shadow: 0 10px 5px 0 rgba(34, 34, 34, 0.5);
 }
-header .img-logoHeader {
+
+.img-logoHeader {
   width: 9rem;
   height: 9rem;
   margin: 0.5rem 0 0.5rem 5rem;
 }
-header .img-logoHeader:hover {
+.img-logoHeader:hover {
   width: 8.75rem;
   height: 8.75rem;
-  margin-right: 0.25rem;
+  margin: auto;
   transition: all 0.5s;
 }
-header .img-logoHeader:active {
+.img-logoHeader:active {
   transform: scale(0.9) skew(-2deg);
 }
-header .menu {
+
+.menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 10rem;
 }
-header .menu .enlaces ul {
+
+.menu-desplegable {
+  display: none;
+  background: none;
+  border: none;
+  color: #F1E7E7;
+  font-size: 5rem;
+  cursor: pointer;
+}
+
+.enlaces ul {
   display: flex;
   list-style: none;
 }
-header .menu .enlaces ul a {
-  font-size: 1.5rem;
-  padding: 1.25rem;
-}
-header .menu .enlaces ul a:hover {
+.enlaces ul a:hover {
   color: #F1A2A2;
 }
-header .menu .separado {
+
+.separado {
   margin-right: 5rem;
 }
 
@@ -161,7 +170,8 @@ footer {
   flex-direction: column;
   gap: 2rem;
 }
-footer .fila-superior {
+
+.fila-superior {
   width: 80%;
   margin: auto;
   display: grid;
@@ -169,30 +179,35 @@ footer .fila-superior {
   align-items: center;
   gap: 1.5rem;
 }
-footer .fila-superior .img-logoFooter {
+
+.img-logoFooter {
   width: 9rem;
   height: 9rem;
   justify-self: start;
 }
-footer .fila-superior .img-logoPatrocinador {
+
+.img-logoPatrocinador {
   width: 10rem;
   height: 10rem;
   justify-self: center;
 }
-footer .fila-superior .cta-redes {
+
+.cta-redes {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 1rem;
 }
-footer .fila-superior .cta-redes .img-redes {
+
+.img-redes {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 0.75rem;
 }
-footer .fila-superior .cta-redes .img-redes .img-logoRedes {
+
+.img-logoRedes {
   width: 2.75rem;
   height: 2.75rem;
   padding: 0.5rem;
@@ -200,7 +215,8 @@ footer .fila-superior .cta-redes .img-redes .img-logoRedes {
   box-shadow: 0 0 0 0.2rem #F1A2A2;
   border-radius: 1.75rem;
 }
-footer .fila-inferior {
+
+.fila-inferior {
   width: 70%;
   margin: auto;
   display: flex;
@@ -208,14 +224,15 @@ footer .fila-inferior {
   flex-direction: column-reverse;
   gap: 0.5rem;
 }
-footer .fila-inferior .menu-footer ul {
+
+.menu-footer ul {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   list-style: none;
   gap: 1.5rem;
 }
-footer .fila-inferior .menu-footer ul a {
+.menu-footer ul a {
   font-weight: normal;
   font-size: 1rem;
   text-transform: none;
@@ -223,10 +240,11 @@ footer .fila-inferior .menu-footer ul a {
   color: #F1E7E7;
   display: inline-block;
 }
-footer .fila-inferior .menu-footer ul a:hover {
+.menu-footer ul a:hover {
   color: #F1A2A2;
 }
-footer .fila-inferior .copy {
+
+.copy {
   align-self: flex-start;
   color: #F1E7E7;
   opacity: 60%;
@@ -244,13 +262,27 @@ footer .fila-inferior .copy {
   align-items: center;
   box-shadow: 0 10px 5px 0 rgba(34, 34, 34, 0.5);
 }
-.introduccion .intro-texto {
+
+.img-header-pred {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  filter: brightness(0.75) contrast(120%) saturate(110%) sepia(25%);
+}
+
+.intro-texto {
   position: relative;
   z-index: 1;
   text-align: center;
   color: #F1E7E7;
 }
-.introduccion .intro-botones {
+
+.intro-botones {
   position: relative;
   z-index: 1;
   margin-top: 5rem;
@@ -268,17 +300,19 @@ footer .fila-inferior .copy {
   text-align: left;
   align-items: center;
 }
-.contenido h2 {
+
+.cont-texto {
+  margin-top: 1.5rem;
+}
+.cont-texto h2 {
   text-align: left;
   margin-bottom: 1.5rem;
 }
-.contenido .cont-texto {
-  margin-top: 1.5rem;
-}
-.contenido .cont-texto a {
+.cont-texto a {
   margin-top: 2.5rem;
 }
-.contenido .img-deco-index {
+
+.img-deco-index {
   display: block;
   width: 100%;
   height: auto;
@@ -286,7 +320,7 @@ footer .fila-inferior .copy {
   box-shadow: 0px 0px 5px 5px rgba(34, 34, 34, 0.5);
   border: 2px solid #961316;
   border-radius: 1rem;
-  filter: brightness(0.75) contrast(115%) saturate(140%) sepia(45%);
+  filter: brightness(0.85) contrast(115%) saturate(140%) sepia(45%);
 }
 
 .anuncio {
@@ -297,7 +331,8 @@ footer .fila-inferior .copy {
   border-radius: 1rem;
   border: 2px solid #B03B3B;
 }
-.anuncio .anuncio-texto {
+
+.anuncio-texto {
   text-align: center;
   font-weight: bolder;
   font-size: 1.5rem;
@@ -314,12 +349,14 @@ footer .fila-inferior .copy {
   align-items: center;
   gap: 1.5rem;
 }
-.redes .redes-img {
+
+.redes-img {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1.5rem;
 }
-.redes .redes-img .img-deco-index-redes {
+
+.img-deco-index-redes {
   position: relative;
   width: 100%;
   aspect-ratio: 1/1;
@@ -327,20 +364,22 @@ footer .fila-inferior .copy {
   border-radius: 1rem;
   overflow: hidden;
   transition: all 0.5s;
-  filter: brightness(0.75) contrast(115%) saturate(140%) sepia(45%);
+  filter: brightness(0.8) contrast(115%) saturate(140%) sepia(45%);
 }
-.redes .redes-img .img-deco-index-redes .img-main {
+
+.img-main {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.redes .redes-img .img-deco-index-redes:hover {
-  cursor: pointer;
+.img-main:hover {
+  cursor: none;
   transform: scale(1.05);
-  filter: brightness(0.8);
+  filter: brightness(1.1);
   transition: all 0.5s;
 }
-.redes .redes-img .img-deco-index-redes .img-Instagram {
+
+.img-Instagram {
   position: absolute;
   bottom: 1rem;
   right: 1rem;
@@ -387,12 +426,32 @@ footer .fila-inferior .copy {
   }
   .menu {
     height: 5rem;
+    align-items: none;
+  }
+  .menu-desplegable {
+    display: block;
+    margin-left: auto;
+    font-size: 3rem;
+    position: relative;
   }
   .enlaces {
     display: none;
+    position: absolute;
+    right: 0;
+  }
+  .enlaces.activo {
+    display: block;
+    top: 5rem;
+    background-color: #961316;
+    text-align: center;
+    border-bottom-left-radius: 2rem;
+  }
+  .enlaces.activo ul {
+    flex-direction: column;
+    position: relative;
   }
   .separado {
-    margin-right: 0.5rem;
+    margin: 0 0.5rem 0 1rem;
   }
   .intro-botones {
     width: 90%;
@@ -459,6 +518,12 @@ footer .fila-inferior .copy {
   .menu {
     height: 8rem;
   }
+  .menu-desplegable {
+    font-size: 4rem;
+  }
+  .enlaces.activo {
+    top: 8rem;
+  }
   .img-deco-index-redes {
     aspect-ratio: 16/9;
   }
@@ -475,6 +540,9 @@ footer .fila-inferior .copy {
   }
   h3 {
     font-size: 2rem;
+  }
+  .menu-desplegable {
+    font-size: 5rem;
   }
   .img-Instagram {
     width: 2rem;
@@ -493,6 +561,35 @@ footer .fila-inferior .copy {
   h2 {
     font-size: 3.5rem;
   }
+  header {
+    position: fixed;
+  }
+  a .img-logoHeader:hover {
+    margin: 0.15rem;
+  }
+  .menu-desplegable {
+    display: none;
+  }
+  .enlaces {
+    display: block;
+    position: relative;
+  }
+  .enlaces.activo {
+    top: 0;
+  }
+  .enlaces ul {
+    flex-direction: row;
+  }
+  .enlaces.activo ul {
+    flex-direction: row;
+  }
+  .redes-img {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .img-deco-index-redes {
+    aspect-ratio: 1/1;
+  }
   .fila-superior {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -502,22 +599,6 @@ footer .fila-inferior .copy {
   .img-logoRedes {
     width: 1.25rem;
     height: 1.25rem;
-  }
-  header {
-    position: fixed;
-  }
-  a .img-logoHeader:hover {
-    margin: 0.15rem;
-  }
-  .enlaces {
-    display: block;
-  }
-  .redes-img {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-  .img-deco-index-redes {
-    aspect-ratio: 1/1;
   }
 }
 @media (min-width: 1200px) {
@@ -535,7 +616,7 @@ footer .fila-inferior .copy {
   a .img-logoHeader:hover {
     width: 8.75rem;
     height: 8.75rem;
-    margin-right: 0.25rem;
+    margin: 0.5rem 0.25rem 0.5rem 5rem;
   }
   .menu {
     height: 10rem;
@@ -592,6 +673,48 @@ footer .fila-inferior .copy {
   .img-logoRedes {
     width: 2.75rem;
     height: 2.75rem;
+  }
+}
+@media (min-width: 320px) {
+  .img-index {
+    background-image: url("../../media/img/hero-image/webp/hero-PaginaPrincipal-320px.webp");
+    background-image: url("../../media/img/hero-image/avif/hero-PaginaPrincipal-320px.avif");
+    background-image: url("../../media/img/hero-image/jpg/hero-PaginaPrincipal-320px.jpg");
+  }
+}
+@media (min-width: 640px) {
+  .img-index {
+    background-image: url("../../media/img/hero-image/webp/hero-PaginaPrincipal-640px.webp");
+    background-image: url("../../media/img/hero-image/avif/hero-PaginaPrincipal-640px.avif");
+    background-image: url("../../media/img/hero-image/jpg/hero-PaginaPrincipal-640px.jpg");
+  }
+}
+@media (min-width: 960px) {
+  .img-index {
+    background-image: url("../../media/img/hero-image/webp/hero-PaginaPrincipal-960px.webp");
+    background-image: url("../../media/img/hero-image/avif/hero-PaginaPrincipal-960px.avif");
+    background-image: url("../../media/img/hero-image/jpg/hero-PaginaPrincipal-960px.jpg");
+  }
+}
+@media (min-width: 1600px) {
+  .img-index {
+    background-image: url("../../media/img/hero-image/webp/hero-PaginaPrincipal-1600px.webp");
+    background-image: url("../../media/img/hero-image/avif/hero-PaginaPrincipal-1600px.avif");
+    background-image: url("../../media/img/hero-image/jpg/hero-PaginaPrincipal-1600px.jpg");
+  }
+}
+@media (min-width: 2240px) {
+  .img-index {
+    background-image: url("../../media/img/hero-image/webp/hero-PaginaPrincipal-2240px.webp");
+    background-image: url("../../media/img/hero-image/avif/hero-PaginaPrincipal-2240px.avif");
+    background-image: url("../../media/img/hero-image/jpg/hero-PaginaPrincipal-2240px.jpg");
+  }
+}
+@media (min-width: 3200px) {
+  .img-index {
+    background-image: url("../../media/img/hero-image/webp/hero-PaginaPrincipal-3200px.webp");
+    background-image: url("../../media/img/hero-image/avif/hero-PaginaPrincipal-3200px.avif");
+    background-image: url("../../media/img/hero-image/jpg/hero-PaginaPrincipal-3200px.jpg");
   }
 }
 

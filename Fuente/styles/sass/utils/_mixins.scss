@@ -1,0 +1,51 @@
+// Aqui creare todos los Mixins que vaya a usar en otros scss
+
+// Estilos de los Botones
+@mixin boton-base($background-color, $hover-background-color, $border-color, $box-shadow) {
+    background-color: $background-color;
+    border: 2px solid ($border-color);
+    border-radius: 1rem;
+    box-shadow: $box-shadow;
+    transition: all 0.25s ease;
+
+    &:hover {
+        background-color: $hover-background-color;
+        transition: all 0.25s;
+    }
+}
+
+// Creo una lista para indicar los formatos y otra para indicar las resoluciones
+$formats: ("webp", "avif", "jpg");
+$resolutions: (320px, 640px, 960px, 1600px, 2240px, 3200px);
+
+@mixin media-img-principal($name) {
+    @each $resolution in $resolutions {
+        @media (min-width: $resolution) {
+            background-image: url("../../media/img/hero-image/#{nth($formats, 1)}/#{$name}-#{$resolution}.#{nth($formats, 1)}");
+            background-image: url("../../media/img/hero-image/#{nth($formats, 2)}/#{$name}-#{$resolution}.#{nth($formats, 2)}");
+            background-image: url("../../media/img/hero-image/#{nth($formats, 3)}/#{$name}-#{$resolution}.#{nth($formats, 3)}");
+        }
+    }
+}
+
+// Declaro los Media Queries para que mi web sea resposive
+// Mapa de Puntos de Ruptura
+$breakpoints: (
+    small: 320px,       // Moviles Pequeños
+    medium: 480px,      // Moviles Medianos
+    tablet: 768px,      // Tablets
+    laptop: 1024px,     // Portailes Pequeños
+    normal: 1200px,     // Monitor Normal 
+    large: 1600px,      // Monitor Grande
+);
+
+// Mixin para hacer las media queries 
+@mixin media-queries($key) {
+    @if map-has-key($breakpoints, $key) {
+        @media (min-width: map-get($breakpoints, $key)) {
+            @content;
+        }
+    } @else {
+        @error "El breakpoint `#{$key}` no existe en el mapa de breakpoints.";
+    }
+}

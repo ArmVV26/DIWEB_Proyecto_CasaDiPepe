@@ -1,4 +1,4 @@
-// Importo los distintos css para aplicar los media queries correspondientes
+// Importo los distintos scss para aplicar los media queries correspondientes
 @use '../base/base';
 @use '../base/typography';
 @use '../layout/footer';
@@ -7,35 +7,15 @@
 @use '../pages/index';
 @use '../utils/variables';
 
-// Declaro los Media Querires para que mi web sea resposive
-// Mapa de Breakpoints
-$breakpoints: (
-    small: 320px,       // Moviles Pequeños
-    medium: 480px,      // Moviles Medianos
-    tablet: 768px,      // Tablets
-    laptop: 1024px,     // Portailes Pequeños
-    normal: 1200px,     // Monitor Normal 
-    large: 1600px,      // Monitor Grande
-);
-
-// Mixin para hacer las media queries 
-@mixin media-queries($key) {
-    @if map-has-key($breakpoints, $key) {
-        @media (min-width: map-get($breakpoints, $key)) {
-            @content;
-        }
-    } @else {
-        @error "El breakpoint `#{$key}` no existe en el mapa de breakpoints.";
-    }
-}
+// Importo los Mixin para poder aplicar la funcion de los media queries
+@use '../utils/mixins';
 
 // Declaro todas las media-queries
-@include media-queries(small) {
+@include mixins.media-queries(small) {
     // Base.scss
     body {
         padding-top: 5rem;
     }
-
     a {
         font-size: 1rem;
         padding: 0.5rem;
@@ -68,12 +48,32 @@ $breakpoints: (
     }
     .menu {
         height: 5rem;
+        align-items: none;
     }
-    .enlaces {
+    .menu-desplegable {
+        display: block;
+        margin-left: auto;
+        font-size: 3rem;
+        position: relative;
+    }
+    .enlaces{
         display: none;
+        position: absolute;
+        right: 0;
+    }
+    .enlaces.activo{
+        display: block;
+        top: 5rem;
+        background-color: variables.$color-Principal;
+        text-align: center;
+        border-bottom-left-radius: 2rem;
+    }
+    .enlaces.activo ul {
+        flex-direction: column;
+        position: relative;
     }
     .separado{
-        margin-right: 0.5rem;
+        margin: 0 0.5rem 0 1rem;
     }
     // Section.scss
     .intro-botones {
@@ -120,7 +120,7 @@ $breakpoints: (
     }
 }
 
-@include media-queries(medium) {
+@include mixins.media-queries(medium) {
     // Base.scss
     body {
         padding-top: 8rem;
@@ -147,6 +147,12 @@ $breakpoints: (
     .menu {
         height: 8rem;
     }
+    .menu-desplegable {
+        font-size: 4rem;
+    }
+    .enlaces.activo {
+        top: 8rem;
+    }
     // Index.html
     .img-deco-index-redes {
         aspect-ratio: 16/9;
@@ -157,7 +163,7 @@ $breakpoints: (
     }
 }
 
-@include media-queries(tablet) {
+@include mixins.media-queries(tablet) {
     // Base.scss
     a {
         font-size: 1.25rem;
@@ -168,6 +174,10 @@ $breakpoints: (
     }
     h3 {
         font-size: 2rem;
+    }
+    // Header.scss
+    .menu-desplegable {
+        font-size: 5rem;
     }
     // Index.html
     .img-Instagram {
@@ -185,10 +195,41 @@ $breakpoints: (
     }
 }
 
-@include media-queries(laptop) {
+@include mixins.media-queries(laptop) {
     // Typpgraphy.scss
     h2 {
         font-size: 3.5rem;
+    }
+    // Header.scss
+    header {
+        position: fixed;
+    }
+    a .img-logoHeader:hover {
+        margin: 0.15rem;
+    }
+    .menu-desplegable {
+        display: none;
+    }
+    .enlaces {
+        display: block;
+        position: relative;
+    }
+    .enlaces.activo {
+        top: 0;
+    }
+    .enlaces ul {
+        flex-direction: row;
+    }
+    .enlaces.activo ul {
+        flex-direction: row;
+    }
+    // Index.html
+    .redes-img{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .img-deco-index-redes {
+        aspect-ratio: 1/1;
     }
     // Footer.scss
     .fila-superior {
@@ -201,27 +242,9 @@ $breakpoints: (
         width: 1.25rem;
         height: 1.25rem;
     }
-    // Header.scss
-    header {
-        position: fixed;
-    }
-    a .img-logoHeader:hover {
-        margin: 0.15rem;
-    }
-    .enlaces {
-        display: block;
-    }
-    // Index.html
-    .redes-img{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-    .img-deco-index-redes {
-        aspect-ratio: 1/1;
-    }
 }
 
-@include media-queries(normal) {
+@include mixins.media-queries(normal) {
     // Base.scss
     body {
         padding-top: 10rem;
@@ -238,7 +261,7 @@ $breakpoints: (
     a .img-logoHeader:hover {
         width: 8.75rem;
         height: 8.75rem;
-        margin-right: 0.25rem;
+        margin: 0.5rem 0.25rem 0.5rem 5rem;
     }
     .menu {
         height: 10rem;
@@ -285,7 +308,7 @@ $breakpoints: (
     }
 }
 
-@include media-queries(large) {
+@include mixins.media-queries(large) {
     // Base.scss
     a {
         font-size: 1.5rem;

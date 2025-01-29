@@ -10,48 +10,52 @@ header {
     min-height: 10rem;
     z-index: 5;
     box-shadow: 0 10px 5px 0 variables.$color-Neutro-Negro-rgba;
+}
 
-    .img-logoHeader {
-        width: 9rem;
-        height: 9rem;
-        margin: 0.5rem 0 0.5rem 5rem;
+.img-logoHeader {
+    width: 9rem;
+    height: 9rem;
+    margin: 0.5rem 0 0.5rem 5rem;
 
-        &:hover {
-            width: 8.75rem;
-            height: 8.75rem;
-            margin-right: 0.25rem;
-            transition: all 0.5s;
-        }
-
-        &:active {
-            transform: scale(0.90) skew(-2deg);
-        }
+    &:hover {
+        width: 8.75rem;
+        height: 8.75rem;
+        margin: auto;
+        transition: all 0.5s;
     }
 
-    .menu {
+    &:active {
+        transform: scale(0.90) skew(-2deg);
+    }
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10rem;
+}
+
+.menu-desplegable {
+    display: none;
+    background: none;
+    border: none;
+    color: variables.$color-Neutro-Blanco;
+    font-size: 5rem;
+    cursor: pointer;
+}
+
+.enlaces {
+    ul {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 10rem;
-
-        .enlaces {
-            ul {
-                display: flex;
-                list-style: none;
-
-                a {
-                    font-size: 1.5rem;
-                    padding: 1.25rem;
-
-                    &:hover {
-                        color: variables.$color-Terciario;
-                    }
-                }
-            }
-        }
-
-        .separado {
-            margin-right: 5rem;
+        list-style: none;
+        
+        a:hover {
+            color: variables.$color-Terciario;
         }
     }
+}
+
+.separado {
+    margin-right: 5rem;
 }

@@ -1,42 +1,9 @@
-// Importo las Variables y las funciones map de sass
-@use '../utils/variables';
+// Importo los Mixins para generar los media queries
+@use '../utils/mixins';
 
-// Estilos predeterminado de las hero-imagenes
-.img-header-pred {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    z-index: 0;
-    filter: brightness(0.75) contrast(120%) saturate(110%) sepia(25%);
-}
+// Aqui generare los media-queries de la imagen principal de cada pagina
 
-//  Creo un Mixin que recibe 3 parametros:
-//      - El nombre del directorio al que me refiero.
-//      - El nombre del fichero que estoy buscando.
-//      - Los formatos en los que voy a querer la imagen.
-//      - Las resoluciones que estan la imagenes.
-//  Con cada @each itero sobre cada formato y resolucion (Como un for).
-//  Genero una regla @media para añadir las imagenes en funcion de la resolucion.
-@mixin add-media-img($file, $name, $formats, $resolutions) {
-    @each $format in $formats {
-        @each $resolution in $resolutions {
-            @media (min-width: $resolution) {
-                background-image: url("../../media/img/#{$file}/#{$format}/#{$name}-#{$resolution}.#{$format}");
-            }
-        }
-    }
-}
-  
-// Para la imagenes del index
+// Imagen del index
 .img-index {
-    @include add-media-img(
-        "hero-image",
-        "hero-PaginaPrincipal",
-        ("webp", "jpg", "avif"),
-        (320px, 640px, 960px, 1600px, 2240px, 3200px)
-    );
+    @include mixins.media-img-principal("hero-PaginaPrincipal");
 }

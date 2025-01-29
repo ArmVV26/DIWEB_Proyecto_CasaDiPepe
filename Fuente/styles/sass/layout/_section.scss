@@ -14,20 +14,32 @@
     align-items: center;
 
     box-shadow: 0 10px 5px 0 variables.$color-Neutro-Negro-rgba;
+}
 
-    .intro-texto {
-        position: relative;
-        z-index: 1;
-        text-align: center;
-        color: variables.$color-Neutro-Blanco;
-    }
+.img-header-pred {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    filter: brightness(0.75) contrast(120%) saturate(110%) sepia(25%);
+}
 
-    .intro-botones {
-        position: relative;
-        z-index: 1;
-        margin-top: 5rem;
-        display: flex;
-        justify-content: space-between;
-        width: 55%;
-    }
+.intro-texto {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: variables.$color-Neutro-Blanco;
+}
+
+.intro-botones {
+    position: relative;
+    z-index: 1;
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+    width: 55%;
 }
