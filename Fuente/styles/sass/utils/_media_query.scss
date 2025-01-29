@@ -1,3 +1,12 @@
+// Importo los distintos css para aplicar los media queries correspondientes
+@use '../base/base';
+@use '../base/typography';
+@use '../layout/footer';
+@use '../layout/header';
+@use '../layout/section';
+@use '../pages/index';
+@use '../utils/variables';
+
 // Declaro los Media Querires para que mi web sea resposive
 // Mapa de Breakpoints
 $breakpoints: (
@@ -17,5 +26,281 @@ $breakpoints: (
         }
     } @else {
         @error "El breakpoint `#{$key}` no existe en el mapa de breakpoints.";
+    }
+}
+
+// Declaro todas las media-queries
+@include media-queries(small) {
+    // Base.scss
+    body {
+        padding-top: 5rem;
+    }
+
+    a {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+    // Typpgraphy.scss
+    h1 {
+        font-size: 3.8rem;
+    }   
+    h2 {
+        text-align: center;
+        font-size: 2rem;
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
+    // Header.scss
+    header {
+        position: absolute;
+        min-height: 5rem;
+    }
+    .img-logoHeader {
+        width: 4rem;
+        height: 4rem;
+        margin: 0;
+    }
+    a .img-logoHeader:hover {
+        width: 3.75rem;
+        height: 3.75rem;
+        margin: 0;
+    }
+    .menu {
+        height: 5rem;
+    }
+    .enlaces {
+        display: none;
+    }
+    .separado{
+        margin-right: 0.5rem;
+    }
+    // Section.scss
+    .intro-botones {
+        width: 90%;
+    }    
+    // Index.html
+    .contenido {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .contenido h2 {
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+    .cont-texto {
+        margin-top: 0.5rem ;
+    }
+    .cont-texto a {
+        margin-top: 2rem;
+    }
+    .anuncio-texto {
+        font-size: 1.25rem;
+    }
+    .redes-img{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .img-Instagram {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    // Footer.scss
+    .fila-superior {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+    }
+    .fila-inferior {
+        width: 90%;
+    }
+    .copy {
+        font-size: 0.55rem;
+    }
+}
+
+@include media-queries(medium) {
+    // Base.scss
+    body {
+        padding-top: 8rem;
+    }
+    a {
+        padding: 1rem;
+    }
+    // Typpgraphy.scss
+    h2 {
+        font-size: 2.5rem;
+    } 
+    // Header.scss
+    header {
+        min-height: 8rem;
+    }
+    .img-logoHeader {
+        width: 7rem;
+        height: 7rem;
+    }
+    a .img-logoHeader:hover {
+        width: 6.75rem;
+        height: 6.75rem;
+    }
+    .menu {
+        height: 8rem;
+    }
+    // Index.html
+    .img-deco-index-redes {
+        aspect-ratio: 16/9;
+    }
+    // Footer.scss
+    .copy {
+        font-size: 0.75rem;
+    }
+}
+
+@include media-queries(tablet) {
+    // Base.scss
+    a {
+        font-size: 1.25rem;
+    }  
+    // Typpgraphy.scss
+    h1 {
+        font-size: 4.8rem;
+    }
+    h3 {
+        font-size: 2rem;
+    }
+    // Index.html
+    .img-Instagram {
+        width: 2rem;
+        height: 2rem;
+    }
+    // Footer.scss
+    .fila-superior {
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .copy {
+        font-size: 1rem;
+    }
+}
+
+@include media-queries(laptop) {
+    // Typpgraphy.scss
+    h2 {
+        font-size: 3.5rem;
+    }
+    // Footer.scss
+    .fila-superior {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        gap: 0rem;
+    }
+    .img-logoRedes {
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+    // Header.scss
+    header {
+        position: fixed;
+    }
+    a .img-logoHeader:hover {
+        margin: 0.15rem;
+    }
+    .enlaces {
+        display: block;
+    }
+    // Index.html
+    .redes-img{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .img-deco-index-redes {
+        aspect-ratio: 1/1;
+    }
+}
+
+@include media-queries(normal) {
+    // Base.scss
+    body {
+        padding-top: 10rem;
+    }
+    // Header.scss
+    header {
+        min-height: 10rem;
+    }
+    .img-logoHeader {
+        width: 9rem;
+        height: 9rem;
+        margin: 0.5rem 0 0.5rem 5rem;
+    }
+    a .img-logoHeader:hover {
+        width: 8.75rem;
+        height: 8.75rem;
+        margin-right: 0.25rem;
+    }
+    .menu {
+        height: 10rem;
+    }
+    .separado{
+        margin-right: 5rem;
+    }
+    // Section.scss
+    .intro-botones {
+        width: 55%;
+    }
+    // Index.html
+    .contenido {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        text-align: left;
+    }
+    .contenido h2 {
+        text-align: left;
+        margin-bottom: 1.5rem;
+    }
+    .cont-texto{
+        margin-top: 1.5rem;
+    }
+    .cont-texto a{
+        margin-top: 2.5rem;
+    }
+    .anuncio-texto {
+        font-size: 1.5rem;
+    }
+     // Footer.scss
+     .fila-superior {
+        gap: 1.5rem;
+    }
+    .img-logoRedes {
+        width: 1.75rem;
+        height: 1.75rem;
+    }
+    .fila-inferior {
+        width: 70%;
+    }
+    .copy {
+        font-size: 1.25rem;
+    }
+}
+
+@include media-queries(large) {
+    // Base.scss
+    a {
+        font-size: 1.5rem;
+    }
+    // Index.html
+    .img-Instagram {
+        width: 3rem;
+        height: 3rem;
+    }
+    // Footer.scss
+    .fila-superior {
+        width: 80%;
+    }
+    .img-logoRedes {
+        width: 2.75rem;
+        height: 2.75rem;
     }
 }

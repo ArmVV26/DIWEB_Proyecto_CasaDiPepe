@@ -1,6 +1,5 @@
-// Importo las variables y las media-querires
+// Importo las variables 
 @use '../utils/variables';
-@import '../utils/media_query';
 
 // Fuentes que voy a usar en mi proyecto web
 @font-face {
@@ -22,13 +21,6 @@ h1 {
     font-size: $font-size * 2.4;
     color: variables.$color-Neutro-Blanco;
     line-height: $line-height - 0.4;
-
-    @include media-queries(small) {
-        font-size: $font-size + 1.8;
-    }
-    @include media-queries(tablet) {
-        font-size: $font-size + 2.8;
-    }
 }
 
 h2 {
@@ -37,17 +29,6 @@ h2 {
     font-style: italic;
     color: variables.$color-Secundario;
     line-height: $line-height - 0.4;
-
-    @include media-queries(small) {
-        text-align: center;
-        font-size: $font-size;
-    }
-    @include media-queries(medium) {
-        font-size: $font-size + 0.5;
-    }
-    @include media-queries(laptop) {
-        font-size: $font-size + 1.5;
-    }
 }
 
 h3 {
@@ -55,13 +36,6 @@ h3 {
     font-size: $font-size;
     color: variables.$color-Neutro-Blanco;
     line-height: $line-height - 0.4;
-
-    @include media-queries(small) {
-        font-size: $font-size - 0.5;
-    }
-    @include media-queries(tablet) {
-        font-size: $font-size;
-    }
 }
 
 p {

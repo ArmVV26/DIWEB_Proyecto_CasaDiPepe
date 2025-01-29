@@ -1,7 +1,6 @@
-// Importo las Variables, las funciones map de sass y las media-querires
+// Importo las Variables y las funciones map de sass
 @use '../utils/variables';
 @use 'sass:map';
-@import '../utils/media_query';
 
 // Diseño del Footer
 // Creo un mapa y luego hago una funcion para obtener los valores correspondientes
@@ -26,30 +25,8 @@ footer {
         margin: auto;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
         gap: 1.5rem;
-
-        @include media-queries(small) {
-            width: 90%;
-            display: flex;
-            flex-direction: column;
-        }
-        @include media-queries(tablet) {
-            flex-wrap: wrap;
-            flex-direction: row;
-            justify-content: center;
-        }
-        @include media-queries(laptop) {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            align-items: center;
-            gap: 0rem;
-        }
-        @include media-queries(normal) {
-            gap: 1.5rem;
-        }
-        @include media-queries(large) {
-            width: 80%;
-        }
 
         .img-logoFooter {
             width: 9rem;
@@ -111,7 +88,6 @@ footer {
                     text-align: center;
                     color: map.get($footer-colors, "text");
                     display: inline-block;
-                    padding: 0;
 
                     &:hover {
                         color: map.get($footer-colors, "hover")
