@@ -2,24 +2,28 @@
 @use '../utils/variables';
 
 // Diseño del Header
+@function px-to-rem($px) {
+    @return $px / 16px * 1rem;
+}
+
 header {
     background-color: variables.$color-Principal;
     position: fixed;
     width: 100%;
     top: 0;
-    min-height: 10rem;
+    min-height: px-to-rem(160px);
     z-index: 5;
-    box-shadow: 0 10px 5px 0 variables.$color-Neutro-Negro-rgba;
+    box-shadow: 0 px-to-rem(10px) px-to-rem(5px) 0 variables.$color-Neutro-Negro-rgba;
 }
 
 .img-logoHeader {
-    width: 9rem;
-    height: 9rem;
-    margin: 0.5rem 0 0.5rem 5rem;
+    width: px-to-rem(144px);
+    height: px-to-rem(144px);
+    margin: px-to-rem(8px) 0 px-to-rem(8px) px-to-rem(80px);
 
     &:hover {
-        width: 8.75rem;
-        height: 8.75rem;
+        width: px-to-rem(140px);
+        height: px-to-rem(140px);
         margin: auto;
         transition: all 0.5s;
     }
@@ -33,7 +37,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 10rem;
+    height: px-to-rem(160px);
 }
 
 .menu-desplegable {
@@ -41,21 +45,20 @@ header {
     background: none;
     border: none;
     color: variables.$color-Neutro-Blanco;
-    font-size: 5rem;
+    font-size: px-to-rem(80px);
     cursor: pointer;
 }
 
 .enlaces {
-    ul {
-        display: flex;
-        list-style: none;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
         
-        a:hover {
-            color: variables.$color-Terciario;
-        }
+    a:hover {
+        color: variables.$color-Terciario;
     }
 }
 
 .separado {
-    margin-right: 5rem;
+    margin-right: px-to-rem(80px);
 }

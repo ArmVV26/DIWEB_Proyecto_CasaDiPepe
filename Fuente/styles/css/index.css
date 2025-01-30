@@ -65,44 +65,49 @@ a:hover {
   color: #F1A2A2;
 }
 
+/* Hago herencia para la base de los botones */
+.boton-footer, .boton-pred, .boton-inicio {
+  display: inline-block;
+  border: 2px solid;
+  border-radius: 1rem;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.boton-footer:hover, .boton-pred:hover, .boton-inicio:hover {
+  transition: all 0.25s;
+}
+
 /* Boton de Iniciar Sesion */
 .boton-inicio {
   background-color: #B03B3B;
-  border: 2px solid #F1E7E7;
-  border-radius: 1rem;
+  border-color: #F1E7E7;
   box-shadow: 0px 0px 5px 5px rgba(34, 34, 34, 0.5);
-  transition: all 0.25s ease;
 }
 .boton-inicio:hover {
   background-color: #362624;
-  transition: all 0.25s;
 }
 
 /* Boton Predeterminado */
 .boton-pred {
   background-color: #961316;
-  border: 2px solid #F1E7E7;
-  border-radius: 1rem;
+  border-color: #F1E7E7;
   box-shadow: 0px 0px 5px 5px rgba(34, 34, 34, 0.5);
-  transition: all 0.25s ease;
 }
 .boton-pred:hover {
   background-color: #362624;
-  transition: all 0.25s;
 }
 
 /* Boton Footer */
 .boton-footer {
   background-color: #961316;
-  border: 2px solid #F1E7E7;
-  border-radius: 1rem;
+  border-color: #F1E7E7;
   box-shadow: none;
-  transition: all 0.25s ease;
   padding: 0.75rem;
 }
 .boton-footer:hover {
   background-color: #F1E7E7;
-  transition: all 0.25s;
 }
 .boton-footer:hover {
   color: #222222;
@@ -116,7 +121,7 @@ header {
   top: 0;
   min-height: 10rem;
   z-index: 5;
-  box-shadow: 0 10px 5px 0 rgba(34, 34, 34, 0.5);
+  box-shadow: 0 0.625rem 0.3125rem 0 rgba(34, 34, 34, 0.5);
 }
 
 .img-logoHeader {
@@ -150,11 +155,12 @@ header {
   cursor: pointer;
 }
 
-.enlaces ul {
+.enlaces {
   display: flex;
+  flex-direction: row;
   list-style: none;
 }
-.enlaces ul a:hover {
+.enlaces a:hover {
   color: #F1A2A2;
 }
 
@@ -440,15 +446,13 @@ footer {
     right: 0;
   }
   .enlaces.activo {
-    display: block;
+    display: flex;
     top: 5rem;
     background-color: #961316;
     text-align: center;
     border-bottom-left-radius: 2rem;
-  }
-  .enlaces.activo ul {
     flex-direction: column;
-    position: relative;
+    position: absolute;
   }
   .separado {
     margin: 0 0.5rem 0 1rem;
@@ -571,17 +575,15 @@ footer {
     display: none;
   }
   .enlaces {
-    display: block;
+    display: flex;
+    flex-direction: row;
     position: relative;
   }
   .enlaces.activo {
+    display: flex;
+    flex-direction: row;
+    position: relative;
     top: 0;
-  }
-  .enlaces ul {
-    flex-direction: row;
-  }
-  .enlaces.activo ul {
-    flex-direction: row;
   }
   .redes-img {
     display: grid;

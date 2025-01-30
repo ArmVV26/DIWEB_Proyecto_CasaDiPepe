@@ -11,10 +11,12 @@
 </head>
 
 <body>
+
   <header>
 
     <nav class="menu">
 
+      <!-- Logotipo de la Casas Di Pepe -->
       <a href="#">
         <picture>
           <source 
@@ -31,19 +33,20 @@
         </picture>
       </a>
 
-      <div class="enlaces ">
-        <ul>
-          <li><a href="#"> CARTA </a> </li>
-          <li><a href="#"> TIENDA </a> </li>
-          <li><a href="#"> RESERVAR MESA </a> </li>
-          <li><a href="#"> HACER PEDIDO </a> </li>
-        </ul>
-      </div>
+      <!-- Enlaces Principales de la Web -->
+      <ul class="enlaces">
+        <li><a href="#"> CARTA </a> </li>
+        <li><a href="#"> TIENDA </a> </li>
+        <li><a href="#"> RESERVAR MESA </a> </li>
+        <li><a href="#"> HACER PEDIDO </a> </li>
+      </ul>
 
+      <!-- Menú Desplegable, que aparece en pantallas más pequeñas -->
       <button class="menu-desplegable" id="menu-desp">
         ☰
       </button>
       
+      <!-- Boton de Inicio de Sesion -->
       <a href="#" class="boton-inicio separado">Inicio de sesion</a> 
 
     </nav>
@@ -52,18 +55,20 @@
 
   <main>
 
+    <!-- Sección Principal con Hero-Image, titulo, subtítulo y botones -->
     <section class="introduccion">
-      <div class="img-header-pred img-index"></div>
+      <figure class="img-header-pred img-index"></figure>
       <div class="intro-texto">
         <h1>CASA DI PEPE</h1>
         <h3>EL CORAZÓN DE LA TOSCANA</h3>
       </div>
-      <div class="intro-botones">
+      <nav class="intro-botones">
         <a href="#" class="boton-pred">LLamanos</a>
         <a href="#" class="boton-pred">Escribenos</a>
-      </div>
+      </nav>
     </section>
 
+    <!-- Sección Sobre Nosotros -->
     <section class="contenido">
       <picture>
         <source 
@@ -120,6 +125,7 @@
       </article>
     </section>
 
+    <!-- Sección de Mensaje Anunciando alguna novedad -->
     <aside class="anuncio">
       <p class="anuncio-texto">
           ¡Celebra con nosotros! Este fin de semana en Casa 
@@ -127,11 +133,12 @@
       </p>
     </aside>
 
+    <!-- Sección en la que se muestrán imagenes de las Redes Sociales -->
     <section class="redes">
       <h2>Explora nuestras Redes Sociales</h2>
 
       <div class="redes-img">
-        <div class="img-deco-index-redes">
+        <figure class="img-deco-index-redes">
           <!-- Imagen de Redes 1 + Imagen del logo de Instagram -->
           <picture>
             <source 
@@ -185,9 +192,9 @@
               <source srcset="media/img/ico-redes-sociales/svg/logo-Instagram.svg" type="image/svg+xml">
               <img class="img-Instagram" loading="lazy" src="media/img/ico-redes-sociales/png/logo-Instagram-128px.png" alt="Logo Instagram">
           </picture>
-        </div>
+        </figure>
 
-        <div class="img-deco-index-redes">
+        <figure class="img-deco-index-redes">
           <!-- Imagen de Redes 2 + Imagen del logo de Instagram -->
           <picture>
             <source 
@@ -241,9 +248,9 @@
               <source srcset="media/img/ico-redes-sociales/svg/logo-Instagram.svg" type="image/svg+xml">
               <img class="img-Instagram" loading="lazy" src="media/img/ico-redes-sociales/png/logo-Instagram-128px.png" alt="Logo Instagram">
           </picture>
-        </div>
+        </figure>
 
-        <div class="img-deco-index-redes">
+        <figure class="img-deco-index-redes">
           <!-- Imagen de Redes 3 + Imagen del logo de Instagram -->
           <picture>
             <source 
@@ -297,9 +304,10 @@
               <source srcset="media/img/ico-redes-sociales/svg/logo-Instagram.svg" type="image/svg+xml">
               <img class="img-Instagram" loading="lazy" src="media/img/ico-redes-sociales/png/logo-Instagram-128px.png" alt="Logo Instagram">
           </picture>
-        </div>
+        </figure>
       </div>
 
+      <!-- Botón para mostrar más Imagenes (Sin funcionalidad, por ahora) -->
       <a class="boton-pred" href="#">Mostrar Más</a>
     </section>
 
@@ -307,8 +315,10 @@
 
   <footer>
 
-    <div class="fila-superior">
+    <!-- Logotipo de Casa Di Pepe, Logotipo del Patrocinador y Menú con las Redes Sociales -->
+    <section class="fila-superior">
       
+      <!-- Logotipo de Casa Di Pepe -->
       <picture>
         <source 
           srcset="
@@ -323,6 +333,7 @@
         <img class="img-logoFooter" loading="lazy" src="media/img/logotipo/png/logo-Header-Blanco-512px.png" alt="Logo Cabecera">
       </picture>
             
+      <!-- Logotipo del Patrocinador -->
       <a href="https://www.guiarepsol.com/">
         <picture>
           <source 
@@ -339,10 +350,11 @@
         </picture>
       </a>
 
-      <div class="cta-redes">
+      <!-- Sección de la Redes Sociales -->
+      <section class="cta-redes">
         <a class="boton-footer" href="#">¡Síguenos en redes sociales!</a>
         
-        <div class="img-redes">
+        <nav class="img-redes">
           <a href="#">
             <picture>
               <source srcset="media/img/ico-redes-sociales/svg/logo-TikTok.svg" type="image/svg+xml">
@@ -406,12 +418,13 @@
                 <img class="img-logoRedes" loading="lazy" src="media/img/ico-redes-sociales/png/logo-Facebook-128px.png" alt="Logo Facebook">
             </picture>
           </a>
-        </div>
-      </div>
+        </nav>
+      </section>
 
-    </div>
+    </section>
 
-    <div class="fila-inferior">
+    <!-- Menú Secundario y mensaje de Copyright -->
+    <section class="fila-inferior">
       <p class="copy">© Casa Di Pepe 2024-2025 Todos los derechos reservados</p>
       
       <nav class="menu-footer">
@@ -422,7 +435,7 @@
           <li><a href="#">Politica de Privacidad</a></li>
         </ul>
       </nav>
-    </div>
+    </section>
     
   </footer>
 

@@ -62,15 +62,13 @@
         right: 0;
     }
     .enlaces.activo{
-        display: block;
+        display: flex;
         top: 5rem;
         background-color: variables.$color-Principal;
         text-align: center;
         border-bottom-left-radius: 2rem;
-    }
-    .enlaces.activo ul {
         flex-direction: column;
-        position: relative;
+        position: absolute;
     }
     .separado{
         margin: 0 0.5rem 0 1rem;
@@ -211,17 +209,15 @@
         display: none;
     }
     .enlaces {
-        display: block;
+        display: flex;
+        flex-direction: row;
         position: relative;
     }
-    .enlaces.activo {
+    .enlaces.activo{
+        display: flex;
+        flex-direction: row;
+        position: relative;
         top: 0;
-    }
-    .enlaces ul {
-        flex-direction: row;
-    }
-    .enlaces.activo ul {
-        flex-direction: row;
     }
     // Index.html
     .redes-img{

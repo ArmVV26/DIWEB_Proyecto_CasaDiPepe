@@ -3,14 +3,11 @@
 // Estilos de los Botones
 @mixin boton-base($background-color, $hover-background-color, $border-color, $box-shadow) {
     background-color: $background-color;
-    border: 2px solid ($border-color);
-    border-radius: 1rem;
+    border-color: $border-color;
     box-shadow: $box-shadow;
-    transition: all 0.25s ease;
 
     &:hover {
         background-color: $hover-background-color;
-        transition: all 0.25s;
     }
 }
 
