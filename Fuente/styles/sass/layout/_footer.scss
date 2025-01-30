@@ -61,8 +61,15 @@ footer {
     height: 2.75rem;
     padding: 0.5rem;
     background-color: map.get($footer-colors, "main");
-    box-shadow: 0 0 0 0.2rem map.get($footer-colors, "hover");
+    box-shadow: 0 0 0 0.2rem map.get($footer-colors, "text");
     border-radius: 1.75rem;
+    transition: all 0.5s ease;
+}
+
+.img-logoRedes:hover {
+    background-color: map.get($footer-colors, "text");
+    box-shadow: 0 0 0 0.2rem map.get($footer-colors, "main");
+    transition: all 0.5s ease;
 }
 
 .fila-inferior {
