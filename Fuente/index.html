@@ -7,6 +7,7 @@
   <link rel="icon" type="image/x-icon" href="media/img/logotipo/logo-Web.ico">
   <link rel="stylesheet" href="styles/css/index.css">
   <script src="scripts/js/menu-desplegable.js" defer></script>
+  <script src="scripts/js/imagenes-adaptables.js" defer></script>
   <title>Casa di Pepe</title>
 </head>
 
@@ -138,60 +139,24 @@
       <h2>Explora nuestras Redes Sociales</h2>
 
       <div class="redes-img">
-        <figure class="img-deco-index-redes">
-          <!-- Imagen de Redes 1 + Imagen del logo de Instagram -->
+        <!-- Imagen de Redes 1 + Imagen del logo de Instagram -->
+        <figure class="img-deco-index-redes" id="contenedor-img">
           <picture>
-            <source 
-              srcset="
-                media/img/img-decorativa/jpg/decorativa-PaginaPrincipal-RS-1-320px.jpg 320w,
-                media/img/img-decorativa/jpg/decorativa-PaginaPrincipal-RS-1-640px.jpg 640w,
-                media/img/img-decorativa/jpg/decorativa-PaginaPrincipal-RS-1-960px.jpg 960w,
-                media/img/img-decorativa/jpg/decorativa-PaginaPrincipal-RS-1-1600px.jpg 1600w,
-                media/img/img-decorativa/jpg/decorativa-PaginaPrincipal-RS-1-2240px.jpg 2240w,
-                media/img/img-decorativa/jpg/decorativa-PaginaPrincipal-RS-1-3200px.jpg 3200w
-              "
-              sizes=" (max-width: 320px) 320px, 
-                      (max-width: 640px) 640px, 
-                      (max-width: 960px) 960px, 
-                      (max-width: 1600px) 1600px, 
-                      (max-width: 2240px) 2240px, 
-                      3200px"
-              type="image/jpg">
-    
-              <source 
-              srcset="
-                media/img/img-decorativa/webp/decorativa-PaginaPrincipal-RS-1-320px.webp 320w,
-                media/img/img-decorativa/webp/decorativa-PaginaPrincipal-RS-1-640px.webp 640w,
-                media/img/img-decorativa/webp/decorativa-PaginaPrincipal-RS-1-960px.webp 960w,
-                media/img/img-decorativa/webp/decorativa-PaginaPrincipal-RS-1-1600px.webp 1600w,
-                media/img/img-decorativa/webp/decorativa-PaginaPrincipal-RS-1-2240px.webp 2240w,
-                media/img/img-decorativa/webp/decorativa-PaginaPrincipal-RS-1-3200px.webp 3200w
-              "
-              sizes=" (max-width: 320px) 320px, 
-                      (max-width: 640px) 640px, 
-                      (max-width: 960px) 960px, 
-                      (max-width: 1600px) 1600px, 
-                      (max-width: 2240px) 2240px, 
-                      3200px"
-              type="image/webp">
-              
-            <source srcset="media/img/img-decorativa/svg/decorativa-PaginaPrincipal-RS-1.svg" type="image/svg+xml">
-            <img class="img-main" loading="lazy" src="media/img/img-decorativa/webp/decorativa-PaginaPrincipal-RS-1-3200px.webp" alt="Imagen de Decoracion">
+            <source id="sourceJpg" type="image/jpg">
+            <source id="sourceWebp" type="image/webp">
+            <source id="sourceSvg" type="image/svg+xml">              
+            <img class="img-main" id="img-main" loading="lazy" alt="Imagen de Decoracion">
           </picture>
 
-          <picture>
-            <source 
-              srcset="
-                media/img/ico-redes-sociales/png/logo-Instagram-32px.png 32w,
-                media/img/ico-redes-sociales/png/logo-Instagram-64px.png 64w,
-                media/img/ico-redes-sociales/png/logo-Instagram-128px.png 128w
-              "
-              sizes="(max-width: 600px) 32px, (max-width: 1200px) 64px, 128px"
-              type="image/png">
-
-              <source srcset="media/img/ico-redes-sociales/svg/logo-Instagram.svg" type="image/svg+xml">
-              <img class="img-Instagram" loading="lazy" src="media/img/ico-redes-sociales/png/logo-Instagram-128px.png" alt="Logo Instagram">
-          </picture>
+          <figcaption>
+            <figure>
+              <picture>
+                <source id="sourcePng" type="image/png">
+                <source id="sourceSvg" type="image/svg+xml">
+                <img id="img-Instagram" loading="lazy" alt="Logo Instagram">
+              </picture>
+            </figure>
+          </figcaption>
         </figure>
 
         <figure class="img-deco-index-redes">

@@ -218,7 +218,7 @@ footer {
   height: 2.75rem;
   padding: 0.5rem;
   background-color: #961316;
-  box-shadow: 0 0 0 0.2rem #F1E7E7;
+  box-shadow: 0 0 0 0.1rem #F1E7E7;
   border-radius: 1.75rem;
   transition: all 0.5s ease;
 }
