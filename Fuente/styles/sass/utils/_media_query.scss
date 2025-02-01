@@ -57,18 +57,23 @@
         position: relative;
     }
     .enlaces{
-        display: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center; 
         position: absolute;
+        opacity: 0;
         right: 0;
+        transform: translateY(-1rem);
     }
     .enlaces.activo{
-        display: flex;
+        opacity: 1;
         top: 5rem;
         background-color: variables.$color-Principal;
-        text-align: center;
-        border-bottom-left-radius: 2rem;
-        flex-direction: column;
-        position: absolute;
+        box-shadow: inset 0 10px 5px 0 variables.$color-Neutro-Negro-rgba;
+        transform: translateY(0);
+        transition: all 0.5s;
+        z-index: 1;
     }
     .separado{
         margin: 0 0.5rem 0 1rem;
@@ -177,6 +182,10 @@
     .menu-desplegable {
         font-size: 5rem;
     }
+    .enlaces.activo {
+        flex-direction: row;
+        width: 100%;
+    }
     // Index.html
     .img-Instagram {
         width: 2rem;
@@ -212,12 +221,15 @@
         display: flex;
         flex-direction: row;
         position: relative;
+        opacity: 1;
+        transform: none;
     }
     .enlaces.activo{
-        display: flex;
-        flex-direction: row;
-        position: relative;
         top: 0;
+        width: auto;
+        background-color: none;
+        box-shadow: none;
+        transition: none;
     }
     // Index.html
     .redes-img{

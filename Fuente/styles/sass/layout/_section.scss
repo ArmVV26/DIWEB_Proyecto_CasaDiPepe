@@ -2,10 +2,14 @@
 @use '../utils/variables';
 
 // Estilo de la parte de la cabecera del main
+@function px-to-rem($px) {
+    @return $px / 16px * 1rem;
+}
+
 .introduccion {
     position: relative;
     width: 100%;
-    height: 32rem;
+    height: px-to-rem(512px);
     overflow: hidden;
 
     display: flex;
@@ -13,7 +17,7 @@
     flex-direction: column;
     align-items: center;
 
-    box-shadow: 0 10px 5px 0 variables.$color-Neutro-Negro-rgba;
+    box-shadow: 0 px-to-rem(10px) px-to-rem(5px) 0 variables.$color-Neutro-Negro-rgba;
 }
 
 .img-header-pred {
@@ -38,7 +42,7 @@
 .intro-botones {
     position: relative;
     z-index: 1;
-    margin-top: 5rem;
+    margin-top: px-to-rem(80px);
     display: flex;
     justify-content: space-between;
     width: 55%;
