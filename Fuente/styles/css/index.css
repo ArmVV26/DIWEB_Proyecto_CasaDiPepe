@@ -130,7 +130,7 @@ header {
   width: 9rem;
   height: 9rem;
   margin: 0.5rem 0 0.5rem 5rem;
-  transition: all 0.5s;
+  transition: all 0.25s;
 }
 .img-logoHeader:hover {
   width: 8.75rem;
