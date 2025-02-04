@@ -1,13 +1,5 @@
-// Importo los distintos scss para aplicar los media queries correspondientes
-@import '../base/base';
-@import '../base/typography';
-@import '../layout/footer';
-@import '../layout/header';
-@import '../layout/section';
-@import '../pages/index';
+// Importo las variables y los Mixins para poder aplicar la funcion de los media queries
 @import '../utils/variables';
-
-// Importo los Mixin para poder aplicar la funcion de los media queries
 @import '../utils/mixins';
 
 // Declaro todas las media-queries

@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="icon" type="image/x-icon" href="../media/img/logotipo/logo-Web.ico">
   <link rel="stylesheet" href="../styles/css/carta.css">
   <script src="../scripts/js/menu-desplegable.js" defer></script>
@@ -74,10 +75,27 @@
       </ul>
     </nav>
 
-    <div class="mostrar carta-img">
+    <div class="carta-img">
       <!-- Imagen del menú Pasta 1 + Descripcion de Productos -->
       <figure class="img-prod-carta">
         <picture>
+          <source 
+            srcset="
+              ../media/img/img-producto/webp/producto-Carta-1-320px.webp 320w,
+              ../media/img/img-producto/webp/producto-Carta-1-640px.webp 640w,
+              ../media/img/img-producto/webp/producto-Carta-1-960px.webp 960w,
+              ../media/img/img-producto/webp/producto-Carta-1-1600px.webp 1600w,
+              ../media/img/img-producto/webp/producto-Carta-1-2240px.webp 2240w,
+              ../media/img/img-producto/webp/producto-Carta-1-3200px.webp 3200w
+            "
+            sizes=" (max-width: 320px) 320px, 
+                    (max-width: 640px) 640px, 
+                    (max-width: 960px) 960px, 
+                    (max-width: 1600px) 1600px, 
+                    (max-width: 2240px) 2240px, 
+                    3200px"
+            type="image/webp">
+
           <source 
             srcset="
               ../media/img/img-producto/jpg/producto-Carta-1-320px.jpg 320w,
@@ -95,7 +113,7 @@
                     3200px"
             type="image/jpg">
   
-            <source 
+          <source 
             srcset="
               ../media/img/img-producto/png/producto-Carta-1-320px.png 320w,
               ../media/img/img-producto/png/producto-Carta-1-640px.png 640w,
@@ -111,158 +129,18 @@
                     (max-width: 2240px) 2240px, 
                     3200px"
             type="image/png">
-
-            <source 
-            srcset="
-              ../media/img/img-producto/webp/producto-Carta-1-320px.webp 320w,
-              ../media/img/img-producto/webp/producto-Carta-1-640px.webp 640w,
-              ../media/img/img-producto/webp/producto-Carta-1-960px.webp 960w,
-              ../media/img/img-producto/webp/producto-Carta-1-1600px.webp 1600w,
-              ../media/img/img-producto/webp/producto-Carta-1-2240px.webp 2240w,
-              ../media/img/img-producto/webp/producto-Carta-1-3200px.webp 3200w
-            "
-            sizes=" (max-width: 320px) 320px, 
-                    (max-width: 640px) 640px, 
-                    (max-width: 960px) 960px, 
-                    (max-width: 1600px) 1600px, 
-                    (max-width: 2240px) 2240px, 
-                    3200px"
-            type="image/webp">
-  
+ 
           <img class="img-main" loading="lazy" src="../media/webp/img-producto/webp/producto-Carta-1-3200px.webp" alt="Imagen de Producto">
         </picture>
 
         <section class="img-desc">
           <h1>Spaghetti alla Carbonara</h1>
-          <p></p>
+          <p>Preparado con huevo, queso pecorino 
+            romano, panceta y pimienta negra. 
+            Una receta sencilla y deliciosa.</p>
         </section>
       </figure>
 
-      <!-- Imagen del menú Pasta 2 + Descripcion de Productos -->
-      <figure class="img-prod-carta">
-        <picture>
-          <source 
-            srcset="
-              ../media/img/img-producto/jpg/producto-Carta-2-320px.jpg 320w,
-              ../media/img/img-producto/jpg/producto-Carta-2-640px.jpg 640w,
-              ../media/img/img-producto/jpg/producto-Carta-2-960px.jpg 960w,
-              ../media/img/img-producto/jpg/producto-Carta-2-1600px.jpg 1600w,
-              ../media/img/img-producto/jpg/producto-Carta-2-2240px.jpg 2240w,
-              ../media/img/img-producto/jpg/producto-Carta-2-3200px.jpg 3200w
-            "
-            sizes=" (max-width: 320px) 320px, 
-                    (max-width: 640px) 640px, 
-                    (max-width: 960px) 960px, 
-                    (max-width: 1600px) 1600px, 
-                    (max-width: 2240px) 2240px, 
-                    3200px"
-            type="image/jpg">
-  
-            <source 
-            srcset="
-              ../media/img/img-producto/png/producto-Carta-2-320px.png 320w,
-              ../media/img/img-producto/png/producto-Carta-2-640px.png 640w,
-              ../media/img/img-producto/png/producto-Carta-2-960px.png 960w,
-              ../media/img/img-producto/png/producto-Carta-2-1600px.png 1600w,
-              ../media/img/img-producto/png/producto-Carta-2-2240px.png 2240w,
-              ../media/img/img-producto/png/producto-Carta-2-3200px.png 3200w
-            "
-            sizes=" (max-width: 320px) 320px, 
-                    (max-width: 640px) 640px, 
-                    (max-width: 960px) 960px, 
-                    (max-width: 1600px) 1600px, 
-                    (max-width: 2240px) 2240px, 
-                    3200px"
-            type="image/png">
-
-            <source 
-            srcset="
-              ../media/img/img-producto/webp/producto-Carta-2-320px.webp 320w,
-              ../media/img/img-producto/webp/producto-Carta-2-640px.webp 640w,
-              ../media/img/img-producto/webp/producto-Carta-2-960px.webp 960w,
-              ../media/img/img-producto/webp/producto-Carta-2-1600px.webp 1600w,
-              ../media/img/img-producto/webp/producto-Carta-2-2240px.webp 2240w,
-              ../media/img/img-producto/webp/producto-Carta-2-3200px.webp 3200w
-            "
-            sizes=" (max-width: 320px) 320px, 
-                    (max-width: 640px) 640px, 
-                    (max-width: 960px) 960px, 
-                    (max-width: 1600px) 1600px, 
-                    (max-width: 2240px) 2240px, 
-                    3200px"
-            type="image/webp">
-  
-          <img class="img-main" loading="lazy" src="../media/webp/img-producto/webp/producto-Carta-2-3200px.webp" alt="Imagen de Producto">
-        </picture>
-
-        <section class="img-desc">
-          <h1></h1>
-          <p></p>
-        </section>
-      </figure>
-
-      <!-- Imagen del menú Pasta 3 + Descripcion de Productos -->
-      <figure class="img-prod-carta">
-        <picture>
-          <source 
-            srcset="
-              ../media/img/img-producto/jpg/producto-Carta-3-320px.jpg 320w,
-              ../media/img/img-producto/jpg/producto-Carta-3-640px.jpg 640w,
-              ../media/img/img-producto/jpg/producto-Carta-3-960px.jpg 960w,
-              ../media/img/img-producto/jpg/producto-Carta-3-1600px.jpg 1600w,
-              ../media/img/img-producto/jpg/producto-Carta-3-2240px.jpg 2240w,
-              ../media/img/img-producto/jpg/producto-Carta-3-3200px.jpg 3200w
-            "
-            sizes=" (max-width: 320px) 320px, 
-                    (max-width: 640px) 640px, 
-                    (max-width: 960px) 960px, 
-                    (max-width: 1600px) 1600px, 
-                    (max-width: 2240px) 2240px, 
-                    3200px"
-            type="image/jpg">
-  
-            <source 
-            srcset="
-              ../media/img/img-producto/png/producto-Carta-3-320px.png 320w,
-              ../media/img/img-producto/png/producto-Carta-3-640px.png 640w,
-              ../media/img/img-producto/png/producto-Carta-3-960px.png 960w,
-              ../media/img/img-producto/png/producto-Carta-3-1600px.png 1600w,
-              ../media/img/img-producto/png/producto-Carta-3-2240px.png 2240w,
-              ../media/img/img-producto/png/producto-Carta-3-3200px.png 3200w
-            "
-            sizes=" (max-width: 320px) 320px, 
-                    (max-width: 640px) 640px, 
-                    (max-width: 960px) 960px, 
-                    (max-width: 1600px) 1600px, 
-                    (max-width: 2240px) 2240px, 
-                    3200px"
-            type="image/png">
-
-            <source 
-            srcset="
-              ../media/img/img-producto/webp/producto-Carta-3-320px.webp 320w,
-              ../media/img/img-producto/webp/producto-Carta-3-640px.webp 640w,
-              ../media/img/img-producto/webp/producto-Carta-3-960px.webp 960w,
-              ../media/img/img-producto/webp/producto-Carta-3-1600px.webp 1600w,
-              ../media/img/img-producto/webp/producto-Carta-3-2240px.webp 2240w,
-              ../media/img/img-producto/webp/producto-Carta-3-3200px.webp 3200w
-            "
-            sizes=" (max-width: 320px) 320px, 
-                    (max-width: 640px) 640px, 
-                    (max-width: 960px) 960px, 
-                    (max-width: 1600px) 1600px, 
-                    (max-width: 2240px) 2240px, 
-                    3200px"
-            type="image/webp">
-  
-          <img class="img-main" loading="lazy" src="../media/img/img-producto/webp/producto-Carta-2-3200px.webp" alt="Imagen de Producto">
-        </picture>
-
-        <section class="img-desc">
-          <h1></h1>
-          <p></p>
-        </section>
-      </figure>
     </div>
 
 
@@ -311,68 +189,20 @@
         <a class="boton-footer" >¡Síguenos en redes sociales!</a>
         
         <nav class="img-redes">
-          <a href="#">
-            <picture>
-              <source 
-                srcset="
-                    ../media/img/ico-redes-sociales/png/logo-TikTok-32px.png 32w,
-                    ../media/img/ico-redes-sociales/png/logo-TikTok-64px.png 64w,
-                    ../media/img/ico-redes-sociales/png/logo-TikTok-128px.png 128w
-                "
-                sizes="(max-width: 600px) 32px, (max-width: 1200px) 64px, 128px"
-                type="image/png">
-
-                <source srcset="../media/img/ico-redes-sociales/svg/logo-TikTok.svg" type="image/svg+xml">
-                <img class="img-logoRedes" loading="lazy" src="../media/img/ico-redes-sociales/png/logo-TikTok-128px.png" alt="Logo TikTok">
-            </picture>
+          <a href="#" target="_blank">
+            <i class="fab fa-tiktok"></i>
           </a>
 
-          <a href="#">
-            <picture>
-              <source 
-                srcset="
-                    ../media/img/ico-redes-sociales/png/logo-Instagram-32px.png 32w,
-                    ../media/img/ico-redes-sociales/png/logo-Instagram-64px.png 64w,
-                    ../media/img/ico-redes-sociales/png/logo-Instagram-128px.png 128w
-                "
-                sizes="(max-width: 600px) 32px, (max-width: 1200px) 64px, 128px"
-                type="image/png">
-
-                <source srcset="../media/img/ico-redes-sociales/svg/logo-Instagram.svg" type="image/svg+xml">
-                <img class="img-logoRedes" loading="lazy" src="../media/img/ico-redes-sociales/png/logo-Instagram-128px.png" alt="Logo Instagram">
-            </picture>
-          </a>
-          
-          <a href="#">
-            <picture>
-              <source 
-                srcset="
-                    ../media/img/ico-redes-sociales/png/logo-Youtube-32px.png 32w,
-                    ../media/img/ico-redes-sociales/png/logo-Youtube-64px.png 64w,
-                    ../media/img/ico-redes-sociales/png/logo-Youtube-128px.png 128w
-                "
-                sizes="(max-width: 600px) 32px, (max-width: 1200px) 64px, 128px"
-                type="image/png">
-
-                <source srcset="../media/img/ico-redes-sociales/svg/logo-Youtube.svg" type="image/svg+xml">
-                <img class="img-logoRedes" loading="lazy" src="../media/img/ico-redes-sociales/png/logo-Youtube-128px.png" alt="Logo Youtube">
-            </picture>
+          <a href="#" target="_blank">
+            <i class="fab fa-instagram"></i>
           </a>
 
-          <a href="#">
-            <picture>
-              <source 
-                srcset="
-                    ../media/img/ico-redes-sociales/png/logo-Facebook-32px.png 32w,
-                    ../media/img/ico-redes-sociales/png/logo-Facebook-64px.png 64w,
-                    ../media/img/ico-redes-sociales/png/logo-Facebook-128px.png 128w    
-                "
-                sizes="(max-width: 600px) 32px, (max-width: 1200px) 64px, 128px"
-                type="image/png">
+          <a href="#" target="_blank">
+            <i class="fab fa-youtube"></i>
+          </a>
 
-                <source srcset="../media/img/ico-redes-sociales/svg/logo-Facebook.svg" type="image/svg+xml">
-                <img class="img-logoRedes" loading="lazy" src="../media/img/ico-redes-sociales/png/logo-Facebook-128px.png" alt="Logo Facebook">
-            </picture>
+          <a href="#" target="_blank">
+            <i class="fab fa-facebook"></i>
           </a>
         </nav>
       </section>
