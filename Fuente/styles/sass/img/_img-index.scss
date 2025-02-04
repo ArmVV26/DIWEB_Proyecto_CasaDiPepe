@@ -1,0 +1,8 @@
+// Importo los Mixins para generar los media queries
+@import '../utils/mixins';
+
+// Imagen del index
+.img-index {
+    filter: brightness(0.55) contrast(120%) saturate(110%);
+    @include media-img-principal("hero-PaginaPrincipal");
+}
