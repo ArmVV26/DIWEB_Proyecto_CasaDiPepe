@@ -1,17 +1,17 @@
-@use 'utils/variables';
+@import 'utils/variables';
 
-@use 'base/reset';
-@use 'base/typography';
-@use 'base/base';
+@import 'base/reset';
+@import 'base/base';
+@import 'base/typography';
 
-@use 'components/buttons';
+@import 'components/buttons';
 
-@use 'layout/header';
-@use 'layout/footer';
-@use 'layout/section';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/section';
 
-@use 'pages/index';
+@import 'pages/index';
 
-@use 'utils/media_query';
+@import 'utils/media_query';
 
-@use 'utils/image';
+@import 'utils/image-hero';

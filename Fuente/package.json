@@ -4,7 +4,7 @@
   "description": "Generar el CSS a partir de SCSS",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "sass styles/sass/index.scss styles/css/index.css",
+    "compile:sass": "sass styles/sass/:styles/css/",
     "watch:sass": "sass --watch styles/sass/:styles/css/"
   },
   "author": "Armando Vaquero",

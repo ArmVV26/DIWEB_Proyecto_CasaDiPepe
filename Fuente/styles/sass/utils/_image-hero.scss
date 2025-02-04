@@ -1,15 +1,15 @@
 // Importo los Mixins para generar los media queries
-@use '../utils/mixins';
+@import '../utils/mixins';
 
 // Aqui generare los media-queries de la imagen principal de cada pagina
 
 // Imagen del index
 .img-index {
-    @include mixins.media-img-principal("hero-PaginaPrincipal");
     filter: brightness(0.55) contrast(120%) saturate(110%);
+    @include media-img-principal("hero-PaginaPrincipal");
 }
 
 .img-carta {
-    @include mixins.media-img-principal("hero-Carta");
     filter: brightness(0.55) contrast(90%) saturate(90%);
+    @include media-img-principal("hero-Carta");
 }

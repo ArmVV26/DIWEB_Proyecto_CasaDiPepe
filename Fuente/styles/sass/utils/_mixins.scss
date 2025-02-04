@@ -1,3 +1,7 @@
+// Importo las funciones map de sass
+@use 'sass:map';
+@use 'sass:list';
+
 // Aqui creare todos los Mixins que vaya a usar en otros scss
 
 // Estilos de los Botones
@@ -19,17 +23,17 @@ $next-res: 0;
 // Mixin para crear media-queries para las hero-image. Le asigno x2 su resolucion
 @mixin media-img-principal($name) {
     @each $resolution in $resolutions {
-        @if (index($resolutions, $resolution) == 1) {
+        @if (list.index($resolutions, $resolution) == 1) {
             @media (min-width: 0px) {
-                background-image: url("../../media/img/hero-image/#{nth($formats, 1)}/#{$name}-#{$resolution}.#{nth($formats, 1)}");
-                background-image: url("../../media/img/hero-image/#{nth($formats, 2)}/#{$name}-#{$resolution}.#{nth($formats, 2)}");
-                background-image: url("../../media/img/hero-image/#{nth($formats, 3)}/#{$name}-#{$resolution}.#{nth($formats, 3)}");
+                background-image: url("../../media/img/hero-image/#{list.nth($formats, 1)}/#{$name}-#{$resolution}.#{list.nth($formats, 1)}");
+                background-image: url("../../media/img/hero-image/#{list.nth($formats, 2)}/#{$name}-#{$resolution}.#{list.nth($formats, 2)}");
+                background-image: url("../../media/img/hero-image/#{list.nth($formats, 3)}/#{$name}-#{$resolution}.#{list.nth($formats, 3)}");
             }
         } @else {
             @media (min-width: $next-res) {
-                background-image: url("../../media/img/hero-image/#{nth($formats, 1)}/#{$name}-#{$resolution}.#{nth($formats, 1)}");
-                background-image: url("../../media/img/hero-image/#{nth($formats, 2)}/#{$name}-#{$resolution}.#{nth($formats, 2)}");
-                background-image: url("../../media/img/hero-image/#{nth($formats, 3)}/#{$name}-#{$resolution}.#{nth($formats, 3)}");
+                background-image: url("../../media/img/hero-image/#{list.nth($formats, 1)}/#{$name}-#{$resolution}.#{list.nth($formats, 1)}");
+                background-image: url("../../media/img/hero-image/#{list.nth($formats, 2)}/#{$name}-#{$resolution}.#{list.nth($formats, 2)}");
+                background-image: url("../../media/img/hero-image/#{list.nth($formats, 3)}/#{$name}-#{$resolution}.#{list.nth($formats, 3)}");
             }
         }
         $next-res: $resolution;
@@ -49,8 +53,8 @@ $breakpoints: (
 
 // Mixin para hacer las media queries 
 @mixin media-queries($key) {
-    @if map-has-key($breakpoints, $key) {
-        @media (min-width: map-get($breakpoints, $key)) {
+    @if map.has-key($breakpoints, $key) {
+        @media (min-width: map.get($breakpoints, $key)) {
             @content;
         }
     } @else {

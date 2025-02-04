@@ -1,27 +1,27 @@
 // Importo las variables
-@use '../utils/variables';
+@import '../utils/variables';
 
 // Estilos base generales
 $size-rem: 2rem;
 
 body {
-    background-color: variables.$color-Neutro-Blanco;
+    background-color: $color-Neutro-Blanco;
     padding-top: $size-rem * 5;
 }   
 
 a {
     text-decoration: none;
-    font-family: variables.$font-Main;
+    font-family: $font-Main;
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;
-    color: variables.$color-Neutro-Blanco;
+    color: $color-Neutro-Blanco;
 
     font-size: $size-rem - 0.5;
     display: inline-block;
     padding: $size-rem - 0.75;
 
     &:hover {
-        color: variables.$color-Terciario;
+        color: $color-Terciario;
     }
 }

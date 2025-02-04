@@ -1,6 +1,6 @@
 // Importo las Variables y el Mixin de la base de los botones
-@use '../utils/variables';
-@use '../utils/mixins';
+@import '../utils/variables';
+@import '../utils/mixins';
 
 /* Hago herencia para la base de los botones */
 %boton-base {
@@ -20,36 +20,36 @@
 /* Boton de Iniciar Sesion */
 .boton-inicio {
     @extend %boton-base;
-    @include mixins.boton-base(
-                variables.$color-Secundario,
-                variables.$color-Neutro-Marron,
-                variables.$color-Neutro-Blanco,
-                0px 0px 5px 5px variables.$color-Neutro-Negro-rgba);
+    @include boton-base(
+                $color-Secundario,
+                $color-Neutro-Marron,
+                $color-Neutro-Blanco,
+                0px 0px 5px 5px $color-Neutro-Negro-rgba);
 }
 
 /* Boton Predeterminado */
 .boton-pred {
     @extend %boton-base;
-    @include mixins.boton-base(
-                variables.$color-Principal,
-                variables.$color-Neutro-Marron,
-                variables.$color-Neutro-Blanco,
-                0px 0px 5px 5px variables.$color-Neutro-Negro-rgba);
+    @include boton-base(
+                $color-Principal,
+                $color-Neutro-Marron,
+                $color-Neutro-Blanco,
+                0px 0px 5px 5px $color-Neutro-Negro-rgba);
 }
 
 /* Boton Footer */
 .boton-footer {
     @extend %boton-base;
-    @include mixins.boton-base(
-                variables.$color-Principal,
-                variables.$color-Neutro-Blanco,
-                variables.$color-Neutro-Blanco,
+    @include boton-base(
+                $color-Principal,
+                $color-Neutro-Blanco,
+                $color-Neutro-Blanco,
                 none);
     padding: 0.75rem;
     cursor: default;
     
     &:hover {
-        color: variables.$color-Neutro-Negro;
-        border: 2px solid variables.$color-Principal;
+        color: $color-Neutro-Negro;
+        border: 2px solid $color-Principal;
     }
 }

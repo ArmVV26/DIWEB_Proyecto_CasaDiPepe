@@ -7,27 +7,7 @@ function generarImagenes(arrayDatos) {
   let imagenes;
 
   // Diferencio entre las diferentes imagenes que tengo
-  if (arrayDatos[1] == "ico-redes-sociales") {
-
-    imagenes = [
-      {
-        ancho: 128,
-        png: `media/img/ico-redes-sociales/png/${arrayDatos[0]}-128px.png`,
-        svg: `media/img/ico-redes-sociales/svg/${arrayDatos[0]}.svg`,
-      },
-      {
-        ancho: 64,
-        png: `media/img/ico-redes-sociales/png/${arrayDatos[0]}-64px.png`,
-        svg: `media/img/ico-redes-sociales/svg/${arrayDatos[0]}.svg`,
-      },
-      {
-        ancho: 0,
-        png: `media/img/ico-redes-sociales/png/${arrayDatos[0]}-32px.png`,
-        svg: `media/img/ico-redes-sociales/svg/${arrayDatos[0]}.svg`,
-      },
-    ]
-
-  } else if (arrayDatos[1] == "img-decorativa") {
+  if (arrayDatos[1] == "img-decorativa") {
 
     imagenes = [
       {

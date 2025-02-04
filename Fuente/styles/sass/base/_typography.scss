@@ -1,5 +1,5 @@
 // Importo las variables 
-@use '../utils/variables';
+@import '../utils/variables';
 
 // Fuentes que voy a usar en mi proyecto web
 @font-face {
@@ -17,31 +17,31 @@ $font-size: 2rem;
 $line-height: 1.6;
 
 h1 {
-    font-family: variables.$font-Main;
+    font-family: $font-Main;
     font-size: $font-size * 2.4;
-    color: variables.$color-Neutro-Blanco;
+    color: $color-Neutro-Blanco;
     line-height: $line-height - 0.4;
 }
 
 h2 {
-    font-family: variables.$font-Main;
+    font-family: $font-Main;
     font-size: $font-size * 1.75;
     font-style: italic;
-    color: variables.$color-Secundario;
+    color: $color-Secundario;
     line-height: $line-height - 0.4;
 }
 
 h3 {
-    font-family: variables.$font-Secondary;
+    font-family: $font-Secondary;
     font-size: $font-size;
-    color: variables.$color-Neutro-Blanco;
+    color: $color-Neutro-Blanco;
     line-height: $line-height - 0.4;
 }
 
 p {
-    font-family: variables.$font-Secondary;
+    font-family: $font-Secondary;
     font-size: $font-size - 0.75;
-    color: variables.$color-Neutro-Negro;
+    color: $color-Neutro-Negro;
     text-align: justify;
     text-indent: $font-size;
 }

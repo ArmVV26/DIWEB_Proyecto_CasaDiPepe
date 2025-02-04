@@ -1,15 +1,15 @@
 // Importo las Variables y las funciones map de sass
-@use '../utils/variables';
 @use 'sass:map';
+@import '../utils/variables';
 
 // Diseño del Footer
 // Creo un mapa y luego hago una funcion para obtener los valores correspondientes
 $footer-colors: (
-    "background": variables.$color-Neutro-Marron,
-    "text": variables.$color-Neutro-Blanco,
-    "hover": variables.$color-Terciario,
-    "shadow": variables.$color-Neutro-Negro-rgba,
-    "main": variables.$color-Principal,
+    "background": $color-Neutro-Marron,
+    "text": $color-Neutro-Blanco,
+    "hover": $color-Terciario,
+    "shadow": $color-Neutro-Negro-rgba,
+    "main": $color-Principal,
 );
 
 footer {
@@ -52,24 +52,20 @@ footer {
 .img-redes {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 0.75rem;
 }
 
-.img-logoRedes {
-    width: 2.75rem;
-    height: 2.75rem;
-    padding: 0.5rem;
+.img-redes i.fab {
+    font-size: 2rem;
+    padding: 1rem;
     background-color: map.get($footer-colors, "main");
-    box-shadow: 0 0 0 0.1rem map.get($footer-colors, "text");
-    border-radius: 1.75rem;
+    border: 0.2rem solid map.get($footer-colors, "text");
+    border-radius: 2.5rem;
     transition: all 0.5s ease;
 }
 
-.img-logoRedes:hover {
+.img-redes i.fab:hover {
     background-color: map.get($footer-colors, "text");
-    box-shadow: 0 0 0 0.2rem map.get($footer-colors, "main");
-    transition: all 0.5s ease;
+    border: 0.2rem solid map.get($footer-colors, "main");
 }
 
 .fila-inferior {

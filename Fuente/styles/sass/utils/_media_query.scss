@@ -1,17 +1,17 @@
 // Importo los distintos scss para aplicar los media queries correspondientes
-@use '../base/base';
-@use '../base/typography';
-@use '../layout/footer';
-@use '../layout/header';
-@use '../layout/section';
-@use '../pages/index';
-@use '../utils/variables';
+@import '../base/base';
+@import '../base/typography';
+@import '../layout/footer';
+@import '../layout/header';
+@import '../layout/section';
+@import '../pages/index';
+@import '../utils/variables';
 
 // Importo los Mixin para poder aplicar la funcion de los media queries
-@use '../utils/mixins';
+@import '../utils/mixins';
 
 // Declaro todas las media-queries
-@include mixins.media-queries(small) {
+@include media-queries(small) {
     // Base.scss
     body {
         padding-top: 5rem;
@@ -62,15 +62,15 @@
         justify-content: center;
         text-align: center; 
         position: absolute;
-        opacity: 0;
         right: 0;
         transform: translateY(-1rem);
+        visibility: hidden;
     }
     .enlaces.activo{
-        opacity: 1;
+        visibility: visible;
         top: 5rem;
-        background-color: variables.$color-Principal;
-        box-shadow: inset 0 10px 5px 0 variables.$color-Neutro-Negro-rgba;
+        background-color: $color-Principal;
+        box-shadow: inset 0 10px 5px 0 $color-Neutro-Negro-rgba;
         transform: translateY(0);
         transition: all 0.5s;
         z-index: 1;
@@ -82,33 +82,6 @@
     .intro-botones {
         width: 90%;
     }    
-    // Index.html
-    .contenido {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-    }
-    .contenido h2 {
-        text-align: center;
-        margin-bottom: 0.5rem;
-    }
-    .cont-texto {
-        margin-top: 0.5rem ;
-    }
-    .cont-texto a {
-        margin-top: 2rem;
-    }
-    .anuncio-texto {
-        font-size: 1.25rem;
-    }
-    .redes-img{
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .img-Instagram {
-        width: 1.5rem;
-        height: 1.5rem;
-    }
     // Footer.scss
     .fila-superior {
         width: 90%;
@@ -123,7 +96,7 @@
     }
 }
 
-@include mixins.media-queries(medium) {
+@include media-queries(medium) {
     // Base.scss
     body {
         padding-top: 8rem;
@@ -162,7 +135,7 @@
     }
 }
 
-@include mixins.media-queries(tablet) {
+@include media-queries(tablet) {
     // Base.scss
     a {
         font-size: 1.25rem;
@@ -182,11 +155,6 @@
         flex-direction: row;
         width: 100%;
     }
-    // Index.html
-    .img-Instagram {
-        width: 2rem;
-        height: 2rem;
-    }
     // Footer.scss
     .fila-superior {
         flex-wrap: wrap;
@@ -198,7 +166,7 @@
     }
 }
 
-@include mixins.media-queries(laptop) {
+@include media-queries(laptop) {
     // Typpgraphy.scss
     h2 {
         font-size: 3.5rem;
@@ -217,7 +185,7 @@
         display: flex;
         flex-direction: row;
         position: relative;
-        opacity: 1;
+        visibility: visible;
         transform: none;
     }
     .enlaces.activo{
@@ -227,11 +195,6 @@
         box-shadow: none;
         transition: none;
     }
-    // Index.html
-    .redes-img{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-    }
     // Footer.scss
     .fila-superior {
         display: grid;
@@ -239,13 +202,9 @@
         align-items: center;
         gap: 0rem;
     }
-    .img-logoRedes {
-        width: 1.25rem;
-        height: 1.25rem;
-    }
 }
 
-@include mixins.media-queries(normal) {
+@include media-queries(normal) {
     // Base.scss
     body {
         padding-top: 10rem;
@@ -274,32 +233,9 @@
     .intro-botones {
         width: 55%;
     }
-    // Index.html
-    .contenido {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        text-align: left;
-    }
-    .contenido h2 {
-        text-align: left;
-        margin-bottom: 1.5rem;
-    }
-    .cont-texto{
-        margin-top: 1.5rem;
-    }
-    .cont-texto a{
-        margin-top: 2.5rem;
-    }
-    .anuncio-texto {
-        font-size: 1.5rem;
-    }
-     // Footer.scss
+    // Footer.scss
      .fila-superior {
         gap: 1.5rem;
-    }
-    .img-logoRedes {
-        width: 1.75rem;
-        height: 1.75rem;
     }
     .fila-inferior {
         width: 70%;
@@ -309,22 +245,13 @@
     }
 }
 
-@include mixins.media-queries(large) {
+@include media-queries(large) {
     // Base.scss
     a {
         font-size: 1.5rem;
     }
-    // Index.html
-    .img-Instagram {
-        width: 3rem;
-        height: 3rem;
-    }
     // Footer.scss
     .fila-superior {
         width: 80%;
-    }
-    .img-logoRedes {
-        width: 2.75rem;
-        height: 2.75rem;
     }
 }

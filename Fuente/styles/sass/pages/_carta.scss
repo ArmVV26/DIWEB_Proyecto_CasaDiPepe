@@ -1,5 +1,5 @@
 // Importo las Variables
-@use '../utils/variables';
+@import '../utils/variables';
 
 // Estilos para la pagina carta de la web (carta.html)
 .menu-carta ul{
@@ -22,7 +22,7 @@
     position: relative;
     width: 100%;
     aspect-ratio: 16/9;
-    border: 4px solid variables.$color-Principal;
+    border: 4px solid $color-Principal;
     border-radius: 1rem;
     overflow: hidden;
     transition: all 0.5s;
