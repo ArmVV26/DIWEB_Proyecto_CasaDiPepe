@@ -14,14 +14,25 @@
 // Creo una lista para indicar los formatos y otra para indicar las resoluciones
 $formats: ("webp", "avif", "jpg");
 $resolutions: (320px, 640px, 960px, 1600px, 2240px, 3200px);
+$next-res: 0;
 
+// Mixin para crear media-queries para las hero-image. Le asigno x2 su resolucion
 @mixin media-img-principal($name) {
     @each $resolution in $resolutions {
-        @media (min-width: $resolution) {
-            background-image: url("../../media/img/hero-image/#{nth($formats, 1)}/#{$name}-#{$resolution}.#{nth($formats, 1)}");
-            background-image: url("../../media/img/hero-image/#{nth($formats, 2)}/#{$name}-#{$resolution}.#{nth($formats, 2)}");
-            background-image: url("../../media/img/hero-image/#{nth($formats, 3)}/#{$name}-#{$resolution}.#{nth($formats, 3)}");
+        @if (index($resolutions, $resolution) == 1) {
+            @media (min-width: 0px) {
+                background-image: url("../../media/img/hero-image/#{nth($formats, 1)}/#{$name}-#{$resolution}.#{nth($formats, 1)}");
+                background-image: url("../../media/img/hero-image/#{nth($formats, 2)}/#{$name}-#{$resolution}.#{nth($formats, 2)}");
+                background-image: url("../../media/img/hero-image/#{nth($formats, 3)}/#{$name}-#{$resolution}.#{nth($formats, 3)}");
+            }
+        } @else {
+            @media (min-width: $next-res) {
+                background-image: url("../../media/img/hero-image/#{nth($formats, 1)}/#{$name}-#{$resolution}.#{nth($formats, 1)}");
+                background-image: url("../../media/img/hero-image/#{nth($formats, 2)}/#{$name}-#{$resolution}.#{nth($formats, 2)}");
+                background-image: url("../../media/img/hero-image/#{nth($formats, 3)}/#{$name}-#{$resolution}.#{nth($formats, 3)}");
+            }
         }
+        $next-res: $resolution;
     }
 }
 

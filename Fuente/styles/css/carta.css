@@ -327,6 +327,49 @@ footer {
   width: 55%;
 }
 
+.menu-carta ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+  margin: 3rem;
+}
+
+.carta-img {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+  width: 75%;
+  margin: auto auto 2.5rem;
+}
+
+.img-prod-carta {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  border: 4px solid #961316;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: all 0.5s;
+  filter: brightness(0.9) contrast(110%) saturate(160%) sepia(20%);
+}
+
+.img-main {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s;
+}
+.img-main:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+.img-desc {
+  display: block;
+  color: black;
+}
+
 .contenido {
   width: 75%;
   margin: 2.5rem auto;
@@ -803,4 +846,4 @@ footer {
   }
 }
 
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=carta.css.map */

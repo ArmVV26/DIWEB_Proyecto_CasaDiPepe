@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "compile:sass": "sass styles/sass/index.scss styles/css/index.css",
-    "watch:sass": "sass --watch styles/sass/index.scss:styles/css/index.css"
+    "watch:sass": "sass --watch styles/sass/:styles/css/"
   },
   "author": "Armando Vaquero",
   "license": "ISC",

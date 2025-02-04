@@ -6,4 +6,10 @@
 // Imagen del index
 .img-index {
     @include mixins.media-img-principal("hero-PaginaPrincipal");
+    filter: brightness(0.55) contrast(120%) saturate(110%);
+}
+
+.img-carta {
+    @include mixins.media-img-principal("hero-Carta");
+    filter: brightness(0.55) contrast(90%) saturate(90%);
 }

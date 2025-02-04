@@ -67,7 +67,6 @@
     <section class="contenido">
       <figure id="contenedor-img" data-info='["decorativa-PaginaPrincipal", "img-decorativa", ["jpg", "webp", "svg"]]'>
         <picture>
-          <source id="sourceJpg" type="image/jpg">
           <source id="sourceWebp" type="image/webp">
           <source id="sourceSvg" type="image/svg+xml">
           <img class="img-deco-index" id="imagen" loading="lazy" alt="Imagen de Decoracion">
@@ -104,64 +103,49 @@
 
       <div class="redes-img">
         <!-- Imagen de Redes 1 + Imagen del logo de Instagram -->
-        <div>
-          <figure class="img-deco-index-redes" id="contenedor-img" data-info='["decorativa-PaginaPrincipal-RS-1", "img-decorativa", ["jpg", "webp", "svg"]]'>
-            <picture>
-              <source id="sourceJpg" type="image/jpg">
-              <source id="sourceWebp" type="image/webp">
-              <source id="sourceSvg" type="image/svg+xml">              
-              <img class="img-main" id="imagen" loading="lazy" alt="Imagen de Decoracion">
-            </picture>
-          </figure>
-
-          <figure id="contenedor-img" data-info='["logo-Instagram", "ico-redes-sociales", ["png", "svg"]]'>
-            <picture>
-              <source id="sourcePng" type="image/png">
-              <source id="sourceSvg" type="image/svg+xml">
-              <img id="img-Instagram" id="imagen" loading="lazy" alt="Logo Instagram">
-            </picture>
-          </figure>
-        </div>
-
-        <!-- Imagen de Redes 2 + Imagen del logo de Instagram -->
-        <div>
-          <figure class="img-deco-index-redes" id="contenedor-img" data-info='["decorativa-PaginaPrincipal-RS-2", "img-decorativa", ["jpg", "webp", "svg"]]'>
-            <picture>
-              <source id="sourceJpg" type="image/jpg">
-              <source id="sourceWebp" type="image/webp">
-              <source id="sourceSvg" type="image/svg+xml">              
-              <img class="img-main" id="imagen" loading="lazy" alt="Imagen de Decoracion">
-            </picture>
-          </figure>
-
-          <figure id="contenedor-img" data-info='["logo-Instagram", "ico-redes-sociales", ["png", "svg"]]'>
-            <picture>
-              <source id="sourcePng" type="image/png">
-              <source id="sourceSvg" type="image/svg+xml">
-              <img id="img-Instagram" id="imagen" loading="lazy" alt="Logo Instagram">
-            </picture>
-          </figure>
-        </div>
+        <figure class="img-deco-index-redes">
+          <picture id="contenedor-img" data-info='["decorativa-PaginaPrincipal-RS-1", "img-decorativa", ["jpg", "webp", "svg"]]'>
+            <source id="sourceWebp" type="image/webp">
+            <source id="sourceSvg" type="image/svg+xml">              
+            <img class="img-main" id="imagen" loading="lazy" alt="Imagen de Decoracion">
+          </picture>
+            
+          <picture id="contenedor-img" data-info='["logo-Instagram", "ico-redes-sociales", ["png", "svg"]]'>
+            <source id="sourcePng" type="image/png">
+            <source id="sourceSvg" type="image/svg+xml">
+            <img class="img-Instagram" id="img-Instagram" id="imagen" loading="lazy" alt="Logo Instagram">
+          </picture>
+        </figure>
+          
+          <!-- Imagen de Redes 2 + Imagen del logo de Instagram -->
+        <figure class="img-deco-index-redes">
+          <picture id="contenedor-img" data-info='["decorativa-PaginaPrincipal-RS-2", "img-decorativa", ["jpg", "webp", "svg"]]'>
+            <source id="sourceWebp" type="image/webp">
+            <source id="sourceSvg" type="image/svg+xml">              
+            <img class="img-main" id="imagen" loading="lazy" alt="Imagen de Decoracion">
+          </picture>
+          
+          <picture id="contenedor-img" data-info='["logo-Instagram", "ico-redes-sociales", ["png", "svg"]]'>
+            <source id="sourcePng" type="image/png">
+            <source id="sourceSvg" type="image/svg+xml">
+            <img class="img-Instagram" id="img-Instagram" id="imagen" loading="lazy" alt="Logo Instagram">
+          </picture>
+        </figure>
 
         <!-- Imagen de Redes 3 + Imagen del logo de Instagram -->
-        <div>
-          <figure class="img-deco-index-redes" id="contenedor-img" data-info='["decorativa-PaginaPrincipal-RS-3", "img-decorativa", ["jpg", "webp", "svg"]]'>
-            <picture>
-              <source id="sourceJpg" type="image/jpg">
-              <source id="sourceWebp" type="image/webp">
-              <source id="sourceSvg" type="image/svg+xml">              
-              <img class="img-main" id="imagen" loading="lazy" alt="Imagen de Decoracion">
-            </picture>
-          </figure>
+        <figure class="img-deco-index-redes">
+          <picture id="contenedor-img" data-info='["decorativa-PaginaPrincipal-RS-3", "img-decorativa", ["jpg", "webp", "svg"]]'>
+            <source id="sourceWebp" type="image/webp">
+            <source id="sourceSvg" type="image/svg+xml">              
+            <img class="img-main" id="imagen" loading="lazy" alt="Imagen de Decoracion">
+          </picture>
 
-          <figure id="contenedor-img" data-info='["logo-Instagram", "ico-redes-sociales", ["png", "svg"]]'>
-            <picture>
-              <source id="sourcePng" type="image/png">
-              <source id="sourceSvg" type="image/svg+xml">
-              <img id="img-Instagram" id="imagen" loading="lazy" alt="Logo Instagram">
-            </picture>
-          </figure>
-        </div>
+          <picture id="contenedor-img" data-info='["logo-Instagram", "ico-redes-sociales", ["png", "svg"]]'>
+            <source id="sourcePng" type="image/png">
+            <source id="sourceSvg" type="image/svg+xml">
+            <img class="img-Instagram" id="img-Instagram" id="imagen" loading="lazy" alt="Logo Instagram">
+          </picture>
+        </figure>
       </div>
 
       <!-- Botón para mostrar más Imagenes (Sin funcionalidad, por ahora) -->
@@ -205,7 +189,7 @@
               <picture>
                 <source id="sourcePng" type="image/png">
                 <source id="sourceSvg" type="image/svg+xml">
-                <img id="img-logoRedes" id="imagen" loading="lazy" alt="Logo Instagram">
+                <img class="img-logoRedes" id="img-logoRedes" id="imagen" loading="lazy" alt="Logo Instagram">
               </picture>
             </figure>
           </a>
@@ -215,7 +199,7 @@
               <picture>
                 <source id="sourcePng" type="image/png">
                 <source id="sourceSvg" type="image/svg+xml">
-                <img id="img-logoRedes" id="imagen" loading="lazy" alt="Logo Instagram">
+                <img class="img-logoRedes" id="img-logoRedes" id="imagen" loading="lazy" alt="Logo Instagram">
               </picture>
             </figure>
           </a>
@@ -225,7 +209,7 @@
               <picture>
                 <source id="sourcePng" type="image/png">
                 <source id="sourceSvg" type="image/svg+xml">
-                <img id="img-logoRedes" id="imagen" loading="lazy" alt="Logo Instagram">
+                <img class="img-logoRedes" id="img-logoRedes" id="imagen" loading="lazy" alt="Logo Instagram">
               </picture>
             </figure>
           </a>
@@ -235,7 +219,7 @@
               <picture>
                 <source id="sourcePng" type="image/png">
                 <source id="sourceSvg" type="image/svg+xml">
-                <img id="img-logoRedes" id="imagen" loading="lazy" alt="Logo Instagram">
+                <img class="img-logoRedes" id="img-logoRedes" id="imagen" loading="lazy" alt="Logo Instagram">
               </picture>
             </figure>
           </a>

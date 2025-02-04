@@ -150,7 +150,6 @@ contenedoresImg.forEach(contenedorImg => {
   const arrayDatos = JSON.parse(dataInfo);
 
   // Obtengo los sources del contenedor
-  const sourceJpg = contenedorImg.querySelector("#sourceJpg");
   const sourceWebp = contenedorImg.querySelector("#sourceWebp");
   const sourcePng = contenedorImg.querySelector("#sourcePng");
   const sourceSvg = contenedorImg.querySelector("#sourceSvg");
@@ -164,23 +163,27 @@ contenedoresImg.forEach(contenedorImg => {
   const cambiarImagen = (anchoContenedor) => {
     // Obtengo la imagen que le voy a asignar al contenedor
     const imagenSeleccionada = imagenes.find(img => anchoContenedor >= img.ancho);
+    console.log(anchoContenedor);
 
     // Compruebo que valores son nulos y cuales no.
     // Cambio las fuentes de <source> y <img>
-    if (sourceJpg) {
-      sourceJpg.srcset = imagenSeleccionada.jpg;
-      imagen.src = imagenSeleccionada.jpg;
-    }
     if (sourceWebp) {
       sourceWebp.srcset = imagenSeleccionada.webp;
     }
     if (sourcePng) {
       sourcePng.srcset = imagenSeleccionada.png;
-      imagen.src = imagenSeleccionada.png;
     }
     if (sourceSvg) {
       sourceSvg.srcset = imagenSeleccionada.svg;
     }
-  }
 
+    // Asigna a la etiqueta img svg, png o jpg.
+    if (imagenSeleccionada.svg) {
+      imagen.src = imagenSeleccionada.svg;
+    } else if (imagenSeleccionada.png) {
+      imagen.src = imagenSeleccionada.png;
+    } else if (imagenSeleccionada.jpg) {
+      imagen.src = imagenSeleccionada.jpg;
+    }
+  }
 });
