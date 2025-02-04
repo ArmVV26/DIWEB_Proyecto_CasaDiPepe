@@ -323,6 +323,31 @@ footer {
   width: 55%;
 }
 
+.menu-carta-principal {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 3rem;
+  width: 75%;
+  margin: 2.5rem auto;
+}
+
+.img-prod-carta-menu {
+  position: relative;
+  width: 100%;
+  border: 4px solid #961316;
+  border-radius: 1rem;
+  overflow: hidden;
+  filter: brightness(0.55) contrast(110%) saturate(160%) sepia(20%);
+  transition: all 0.5s;
+}
+
+.img-main-menu {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .menu-carta ul {
   display: flex;
   flex-direction: row;
@@ -345,7 +370,6 @@ footer {
   border: 4px solid #961316;
   border-radius: 1rem;
   overflow: hidden;
-  transition: all 0.5s;
   filter: brightness(0.75) contrast(110%) saturate(160%) sepia(20%);
   transition: all 0.5s;
 }
