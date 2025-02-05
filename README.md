@@ -37,3 +37,6 @@ Contiene todos los archivos necesarios para implementar el proyecto web. Esta ca
   + **css/**: Contiene las hojas de estilo (CSS) usadas para diseñar la web.
   + **sass/**: Contiene los archivos con el contenidos SASS usados para el diseño de la web.
 - **index.html**: Archivo principal que actúa como punto de entrada a la web.
+
+### 2. [Index.html](https://github.com/ArmVV26/CasaDiPepe/tree/main/Fuente)
+Contiene todos los archivos necesarios para implementar el proyecto web. Esta carpeta está organizada de la siguiente manera:  

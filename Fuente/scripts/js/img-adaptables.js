@@ -49,7 +49,13 @@ function generarImagenes(arrayDatos) {
       ]
 
       // Cambio la ubicacion de las imagenes en funcion de la carpeta donde se encuentre
-      if (arrayDatos[2] == "1") {
+      if (arrayDatos[2] == "0") {
+        imagenes.forEach(element => {
+          element.jpg = `.Fuente/${element.jpg}`;
+          element.webp = `Fuente/${element.webp}`;
+        });
+
+      } else if (arrayDatos[2] == "1") {
         imagenes.forEach(element => {
           element.jpg = `../${element.jpg}`;
           element.webp = `../${element.webp}`;
@@ -104,7 +110,13 @@ function generarImagenes(arrayDatos) {
       ]
       
       // Cambio la ubicacion de las imagenes en funcion de la carpeta donde se encuentre
-      if (arrayDatos[2] == "1") {
+      if (arrayDatos[2] == "0") {
+        imagenes.forEach(element => {
+          element.jpg = `Fuente/${element.jpg}`;
+          element.webp = `Fuente/${element.webp}`;
+          element.png = `Fuente/${element.png}`;
+        });
+      } else if (arrayDatos[2] == "1") {
         imagenes.forEach(element => {
           element.jpg = `../${element.jpg}`;
           element.webp = `../${element.webp}`;
@@ -140,7 +152,13 @@ function generarImagenes(arrayDatos) {
       ]
 
       // Cambio la ubicacion de las imagenes en funcion de la carpeta donde se encuentre
-      if (arrayDatos[2] == "1") {
+      if (arrayDatos[2] == "0") {
+        imagenes.forEach(element => {
+          element.png = `Fuente/${element.png}`;
+          element.svg = `Fuente/${element.svg}`;
+        });
+        
+      } else if (arrayDatos[2] == "1") {
         imagenes.forEach(element => {
           element.png = `../${element.png}`;
           element.svg = `../${element.svg}`;
