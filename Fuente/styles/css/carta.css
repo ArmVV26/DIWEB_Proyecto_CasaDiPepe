@@ -244,6 +244,7 @@ footer {
 }
 
 .img-redes i.fab:hover {
+  color: #222222;
   background-color: #F1E7E7;
   border: 0.2rem solid #961316;
 }
@@ -329,6 +330,7 @@ footer {
   grid-template-rows: 1fr 1fr 1fr;
   gap: 3rem;
   width: 75%;
+  height: 75rem;
   margin: 2.5rem auto;
 }
 
@@ -338,7 +340,6 @@ footer {
   border: 4px solid #961316;
   border-radius: 1rem;
   overflow: hidden;
-  filter: brightness(0.55) contrast(110%) saturate(160%) sepia(20%);
   transition: all 0.5s;
 }
 
@@ -346,6 +347,23 @@ footer {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  filter: brightness(0.55) contrast(110%) saturate(160%) sepia(20%);
+  transition: all 0.5s;
+}
+.img-main-menu:hover {
+  filter: brightness(0.5);
+}
+
+.enlace-carta {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  font-size: 5rem;
+  transition: all 0.5s;
+}
+.enlace-carta .img-main-menu:hover {
+  filter: brightness(0.5);
 }
 
 .menu-carta ul {

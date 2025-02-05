@@ -244,6 +244,7 @@ footer {
 }
 
 .img-redes i.fab:hover {
+  color: #222222;
   background-color: #F1E7E7;
   border: 0.2rem solid #961316;
 }

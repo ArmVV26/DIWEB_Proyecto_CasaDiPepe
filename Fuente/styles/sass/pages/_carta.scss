@@ -1,13 +1,14 @@
 // Importo las Variables
 @import '../utils/variables';
 
-// Estilos para la pagina carta de la web (carta.html y carta/)
+// Estilos para la pagina carta de la web carta.html
 .menu-carta-principal {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 3rem;
     width: 75%;
+    height: 75rem;  
     margin: 2.5rem auto;
 }
 
@@ -17,7 +18,6 @@
     border: 4px solid $color-Principal;
     border-radius: 1rem;
     overflow: hidden;
-    filter: brightness(0.55) contrast(110%) saturate(160%) sepia(20%);
     transition: all 0.5s;
 }
 
@@ -25,9 +25,29 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    filter: brightness(0.55) contrast(110%) saturate(160%) sepia(20%);
+    transition: all 0.5s;
+
+    &:hover {
+        filter: brightness(0.50);
+    }
 }
 
+.enlace-carta {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
 
+    font-size: 5rem;
+    transition: all 0.5s;
+
+    & .img-main-menu:hover {
+        filter: brightness(0.50);
+    }
+}
+
+// Estilos para las paginas del directorio carta (pasta.html)
 .menu-carta ul{
     display: flex;
     flex-direction: row;
