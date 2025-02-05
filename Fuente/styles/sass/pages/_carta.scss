@@ -75,6 +75,7 @@
     border-radius: 1rem;
     overflow: hidden;
     filter: brightness(0.75) contrast(110%) saturate(160%) sepia(20%);
+    box-shadow:  0px 2px 8px 0px $color-Neutro-Negro-rgba;
     transition: all 0.25s;
     
     &:hover {

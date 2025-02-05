@@ -1,0 +1,55 @@
+// Importo las Variables y los mixins para aplicar las media queries necesarias
+@import '../utils/variables';
+@import '../utils/mixins';
+
+// Aqui voy a definir el estilo de la pagina incio-sesion.html
+.contenedor-formulario {
+    position: relative;
+    margin: 5rem auto;
+    width: 50%;
+    height: 30rem;
+    background-color: $color-Secundario;
+    border: 4px solid $color-Neutro-Marron;
+    border-radius: 1rem;
+    box-shadow: 3px 4px 0px 1px $color-Terciario;
+
+    h1 {
+        font-size: 3.5rem;
+        font-style: italic;
+        text-align: center;
+        text-shadow: 4px 4px 5px $color-Neutro-Negro;
+        padding: 1rem 1rem 2rem;
+    }
+}
+
+.inicio-formulario {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 80%;
+
+    label {
+        font-family: $font-Secondary;
+        font-size: 2rem;
+        color: $color-Neutro-Blanco;
+    }
+
+    input {
+        font-family: $font-Secondary;
+        font-size: 1.25rem;
+
+        width: 100%;
+        height: 2rem;
+        padding: 0.5rem;
+        margin: 0.5rem 0 2rem;
+
+        background-color: $color-Neutro-Blanco;
+        border: 0.15rem solid $color-Neutro-Negro;
+        border-radius: 1rem;
+        box-shadow: 3px 4px 0px 1px $color-Terciario;
+
+        &::placeholder {
+            font-family: $font-Secondary;
+        }
+    }
+}

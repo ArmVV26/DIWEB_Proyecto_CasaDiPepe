@@ -324,196 +324,51 @@ footer {
   width: 55%;
 }
 
-.menu-carta-principal {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 3rem;
-  width: 85%;
-  height: 75rem;
-  margin: 3.5rem auto;
-}
-
-.img-prod-carta-menu {
+.contenedor-formulario {
   position: relative;
-  width: 100%;
-  border: 4px solid #961316;
+  margin: 5rem auto;
+  width: 50%;
+  height: 30rem;
+  background-color: #B03B3B;
+  border: 4px solid #362624;
   border-radius: 1rem;
-  overflow: hidden;
-  box-shadow: 0px 2px 8px 0px rgba(34, 34, 34, 0.5);
-  transition: all 0.5s;
+  box-shadow: 3px 4px 0px 1px #F1A2A2;
 }
-
-.img-main {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(0.55) contrast(110%) saturate(160%) sepia(20%);
-  transition: all 0.5s;
-}
-.img-main:hover {
-  filter: brightness(0.5);
-}
-
-.enlace-carta {
-  position: absolute;
-  left: 50%;
-  top: 50%;
+.contenedor-formulario h1 {
+  font-size: 3.5rem;
+  font-style: italic;
   text-align: center;
-  transform: translate(-50%, -50%);
-  font-size: 4rem;
-  transition: all 0.25s;
+  text-shadow: 4px 4px 5px #222222;
+  padding: 1rem 1rem 2rem;
 }
 
-.menu-carta ul {
+.inicio-formulario {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 1.5rem;
-  margin: 3rem;
+  flex-direction: column;
+  margin: auto;
+  width: 80%;
 }
-
-.seleccion {
-  color: #F1A2A2;
-  background-color: #362624;
-}
-
-.carta-img {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 1.5rem;
-  width: 90%;
-  margin: auto auto 2.5rem;
-}
-
-.img-prod-carta {
-  position: relative;
-  width: 100%;
-  border: 4px solid #961316;
-  border-radius: 1rem;
-  overflow: hidden;
-  filter: brightness(0.75) contrast(110%) saturate(160%) sepia(20%);
-  box-shadow: 0px 2px 8px 0px rgba(34, 34, 34, 0.5);
-  transition: all 0.25s;
-}
-.img-prod-carta:hover {
-  filter: brightness(0.9);
-}
-.img-prod-carta:hover .img-desc {
-  opacity: 0;
-  transition: all 0.25s;
-}
-
-.img-main-carta {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.img-desc {
-  position: absolute;
-  height: 30%;
-  bottom: 0;
-  padding: 0 1rem;
-  background-color: #362624;
-  border-top: 0.15rem solid #F1A2A2;
-  transition: all 0.5s;
-}
-.img-desc h1 {
-  text-align: center;
+.inicio-formulario label {
+  font-family: "Questrial";
   font-size: 2rem;
-  color: #F1A2A2;
-}
-.img-desc p {
-  text-align: center;
   color: #F1E7E7;
-  margin-top: 0.25rem;
+}
+.inicio-formulario input {
+  font-family: "Questrial";
+  font-size: 1.25rem;
+  width: 100%;
+  height: 2rem;
+  padding: 0.5rem;
+  margin: 0.5rem 0 2rem;
+  background-color: #F1E7E7;
+  border: 0.15rem solid #222222;
+  border-radius: 1rem;
+  box-shadow: 3px 4px 0px 1px #F1A2A2;
+}
+.inicio-formulario input::placeholder {
+  font-family: "Questrial";
 }
 
-@media (min-width: 320px) {
-  .menu-carta-principal {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, 1fr);
-    width: 90%;
-  }
-  .enlace-carta {
-    font-size: 2rem;
-  }
-  .menu-carta ul {
-    flex-direction: column;
-    align-items: center;
-  }
-  .menu-carta ul a {
-    font-size: 1.5rem;
-  }
-  .carta-img {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(9, 1fr);
-  }
-  .img-desc {
-    height: 40%;
-  }
-  .img-desc h1 {
-    font-size: 1rem;
-  }
-  .img-desc p {
-    font-size: 1rem;
-  }
-}
-@media (min-width: 480px) {
-  .enlace-carta {
-    font-size: 3rem;
-  }
-  .img-desc {
-    height: 20%;
-  }
-}
-@media (min-width: 768px) {
-  .menu-carta-principal {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    width: 85%;
-  }
-  .menu-carta ul {
-    flex-direction: row;
-  }
-  .menu-carta ul a {
-    font-size: 0.75rem;
-  }
-  .carta-img {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(5, 1fr);
-  }
-  .img-desc {
-    height: 30%;
-  }
-}
-@media (min-width: 1024px) {
-  .enlace-carta {
-    font-size: 4rem;
-  }
-}
-@media (min-width: 1200px) {
-  .carta-img {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-  }
-}
-@media (min-width: 1600px) {
-  .menu-carta ul a {
-    font-size: 1.5rem;
-  }
-  .img-desc h1 {
-    font-size: 2rem;
-  }
-  .img-desc p {
-    font-size: 1.25rem;
-  }
-  .menu-carta ul a {
-    font-size: 1.5rem;
-  }
-}
 @media (min-width: 320px) {
   body {
     padding-top: 5rem;
@@ -783,4 +638,4 @@ footer {
   }
 }
 
-/*# sourceMappingURL=carta.css.map */
+/*# sourceMappingURL=inicio-sesion.css.map */

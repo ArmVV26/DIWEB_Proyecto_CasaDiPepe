@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="icon" type="image/x-icon" href="../media/img/logotipo/logo-Web.ico">
-  <link rel="stylesheet" href="../styles/css/carta.css">
+  <link rel="stylesheet" href="../styles/css/inicio-sesion.css">
   <script src="../scripts/js/menu-desplegable.js" defer></script>
   <script src="../scripts/js/img-adaptables.js" defer></script>
   <title>Casa di Pepe</title>
@@ -43,89 +43,26 @@
       </button>
       
       <!-- Boton de Inicio de Sesion -->
-      <a href="inicio-sesion.html" class="boton-inicio separado">Inicio de sesion</a> 
+      <a href="#" class="boton-inicio separado">Inicio de sesion</a> 
 
     </nav>
 
   </header>
 
   <main>
-    <!-- Sección Principal con Hero-Image, titulo, subtítulo y botones -->
-    <section class="introduccion">
-      <figure class="img-header-pred img-carta"></figure>
-      <div class="intro-texto">
-        <h1>CARTA DE CASA DI PEPE</h1>
-        <h3>COCINA CON EL CORAZÓN, SIRVE CON EL ALMA</h3>
-      </div>
+    <!-- Formulario de Incio de Sesion -->
+    <section class="contenedor-formulario">
+        <h1>INICIO DE SESIÓN</h1>
+
+        <form class="inicio-formulario" action="" method="POST">
+            <label for="correoUser">Correo</label>
+            <input type="email" id="correoUser" name="correoUser" placeholder="Escribe tu direccion de correo completa" required>
+
+            <label for="passUser">Contraseña</label>
+            <input type="password" id="passUser" name="passUser" placeholder="Escribe tu contraseña" required>
+
+        </form>
     </section>
-
-    <nav class="menu-carta-principal">
-      <!-- Opción Menu Entrantes -->
-      <figure class="img-prod-carta-menu"  id="contenedor-img" data-info='["producto-Carta-Entrante-1", "img-producto", "1"]'>
-        <picture>
-          <source id="sourceWebp" type="image/webp">
-          <source id="sourceJpg" type="image/jpg">              
-          <img class="img-main" id="imagen" loading="lazy" alt="Imagen de Producto">
-        </picture>
-          
-        <a class="enlace-carta" href="#">Entrantes</a>
-      </figure>
-
-      <!-- Opción Menu Vinos -->
-      <figure class="img-prod-carta-menu"  id="contenedor-img" data-info='["producto-Carta-Vinos-1", "img-producto", "1"]'>
-        <picture>
-          <source id="sourceWebp" type="image/webp">
-          <source id="sourceJpg" type="image/jpg">              
-          <img class="img-main" id="imagen" loading="lazy" alt="Imagen de Producto">
-        </picture>
-          
-        <a class="enlace-carta" href="#">Vinos</a>
-      </figure>
-
-      <!-- Opción Menu Ensaladas -->
-      <figure class="img-prod-carta-menu"  id="contenedor-img" data-info='["producto-Carta-Ensalada-1", "img-producto", "1"]'>
-        <picture>
-          <source id="sourceWebp" type="image/webp">
-          <source id="sourceJpg" type="image/jpg">              
-          <img class="img-main" id="imagen" loading="lazy" alt="Imagen de Producto">
-        </picture>
-          
-        <a class="enlace-carta" href="#">Ensaladas</a>
-      </figure>
-
-      <!-- Opción Menu Pastas -->
-      <figure class="img-prod-carta-menu"  id="contenedor-img" data-info='["producto-Carta-Pasta-1", "img-producto", "1"]'>
-        <picture>
-          <source id="sourceWebp" type="image/webp">
-          <source id="sourceJpg" type="image/jpg">              
-          <img class="img-main" id="imagen" loading="lazy" alt="Imagen de Producto">
-        </picture>
-          
-        <a class="enlace-carta" href="carta/pasta.html">Pastas</a>
-      </figure>
-
-      <!-- Opción Menu Pizza -->
-      <figure class="img-prod-carta-menu"  id="contenedor-img" data-info='["producto-Carta-Pizza-1", "img-producto", "1"]'>
-        <picture>
-          <source id="sourceWebp" type="image/webp">
-          <source id="sourceJpg" type="image/jpg">              
-          <img class="img-main" id="imagen" loading="lazy" alt="Imagen de Producto">
-        </picture>
-          
-        <a class="enlace-carta" href="#">Pizzas</a>
-      </figure>
-
-      <!-- Opción Menu Postre -->
-      <figure class="img-prod-carta-menu"  id="contenedor-img" data-info='["producto-Carta-Postre-1", "img-producto", "1"]'>
-        <picture>
-          <source id="sourceWebp" type="image/webp">
-          <source id="sourceJpg" type="image/jpg">              
-          <img class="img-main" id="imagen" loading="lazy" alt="Imagen de Producto">
-        </picture>
-          
-        <a class="enlace-carta" href="#">Postres</a>
-      </figure>
-    </nav>
 
   </main>
 
