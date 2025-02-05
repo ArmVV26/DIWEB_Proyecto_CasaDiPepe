@@ -399,8 +399,10 @@ footer {
 }
 
 .img-main {
+  display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
   object-fit: cover;
   transition: all 0.5s;
 }
@@ -448,11 +450,17 @@ footer {
   .img-deco-index-redes i.fab {
     font-size: 2rem;
   }
+  .img-main {
+    aspect-ratio: 16/9;
+  }
 }
 @media (min-width: 1024px) {
   .redes-img {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+  }
+  .img-main {
+    aspect-ratio: 1/1;
   }
 }
 @media (min-width: 1200px) {

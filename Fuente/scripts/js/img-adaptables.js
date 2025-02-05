@@ -11,31 +11,31 @@ function generarImagenes(arrayDatos) {
 
     imagenes = [
       {
-        ancho: 3200,
+        ancho: 2240,
         jpg: `media/img/img-decorativa/jpg/${arrayDatos[0]}-3200px.jpg`,
         webp: `media/img/img-decorativa/webp/${arrayDatos[0]}-3200px.webp`,
         svg: `media/img/img-decorativa/svg/${arrayDatos[0]}.svg`,
       },
       {
-        ancho: 2240,
+        ancho: 1600,
         jpg: `media/img/img-decorativa/jpg/${arrayDatos[0]}-2240px.jpg`,
         webp: `media/img/img-decorativa/webp/${arrayDatos[0]}-2240px.webp`,
         svg: `media/img/img-decorativa/svg/${arrayDatos[0]}.svg`,
       },
       {
-        ancho: 1600,
+        ancho: 960,
         jpg: `media/img/img-decorativa/jpg/${arrayDatos[0]}-1600px.jpg`,
         webp: `media/img/img-decorativa/webp/${arrayDatos[0]}-1600px.webp`,
         svg: `media/img/img-decorativa/svg/${arrayDatos[0]}.svg`,
       },
       {
-        ancho: 960,
+        ancho: 640,
         jpg: `media/img/img-decorativa/jpg/${arrayDatos[0]}-960px.jpg`,
         webp: `media/img/img-decorativa/webp/${arrayDatos[0]}-960px.webp`,
         svg: `media/img/img-decorativa/svg/${arrayDatos[0]}.svg`,
       },
       {
-        ancho: 640,
+        ancho: 320,
         jpg: `media/img/img-decorativa/jpg/${arrayDatos[0]}-640px.jpg`,
         webp: `media/img/img-decorativa/webp/${arrayDatos[0]}-640px.webp`,
         svg: `media/img/img-decorativa/svg/${arrayDatos[0]}.svg`,
@@ -52,31 +52,31 @@ function generarImagenes(arrayDatos) {
 
     imagenes = [
       {
-        ancho: 3200,
+        ancho: 2240,
         jpg: `media/img/img-producto/jpg/${arrayDatos[0]}-3200px.jpg`,
         webp: `media/img/img-producto/webp/${arrayDatos[0]}-3200px.webp`,
         svg: `media/img/img-producto/svg/${arrayDatos[0]}.svg`,
       },
       {
-        ancho: 2240,
+        ancho: 1600,
         jpg: `media/img/img-producto/jpg/${arrayDatos[0]}-2240px.jpg`,
         webp: `media/img/img-producto/webp/${arrayDatos[0]}-2240px.webp`,
         svg: `media/img/img-producto/svg/${arrayDatos[0]}.svg`,
       },
       {
-        ancho: 1600,
+        ancho: 960,
         jpg: `media/img/img-producto/jpg/${arrayDatos[0]}-1600px.jpg`,
         webp: `media/img/img-producto/webp/${arrayDatos[0]}-1600px.webp`,
         svg: `media/img/img-producto/svg/${arrayDatos[0]}.svg`,
       },
       {
-        ancho: 960,
+        ancho: 640,
         jpg: `media/img/img-producto/jpg/${arrayDatos[0]}-960px.jpg`,
         webp: `media/img/img-producto/webp/${arrayDatos[0]}-960px.webp`,
         svg: `media/img/img-producto/svg/${arrayDatos[0]}.svg`,
       },
       {
-        ancho: 640,
+        ancho: 320,
         jpg: `media/img/img-producto/jpg/${arrayDatos[0]}-640px.jpg`,
         webp: `media/img/img-producto/webp/${arrayDatos[0]}-640px.webp`,
         svg: `media/img/img-producto/svg/${arrayDatos[0]}.svg`,
@@ -93,12 +93,12 @@ function generarImagenes(arrayDatos) {
 
     imagenes = [
       {
-        ancho: 512,
+        ancho: 256,
         png: `media/img/logotipo/png/${arrayDatos[0]}-512px.png`,
         svg: `media/img/ico-redes-sociales/svg/${arrayDatos[0]}.svg`,
       },
       {
-        ancho: 256,
+        ancho: 128,
         png: `media/img/logotipo/png/${arrayDatos[0]}-256px.png`,
         svg: `media/img/ico-redes-sociales/svg/${arrayDatos[0]}.svg`,
       },
@@ -113,7 +113,6 @@ function generarImagenes(arrayDatos) {
 
   return imagenes;
 }
-
 
 // Recorro todos los contenedores
 contenedoresImg.forEach(contenedorImg => {
@@ -143,7 +142,10 @@ contenedoresImg.forEach(contenedorImg => {
   const cambiarImagen = (anchoContenedor) => {
     // Obtengo la imagen que le voy a asignar al contenedor
     const imagenSeleccionada = imagenes.find(img => anchoContenedor >= img.ancho);
-    console.log(anchoContenedor);
+
+    // Comentarios de consola para comprobar el funcionamiento
+    // console.log(`Ancho: ${anchoContenedor} | Imagen: ${imagenSeleccionada.jpg}`);
+    // console.log(arrayDatos);
 
     // Compruebo que valores son nulos y cuales no.
     // Cambio las fuentes de <source> y <img>
