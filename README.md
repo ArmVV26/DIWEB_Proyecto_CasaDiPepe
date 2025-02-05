@@ -6,8 +6,6 @@
 > El objetivo del proyecto es diseñar y estructurar una página web completa para un restaurante ficticio llamado **Casa di Pepe**.
 >
 > Creado por: **Armando Vaquero Vargas**  
->
-> ---
 
 ## Organización del Proyecto
 El repositorio está estructurado en dos carpetas principales:  
