@@ -1,5 +1,5 @@
 # DIWEB_Proyecto_CasaDiPepe
-> ---
+> [!NOTE]
 > ## Descripción del Repositorio
 > Este repositorio contiene el proyecto **Casa di Pepe**, desarrollado para la asignatura **Diseño de Interfaces Web** como parte del curso de **2º DAW**.
 > 
@@ -26,7 +26,6 @@ Contiene todos los archivos necesarios para implementar el proyecto web. Esta ca
   + **fonts/**: Incluye las tipografías usadas en el proyecto.
   + **img/**: Almacena todas las imagenes usadas en el proyecto, organizadas por tipo:
     - hero-image (avif, jpg, webp).
-    - ico-redes-sociales (png, svg).
     - img-decorativa (jpg, svg, webp).
     - img-producto (jpg, png, webp).
     - logotipo (png, svg).
@@ -36,7 +35,6 @@ Contiene todos los archivos necesarios para implementar el proyecto web. Esta ca
 - **style/**: Carpeta que contiene las carpetas de estilo CSS y SASS.
   + **css/**: Contiene las hojas de estilo (CSS) usadas para diseñar la web.
   + **sass/**: Contiene los archivos con el contenidos SASS usados para el diseño de la web.
-- **index.html**: Archivo principal que actúa como punto de entrada a la web.
 
-### 2. [Index.html](https://github.com/ArmVV26/CasaDiPepe/tree/main/Fuente)
-Contiene todos los archivos necesarios para implementar el proyecto web. Esta carpeta está organizada de la siguiente manera:  
+### 3. [Index.html](https://armvv26.github.io/DIWEB_Proyecto_CasaDiPepe/)
+Archivo principal que actúa como punto de entrada a la web.
