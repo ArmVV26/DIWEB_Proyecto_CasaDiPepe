@@ -8,6 +8,7 @@
   <link rel="icon" type="image/x-icon" href="media/img/logotipo/logo-Web.ico">
   <link rel="stylesheet" href="styles/css/index.css">
   <script src="scripts/js/menu-desplegable.js" defer></script>
+  <script src="scripts/js/img-adaptables.js" defer></script>
   <title>Casa di Pepe</title>
 </head>
 
@@ -19,19 +20,13 @@
 
       <!-- Logotipo de la Casas Di Pepe -->
       <a href="index.html">
+        <figure id="contenedor-img" data-info='["logo-Header", "logotipo"]'>
           <picture>
-            <source 
-              srcset="
-                media/img/logotipo/png/logo-Header-128px.png 128w,
-                media/img/logotipo/png/logo-Header-256px.png 256w,
-                media/img/logotipo/png/logo-Header-512px.png 512w
-              "
-              sizes="(max-width: 600px) 128px, (max-width: 1200px) 256px, 512px"
-              type="image/png">
-
-            <source srcset="media/img/logotipo/svg/logo-Header.svg" type="image/svg+xml">
-            <img class="img-logoHeader" loading="lazy" src="media/img/logotipo/png/logo-Header-512px.png" alt="Logo Cabecera">
+            <source id="sourcePng" type="image/png">
+            <source id="sourceSvg" type="image/svg+xml">
+            <img class="img-logoHeader" id="imagen" loading="lazy" alt="Logo Cabecera">
           </picture>
+        </figure>
       </a>
 
       <!-- Enlaces Principales de la Web -->
@@ -71,45 +66,14 @@
 
     <!-- Sección Sobre Nosotros -->
     <section class="contenido">
-      <picture>
-        <source 
-          srcset="
-            media/img/img-decorativa/webp/decorativa-PaginaPrincipal-320px.webp 320w,
-            media/img/img-decorativa/webp/decorativa-PaginaPrincipal-640px.webp 640w,
-            media/img/img-decorativa/webp/decorativa-PaginaPrincipal-960px.webp 960w,
-            media/img/img-decorativa/webp/decorativa-PaginaPrincipal-1600px.webp 1600w,
-            media/img/img-decorativa/webp/decorativa-PaginaPrincipal-2240px.webp 2240w,
-            media/img/img-decorativa/webp/decorativa-PaginaPrincipal-3200px.webp 3200w
-          "
-          sizes=" (max-width: 320px) 320px, 
-                  (max-width: 640px) 640px, 
-                  (max-width: 960px) 960px, 
-                  (max-width: 1600px) 1600px, 
-                  (max-width: 2240px) 2240px, 
-                  3200px"
-          type="image/webp">
-
-        <source 
-          srcset="
-            media/img/img-decorativa/jpg/decorativa-PaginaPrincipal-320px.jpg 320w,
-            media/img/img-decorativa/jpg/decorativa-PaginaPrincipal-640px.jpg 640w,
-            media/img/img-decorativa/jpg/decorativa-PaginaPrincipal-960px.jpg 960w,
-            media/img/img-decorativa/jpg/decorativa-PaginaPrincipal-1600px.jpg 1600w,
-            media/img/img-decorativa/jpg/decorativa-PaginaPrincipal-2240px.jpg 2240w,
-            media/img/img-decorativa/jpg/decorativa-PaginaPrincipal-3200px.jpg 3200w
-          "
-          sizes=" (max-width: 320px) 320px, 
-                  (max-width: 640px) 640px, 
-                  (max-width: 960px) 960px, 
-                  (max-width: 1600px) 1600px, 
-                  (max-width: 2240px) 2240px, 
-                  3200px"
-          type="image/jpg">
-
-
-        <source srcset="media/img/img-decorativa/svg/decorativa-PaginaPrincipal.svg" type="image/svg+xml">
-        <img class="img-deco-index" loading="lazy" src="media/img/img-decorativa/jpg/decorativa-PaginaPrincipal-3200px.jpg" alt="Imagen de Decoracion">
-      </picture>
+      <figure id="contenedor-img" data-info='["decorativa-PaginaPrincipal", "img-decorativa"]'>
+        <picture>
+          <source id="sourceWebp" type="image/webp">
+          <source id="sourceJpg" type="image/jpg">
+          <source id="sourceSvg" type="image/svg+xml">
+          <img class="img-deco-index" id="imagen" loading="lazy" alt="Imagen de Decoracion">
+        </picture>
+      </figure>
 
       <article class="cont-texto">
         <h2>Sobre Nosotros</h2>
@@ -141,135 +105,36 @@
 
       <section class="redes-img">
         <!-- Imagen de Redes 1 + Imagen del logo de Instagram -->
-        <figure class="img-deco-index-redes">
+        <figure class="img-deco-index-redes"  id="contenedor-img" data-info='["decorativa-PaginaPrincipal-RS-1", "img-decorativa"]'>
           <picture>
-            <source 
-              srcset="
-                media/img/img-decorativa/webp/decorativa-PaginaPrincipal-RS-1-320px.webp 320w,
-                media/img/img-decorativa/webp/decorativa-PaginaPrincipal-RS-1-640px.webp 640w,
-                media/img/img-decorativa/webp/decorativa-PaginaPrincipal-RS-1-960px.webp 960w,
-                media/img/img-decorativa/webp/decorativa-PaginaPrincipal-RS-1-1600px.webp 1600w,
-                media/img/img-decorativa/webp/decorativa-PaginaPrincipal-RS-1-2240px.webp 2240w,
-                media/img/img-decorativa/webp/decorativa-PaginaPrincipal-RS-1-3200px.webp 3200w
-              "
-              sizes=" (max-width: 320px) 320px, 
-                      (max-width: 640px) 640px, 
-                      (max-width: 960px) 960px, 
-                      (max-width: 1600px) 1600px, 
-                      (max-width: 2240px) 2240px, 
-                      3200px"
-              type="image/webp">
-
-            <source 
-              srcset="
-                media/img/img-decorativa/jpg/decorativa-PaginaPrincipal-RS-1-320px.jpg 320w,
-                media/img/img-decorativa/jpg/decorativa-PaginaPrincipal-RS-1-640px.jpg 640w,
-                media/img/img-decorativa/jpg/decorativa-PaginaPrincipal-RS-1-960px.jpg 960w,
-                media/img/img-decorativa/jpg/decorativa-PaginaPrincipal-RS-1-1600px.jpg 1600w,
-                media/img/img-decorativa/jpg/decorativa-PaginaPrincipal-RS-1-2240px.jpg 2240w,
-                media/img/img-decorativa/jpg/decorativa-PaginaPrincipal-RS-1-3200px.jpg 3200w
-              "
-              sizes=" (max-width: 320px) 320px, 
-                      (max-width: 640px) 640px, 
-                      (max-width: 960px) 960px, 
-                      (max-width: 1600px) 1600px, 
-                      (max-width: 2240px) 2240px, 
-                      3200px"
-              type="image/jpg">
-    
-              
-            <source srcset="media/img/img-decorativa/svg/decorativa-PaginaPrincipal-RS-1.svg" type="image/svg+xml">
-            <img class="img-main" loading="lazy" src="media/img/img-decorativa/jpg/decorativa-PaginaPrincipal-RS-1-3200px.jpg" alt="Imagen de Decoracion">
+            <source id="sourceWebp" type="image/webp">
+            <source id="sourceJpg" type="image/jpg">
+            <source id="sourceSvg" type="image/svg+xml">              
+            <img class="img-main" id="imagen" loading="lazy" alt="Imagen de Decoracion">
           </picture>
-
+            
           <i class="fab fa-instagram"></i>
         </figure>
 
         <!-- Imagen de Redes 2 + Imagen del logo de Instagram -->
-        <figure class="img-deco-index-redes">
+        <figure class="img-deco-index-redes" id="contenedor-img" data-info='["decorativa-PaginaPrincipal-RS-2", "img-decorativa"]'>
           <picture>
-            <source 
-              srcset="
-                media/img/img-decorativa/webp/decorativa-PaginaPrincipal-RS-2-320px.webp 320w,
-                media/img/img-decorativa/webp/decorativa-PaginaPrincipal-RS-2-640px.webp 640w,
-                media/img/img-decorativa/webp/decorativa-PaginaPrincipal-RS-2-960px.webp 960w,
-                media/img/img-decorativa/webp/decorativa-PaginaPrincipal-RS-2-1600px.webp 1600w,
-                media/img/img-decorativa/webp/decorativa-PaginaPrincipal-RS-2-2240px.webp 2240w,
-                media/img/img-decorativa/webp/decorativa-PaginaPrincipal-RS-2-3200px.webp 3200w
-              "
-              sizes=" (max-width: 320px) 320px, 
-                      (max-width: 640px) 640px, 
-                      (max-width: 960px) 960px, 
-                      (max-width: 1600px) 1600px, 
-                      (max-width: 2240px) 2240px, 
-                      3200px"
-              type="image/webp">
-            
-            <source 
-              srcset="
-                media/img/img-decorativa/jpg/decorativa-PaginaPrincipal-RS-2-320px.jpg 320w,
-                media/img/img-decorativa/jpg/decorativa-PaginaPrincipal-RS-2-640px.jpg 640w,
-                media/img/img-decorativa/jpg/decorativa-PaginaPrincipal-RS-2-960px.jpg 960w,
-                media/img/img-decorativa/jpg/decorativa-PaginaPrincipal-RS-2-1600px.jpg 1600w,
-                media/img/img-decorativa/jpg/decorativa-PaginaPrincipal-RS-2-2240px.jpg 2240w,
-                media/img/img-decorativa/jpg/decorativa-PaginaPrincipal-RS-2-3200px.jpg 3200w
-              "
-              sizes=" (max-width: 320px) 320px, 
-                      (max-width: 640px) 640px, 
-                      (max-width: 960px) 960px, 
-                      (max-width: 1600px) 1600px, 
-                      (max-width: 2240px) 2240px, 
-                      3200px"
-              type="image/jpg">
-    
-
-            <source srcset="media/img/img-decorativa/svg/decorativa-PaginaPrincipal-RS-2.svg" type="image/svg+xml">
-            <img class="img-main" loading="lazy" src="media/jpg/img-decorativa/webp/decorativa-PaginaPrincipal-RS-2-3200px.jpg" alt="Imagen de Decoracion">
+            <source id="sourceWebp" type="image/webp">
+            <source id="sourceJpg" type="image/jpg">
+            <source id="sourceSvg" type="image/svg+xml">              
+            <img class="img-main" id="imagen" loading="lazy" alt="Imagen de Decoracion">
           </picture>
-
+          
           <i class="fab fa-instagram"></i>
         </figure>
 
         <!-- Imagen de Redes 3 + Imagen del logo de Instagram -->
-        <figure class="img-deco-index-redes">
+        <figure class="img-deco-index-redes" id="contenedor-img" data-info='["decorativa-PaginaPrincipal-RS-3", "img-decorativa"]'>
           <picture>
-            <source 
-              srcset="
-                media/img/img-decorativa/webp/decorativa-PaginaPrincipal-RS-3-320px.webp 320w,
-                media/img/img-decorativa/webp/decorativa-PaginaPrincipal-RS-3-640px.webp 640w,
-                media/img/img-decorativa/webp/decorativa-PaginaPrincipal-RS-3-960px.webp 960w,
-                media/img/img-decorativa/webp/decorativa-PaginaPrincipal-RS-3-1600px.webp 1600w,
-                media/img/img-decorativa/webp/decorativa-PaginaPrincipal-RS-3-2240px.webp 2240w,
-                media/img/img-decorativa/webp/decorativa-PaginaPrincipal-RS-3-3200px.webp 3200w
-              "
-              sizes=" (max-width: 320px) 320px, 
-                      (max-width: 640px) 640px, 
-                      (max-width: 960px) 960px, 
-                      (max-width: 1600px) 1600px, 
-                      (max-width: 2240px) 2240px, 
-                      3200px"
-              type="image/webp">
-
-            <source 
-              srcset="
-                media/img/img-decorativa/jpg/decorativa-PaginaPrincipal-RS-3-320px.jpg 320w,
-                media/img/img-decorativa/jpg/decorativa-PaginaPrincipal-RS-3-640px.jpg 640w,
-                media/img/img-decorativa/jpg/decorativa-PaginaPrincipal-RS-3-960px.jpg 960w,
-                media/img/img-decorativa/jpg/decorativa-PaginaPrincipal-RS-3-1600px.jpg 1600w,
-                media/img/img-decorativa/jpg/decorativa-PaginaPrincipal-RS-3-2240px.jpg 2240w,
-                media/img/img-decorativa/jpg/decorativa-PaginaPrincipal-RS-3-3200px.jpg 3200w
-              "
-              sizes=" (max-width: 320px) 320px, 
-                      (max-width: 640px) 640px, 
-                      (max-width: 960px) 960px, 
-                      (max-width: 1600px) 1600px, 
-                      (max-width: 2240px) 2240px, 
-                      3200px"
-              type="image/jpg">
-    
-
-            <source srcset="media/img/img-decorativa/svg/decorativa-PaginaPrincipal-RS-3.svg" type="image/svg+xml">
-            <img class="img-main" loading="lazy" src="media/img/img-decorativa/jpg/decorativa-PaginaPrincipal-RS-3-3200px.jpg" alt="Imagen de Decoracion">
+            <source id="sourceWebp" type="image/webp">
+            <source id="sourceJpg" type="image/jpg">
+            <source id="sourceSvg" type="image/svg+xml">              
+            <img class="img-main" id="imagen" loading="lazy" alt="Imagen de Decoracion">
           </picture>
 
           <i class="fab fa-instagram"></i>
@@ -287,36 +152,24 @@
     <!-- Logotipo de Casa Di Pepe, Logotipo del Patrocinador y Menú con las Redes Sociales -->
     <section class="fila-superior">
       
-      <!-- Logotipo de Casa Di Pepe -->
-      <picture>
-        <source 
-          srcset="
-            media/img/logotipo/png/logo-Header-Blanco-128px.png 128w,
-            media/img/logotipo/png/logo-Header-Blanco-256px.png 256w,
-            media/img/logotipo/png/logo-Header-Blanco-512px.png 512w
-          "
-          sizes="(max-width: 600px) 128px, (max-width: 1200px) 256px, 512px"
-          type="image/png">
-
-        <source srcset="media/img/logotipo/svg/logo-Header-Blanco.svg" type="image/svg+xml">
-        <img class="img-logoFooter" loading="lazy" src="media/img/logotipo/png/logo-Header-Blanco-512px.png" alt="Logo Cabecera">
-      </picture>
+      <!-- Logotipo de Casa Di Pepe V2 -->
+      <figure id="contenedor-img" data-info='["logo-Header-Blanco", "logotipo"]'>
+        <picture>
+          <source id="sourcePng" type="image/png">
+          <source id="sourceSvg" type="image/svg+xml">
+          <img class="img-logoFooter" id="imagen" loading="lazy" alt="Logo Cabecera">
+        </picture>
+      </figure>
             
       <!-- Logotipo del Patrocinador -->
       <a href="https://www.guiarepsol.com/">
-        <picture>
-          <source 
-            srcset="
-              media/img/logotipo/png/logo-Patrocinador-128px.png 128w,
-              media/img/logotipo/png/logo-Patrocinador-256px.png 256w,
-              media/img/logotipo/png/logo-Patrocinador-512px.png 512w
-            "
-            sizes="(max-width: 600px) 128px, (max-width: 1200px) 256px, 512px"
-            type="image/png">
-
-          <source srcset="media/img/logotipo/svg/logo-Patrocinador.svg" type="image/svg+xml">
-          <img class="img-logoPatrocinador" loading="lazy" src="media/img/logotipo/png/logo-Patrocinador-512px.png" alt="Logo Cabecera">
-        </picture>
+        <figure id="contenedor-img" data-info='["logo-Patrocinador", "logotipo"]'>
+          <picture>
+            <source id="sourcePng" type="image/png">
+            <source id="sourceSvg" type="image/svg+xml">
+            <img class="img-logoPatrocinador" id="imagen" loading="lazy" alt="Logo Cabecera">
+          </picture>
+        </figure>
       </a>
 
       <!-- Sección de la Redes Sociales -->

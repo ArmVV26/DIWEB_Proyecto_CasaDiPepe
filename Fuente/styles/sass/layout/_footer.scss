@@ -61,7 +61,7 @@ footer {
     background-color: map.get($footer-colors, "main");
     border: 0.2rem solid map.get($footer-colors, "text");
     border-radius: 2.5rem;
-    transition: all 0.5s ease;
+    transition: all 0.25s ease;
 }
 
 .img-redes i.fab:hover {

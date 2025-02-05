@@ -8,6 +8,7 @@
   <link rel="icon" type="image/x-icon" href="../../media/img/logotipo/logo-Web.ico">
   <link rel="stylesheet" href="../../styles/css/carta.css">
   <script src="../../scripts/js/menu-desplegable.js" defer></script>
+  <script src="../../scripts/js/img-adaptables.js" defer></script>
   <title>Casa di Pepe</title>
 </head>
 
@@ -19,19 +20,13 @@
 
       <!-- Logotipo de la Casas Di Pepe -->
       <a href="../../index.html">
+        <figure id="contenedor-img" data-info='["logo-Header", "logotipo", "2"]'>
           <picture>
-            <source 
-              srcset="
-                ../../media/img/logotipo/png/logo-Header-128px.png 128w,
-                ../../media/img/logotipo/png/logo-Header-256px.png 256w,
-                ../../media/img/logotipo/png/logo-Header-512px.png 512w
-              "
-              sizes="(max-width: 600px) 128px, (max-width: 1200px) 256px, 512px"
-              type="image/png">
-
-            <source srcset="../../media/img/logotipo/svg/logo-Header.svg" type="image/svg+xml">
-            <img class="img-logoHeader" loading="lazy" src="../../media/img/logotipo/png/logo-Header-512px.png" alt="Logo Cabecera">
+            <source id="sourcePng" type="image/png">
+            <source id="sourceSvg" type="image/svg+xml">
+            <img class="img-logoHeader" id="imagen" loading="lazy" alt="Logo Cabecera">
           </picture>
+        </figure>
       </a>
 
       <!-- Enlaces Principales de la Web -->
@@ -69,7 +64,7 @@
         <li><a class="boton-pred" >Entrantes</a></li>
         <li><a class="boton-pred" >Vinos</a></li>
         <li><a class="boton-pred" >Ensaladas</a></li>
-        <li><a class="boton-pred" >Pasta</a></li>
+        <li><a class="boton-pred seleccion" >Pasta</a></li>
         <li><a class="boton-pred" >Pizza</a></li>
         <li><a class="boton-pred" >Postres</a></li>
       </ul>
@@ -77,50 +72,128 @@
 
     <div class="carta-img">
       <!-- Imagen del menú Pasta 1 + Descripcion de Productos -->
-      <figure class="img-prod-carta">
+      <figure class="img-prod-carta"  id="contenedor-img" data-info='["producto-Carta-Pasta-1", "img-producto", "2"]'>
         <picture>
-          <source 
-            srcset="
-              ../../media/img/img-producto/webp/producto-Carta-Pasta-1-320px.webp 320w,
-              ../../media/img/img-producto/webp/producto-Carta-Pasta-1-640px.webp 640w,
-              ../../media/img/img-producto/webp/producto-Carta-Pasta-1-960px.webp 960w,
-              ../../media/img/img-producto/webp/producto-Carta-Pasta-1-1600px.webp 1600w,
-              ../../media/img/img-producto/webp/producto-Carta-Pasta-1-2240px.webp 2240w,
-              ../../media/img/img-producto/webp/producto-Carta-Pasta-1-3200px.webp 3200w
-            "
-            sizes=" (max-width: 320px) 320px, 
-                    (max-width: 640px) 640px, 
-                    (max-width: 960px) 960px, 
-                    (max-width: 1600px) 1600px, 
-                    (max-width: 2240px) 2240px, 
-                    3200px"
-            type="image/webp">
-
-          <source 
-            srcset="
-              ../../media/img/img-producto/jpg/producto-Carta-Pasta-1-320px.jpg 320w,
-              ../../media/img/img-producto/jpg/producto-Carta-Pasta-1-640px.jpg 640w,
-              ../../media/img/img-producto/jpg/producto-Carta-Pasta-1-960px.jpg 960w,
-              ../../media/img/img-producto/jpg/producto-Carta-Pasta-1-1600px.jpg 1600w,
-              ../../media/img/img-producto/jpg/producto-Carta-Pasta-1-2240px.jpg 2240w,
-              ../../media/img/img-producto/jpg/producto-Carta-Pasta-1-3200px.jpg 3200w
-            "
-            sizes=" (max-width: 320px) 320px, 
-                    (max-width: 640px) 640px, 
-                    (max-width: 960px) 960px, 
-                    (max-width: 1600px) 1600px, 
-                    (max-width: 2240px) 2240px, 
-                    3200px"
-            type="image/jpg">
-   
-          <img class="img-main" loading="lazy" src="../../media/webp/img-producto/webp/producto-Carta-Pasta-1-3200px.webp" alt="Imagen de Producto">
+          <source id="sourceWebp" type="image/webp">
+          <source id="sourceJpg" type="image/jpg">              
+          <img class="img-main-carta" id="imagen" loading="lazy" alt="Imagen de Producto">
         </picture>
-
+          
         <section class="img-desc">
           <h1>Spaghetti alla Carbonara</h1>
-          <p>Preparado con huevo, queso pecorino 
-            romano, panceta y pimienta negra. 
-            Una receta sencilla y deliciosa.</p>
+          <p>Preparado con huevo, queso pecorino romano, panceta y pimienta negra. Una receta sencilla y deliciosa.</p>
+        </section>
+      </figure>
+
+      <!-- Imagen del menú Pasta 2 + Descripcion de Productos -->
+      <figure class="img-prod-carta"  id="contenedor-img" data-info='["producto-Carta-Pasta-2", "img-producto", "2"]'>
+        <picture>
+          <source id="sourceWebp" type="image/webp">
+          <source id="sourceJpg" type="image/jpg">              
+          <img class="img-main-carta" id="imagen" loading="lazy" alt="Imagen de Producto">
+        </picture>
+          
+        <section class="img-desc">
+          <h1>Tagliatelle al Ragù</h1>
+          <p>Conocido internacionalmente como "boloñesa",  es un plato elaborado con una salsa de carne cocinada lentamente.</p>
+        </section>
+      </figure>
+
+      <!-- Imagen del menú Pasta 3 + Descripcion de Productos -->
+      <figure class="img-prod-carta"  id="contenedor-img" data-info='["producto-Carta-Pasta-3", "img-producto", "2"]'>
+        <picture>
+          <source id="sourceWebp" type="image/webp">
+          <source id="sourceJpg" type="image/jpg">              
+          <img class="img-main-carta" id="imagen" loading="lazy" alt="Imagen de Producto">
+        </picture>
+          
+        <section class="img-desc">
+          <h1>Spaghetti con Gamberi</h1>
+          <p>Un plato icónico que combina gambas, tomate, ricotta salata y albahaca.</p>
+        </section>
+      </figure>
+
+      <!-- Imagen del menú Pasta 4 + Descripcion de Productos -->
+      <figure class="img-prod-carta"  id="contenedor-img" data-info='["producto-Carta-Pasta-4", "img-producto", "2"]'>
+        <picture>
+          <source id="sourceWebp" type="image/webp">
+          <source id="sourceJpg" type="image/jpg">              
+          <img class="img-main-carta" id="imagen" loading="lazy" alt="Imagen de Producto">
+        </picture>
+          
+        <section class="img-desc">
+          <h1>Spaghetti al Salame Piccante</h1>
+          <p>Una receta que mezcla el salami picante con el queso pecorino romano y pimienta negra.</p>
+        </section>
+      </figure>
+
+      <!-- Imagen del menú Pasta 5 + Descripcion de Productos -->
+      <figure class="img-prod-carta"  id="contenedor-img" data-info='["producto-Carta-Pasta-5", "img-producto", "2"]'>
+        <picture>
+          <source id="sourceWebp" type="image/webp">
+          <source id="sourceJpg" type="image/jpg">              
+          <img class="img-main-carta" id="imagen" loading="lazy" alt="Imagen de Producto">
+        </picture>
+          
+        <section class="img-desc">
+          <h1>Spaghetti all'Arrabbiata</h1>
+          <p>Penne en una salsa de tomate picante, con ajo y guindilla, un plato sencillo pero con un toque atrevido.</p>
+        </section>
+      </figure>
+
+      <!-- Imagen del menú Pasta 6 + Descripcion de Productos -->
+      <figure class="img-prod-carta"  id="contenedor-img" data-info='["producto-Carta-Pasta-6", "img-producto", "2"]'>
+        <picture>
+          <source id="sourceWebp" type="image/webp">
+          <source id="sourceJpg" type="image/jpg">              
+          <img class="img-main-carta" id="imagen" loading="lazy" alt="Imagen de Producto">
+        </picture>
+          
+        <section class="img-desc">
+          <h1>Linguine con Polpette</h1>
+          <p>Pasta linguine acompañada de albondigas, tomate, pimientos verdes y un toque de albahaca.</p>
+        </section>
+      </figure>
+
+      <!-- Imagen del menú Pasta 7 + Descripcion de Productos -->
+      <figure class="img-prod-carta"  id="contenedor-img" data-info='["producto-Carta-Pasta-7", "img-producto", "2"]'>
+        <picture>
+          <source id="sourceWebp" type="image/webp">
+          <source id="sourceJpg" type="image/jpg">              
+          <img class="img-main-carta" id="imagen" loading="lazy" alt="Imagen de Producto">
+        </picture>
+          
+        <section class="img-desc">
+          <h1>Orecchiette con Cime di Rapa</h1>
+          <p>Combina orecchiette (una pasta con forma de orejitas) con grelos o brócoli, ajo, aceite y anchoas.</p>
+        </section>
+      </figure>
+
+      <!-- Imagen del menú Pasta 8 + Descripcion de Productos -->
+      <figure class="img-prod-carta"  id="contenedor-img" data-info='["producto-Carta-Pasta-8", "img-producto", "2"]'>
+        <picture>
+          <source id="sourceWebp" type="image/webp">
+          <source id="sourceJpg" type="image/jpg">              
+          <img class="img-main-carta" id="imagen" loading="lazy" alt="Imagen de Producto">
+        </picture>
+          
+        <section class="img-desc">
+          <h1>Cacio e Pepe</h1>
+          <p>Plato clasico de la cocina romana, elaborado solamente con queso pecorino y pimita negra.</p>
+        </section>
+      </figure>
+
+      <!-- Imagen del menú Pasta 9 + Descripcion de Productos -->
+      <figure class="img-prod-carta"  id="contenedor-img" data-info='["producto-Carta-Pasta-9", "img-producto", "2"]'>
+        <picture>
+          <source id="sourceWebp" type="image/webp">
+          <source id="sourceJpg" type="image/jpg">              
+          <img class="img-main-carta" id="imagen" loading="lazy" alt="Imagen de Producto">
+        </picture>
+          
+        <section class="img-desc">
+          <h1>Lasagna alla Bolognese</h1>
+          <p>Láminas de pasta intercaladas con ragú, bechamel y queso, horneadas hasta alcanzar la perfección.</p>
         </section>
       </figure>
 
@@ -133,36 +206,24 @@
     <!-- Logotipo de Casa Di Pepe, Logotipo del Patrocinador y Menú con las Redes Sociales -->
     <section class="fila-superior">
       
-      <!-- Logotipo de Casa Di Pepe -->
-      <picture>
-        <source 
-          srcset="
-            ../../media/img/logotipo/png/logo-Header-Blanco-128px.png 128w,
-            ../../media/img/logotipo/png/logo-Header-Blanco-256px.png 256w,
-            ../../media/img/logotipo/png/logo-Header-Blanco-512px.png 512w
-          "
-          sizes="(max-width: 600px) 128px, (max-width: 1200px) 256px, 512px"
-          type="image/png">
-
-        <source srcset="../../media/img/logotipo/svg/logo-Header-Blanco.svg" type="image/svg+xml">
-        <img class="img-logoFooter" loading="lazy" src="../../media/img/logotipo/png/logo-Header-Blanco-512px.png" alt="Logo Cabecera">
-      </picture>
+      <!-- Logotipo de Casa Di Pepe V2 -->
+      <figure id="contenedor-img" data-info='["logo-Header-Blanco", "logotipo", "2"]'>
+        <picture>
+          <source id="sourcePng" type="image/png">
+          <source id="sourceSvg" type="image/svg+xml">
+          <img class="img-logoFooter" id="imagen" loading="lazy" alt="Logo Cabecera">
+        </picture>
+      </figure>
             
       <!-- Logotipo del Patrocinador -->
       <a href="https://www.guiarepsol.com/">
-        <picture>
-          <source 
-            srcset="
-                ../../media/img/logotipo/png/logo-Patrocinador-128px.png 128w,
-                ../../media/img/logotipo/png/logo-Patrocinador-256px.png 256w,
-                ../../media/img/logotipo/png/logo-Patrocinador-512px.png 512w
-            "
-            sizes="(max-width: 600px) 128px, (max-width: 1200px) 256px, 512px"
-            type="image/png">
-
-          <source srcset="../../media/img/logotipo/svg/logo-Patrocinador.svg" type="image/svg+xml">
-          <img class="img-logoPatrocinador" loading="lazy" src="../../media/img/logotipo/png/logo-Patrocinador-512px.png" alt="Logo Cabecera">
-        </picture>
+        <figure id="contenedor-img" data-info='["logo-Patrocinador", "logotipo", "2"]'>
+          <picture>
+            <source id="sourcePng" type="image/png">
+            <source id="sourceSvg" type="image/svg+xml">
+            <img class="img-logoPatrocinador" id="imagen" loading="lazy" alt="Logo Cabecera">
+          </picture>
+        </figure>
       </a>
 
       <!-- Sección de la Redes Sociales -->

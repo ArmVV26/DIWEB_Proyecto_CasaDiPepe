@@ -1,5 +1,6 @@
-// Importo las Variables
+// Importo las Variables y los mixins para aplicar las media queries necesarias
 @import '../utils/variables';
+@import '../utils/mixins';
 
 // Estilos para la pagina carta de la web carta.html
 .menu-carta-principal {
@@ -7,9 +8,9 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 3rem;
-    width: 75%;
+    width: 85%;
     height: 75rem;  
-    margin: 2.5rem auto;
+    margin: 3.5rem auto;
 }
 
 .img-prod-carta-menu {
@@ -18,10 +19,11 @@
     border: 4px solid $color-Principal;
     border-radius: 1rem;
     overflow: hidden;
+    box-shadow:  0px 2px 8px 0px $color-Neutro-Negro-rgba;
     transition: all 0.5s;
 }
 
-.img-main-menu {
+.img-main {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -35,16 +37,12 @@
 
 .enlace-carta {
     position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-
-    font-size: 5rem;
-    transition: all 0.5s;
-
-    & .img-main-menu:hover {
-        filter: brightness(0.50);
-    }
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    transition: all 0.25s;
 }
 
 // Estilos para las paginas del directorio carta (pasta.html)
@@ -56,11 +54,17 @@
     margin: 3rem;
 }
 
+.seleccion {
+    color: $color-Terciario;
+    background-color: $color-Neutro-Marron;
+}
+
 .carta-img {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     gap: 1.5rem;
-    width: 75%;
+    width: 90%;
     margin: auto auto 2.5rem;
 }
 
@@ -71,19 +75,19 @@
     border-radius: 1rem;
     overflow: hidden;
     filter: brightness(0.75) contrast(110%) saturate(160%) sepia(20%);
-    transition: all 0.5s;
+    transition: all 0.25s;
     
     &:hover {
         filter: brightness(0.9);
         
         .img-desc {
             opacity: 0;
-            transition: all 0.5s;
+            transition: all 0.25s;
         }
     }
 }
 
-.img-main {
+.img-main-carta {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -91,9 +95,9 @@
 
 .img-desc {
     position: absolute;
+    height: 30%;
     bottom: 0;
-    left: 0;
-    padding: 0.5rem 1rem;
+    padding: 0 1rem;
     background-color: $color-Neutro-Marron;
     border-top: 0.15rem solid $color-Terciario;
     transition: all 0.5s;
@@ -107,6 +111,96 @@
     p {
         text-align: center;
         color: $color-Neutro-Blanco;
-        margin-top: 0.5rem;
+        margin-top: 0.25rem;
+    }
+}
+
+// Aqui declaro los media queries de carta.html y carta/
+@include media-queries(small) {
+    .menu-carta-principal {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+        width: 90%;
+    }   
+    .enlace-carta {
+        font-size: 2rem;
+    } 
+    .menu-carta ul{
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu-carta ul a {
+        font-size: 1.5rem;
+    }
+    .carta-img {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(9, 1fr);
+    }
+    .img-desc {
+        height: 40%;
+    }
+    .img-desc h1 {
+        font-size: 1rem;
+    }
+    .img-desc p {
+        font-size: 1rem;
+    }
+}
+
+@include media-queries(medium) {
+    .enlace-carta {
+        font-size: 3rem;
+    }
+    .img-desc {
+        height: 20%;
+    }
+}
+
+@include media-queries(tablet) {
+    .menu-carta-principal {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        width: 85%;
+    }
+    .menu-carta ul{
+        flex-direction: row;
+    }
+    .menu-carta ul a{
+        font-size: 0.75rem;
+    }
+    .carta-img {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(5, 1fr);
+    }
+    .img-desc {
+        height: 30%;
+    }
+}
+
+@include media-queries(laptop) {
+    .enlace-carta {
+        font-size: 4rem;
+    }
+}
+
+@include media-queries(normal) {
+    .carta-img {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+}
+
+@include media-queries(large) {
+    .menu-carta ul a {
+        font-size: 1.5rem;
+    }
+    .img-desc h1 {
+        font-size: 2rem;
+    }
+    .img-desc p {
+        font-size: 1.25rem;
+    }
+    .menu-carta ul a{
+        font-size: 1.5rem;
     }
 }
