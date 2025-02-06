@@ -53,3 +53,23 @@
         }
     }
 }
+
+.formulario-botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    input[type="submit"] {
+        width: 30%;
+        height: 3rem;
+        cursor: pointer;
+        transition: all 0.25s;
+
+        &:hover {
+            background-color: $color-Principal;
+            color: $color-Neutro-Blanco;
+            border: 0.15rem solid $color-Neutro-Blanco;
+            box-shadow: 3px 4px 0px 1px $color-Neutro-Blanco;
+        }
+    } 
+}

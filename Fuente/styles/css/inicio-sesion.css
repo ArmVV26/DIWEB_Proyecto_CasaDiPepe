@@ -369,6 +369,24 @@ footer {
   font-family: "Questrial";
 }
 
+.formulario-botones {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.formulario-botones input[type=submit] {
+  width: 30%;
+  height: 3rem;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+.formulario-botones input[type=submit]:hover {
+  background-color: #961316;
+  color: #F1E7E7;
+  border: 0.15rem solid #F1E7E7;
+  box-shadow: 3px 4px 0px 1px #F1E7E7;
+}
+
 @media (min-width: 320px) {
   body {
     padding-top: 5rem;
