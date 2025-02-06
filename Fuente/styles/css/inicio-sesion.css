@@ -324,11 +324,25 @@ footer {
   width: 55%;
 }
 
+input[type=submit], .formulario-botones a, input[type=email], input[type=password] {
+  background-color: #F1E7E7;
+  border: 0.15rem solid #222222;
+  border-radius: 1rem;
+  box-shadow: 3px 4px 0px 1px #F1A2A2;
+}
+
+input[type=submit]:hover, .formulario-botones a:hover {
+  background-color: #961316;
+  color: #F1E7E7;
+  border: 0.15rem solid #F1E7E7;
+  box-shadow: 3px 4px 0px 1px #222222;
+}
+
 .contenedor-formulario {
   position: relative;
   margin: 5rem auto;
   width: 50%;
-  height: 30rem;
+  height: 32rem;
   background-color: #B03B3B;
   border: 4px solid #362624;
   border-radius: 1rem;
@@ -353,40 +367,84 @@ footer {
   font-size: 2rem;
   color: #F1E7E7;
 }
-.inicio-formulario input {
+
+input[type=email], input[type=password] {
   font-family: "Questrial";
   font-size: 1.25rem;
   width: 100%;
   height: 2rem;
   padding: 0.5rem;
   margin: 0.5rem 0 2rem;
-  background-color: #F1E7E7;
-  border: 0.15rem solid #222222;
-  border-radius: 1rem;
-  box-shadow: 3px 4px 0px 1px #F1A2A2;
 }
-.inicio-formulario input::placeholder {
+input[type=email]::placeholder, input[type=password]::placeholder {
   font-family: "Questrial";
+}
+
+.formulario-checkbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+input[type=checkbox] {
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+input[type=checkbox]:checked {
+  accent-color: #961316;
+  box-shadow: 0px 0px 10px 2px #F1A2A2;
 }
 
 .formulario-botones {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-top: 1.5rem;
 }
-.formulario-botones input[type=submit] {
+.formulario-botones a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Questrial";
+  font-weight: normal;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #222222;
+  padding: 0;
+  text-transform: none;
+  width: 30%;
+  height: 3rem;
+  transition: all 0.25s;
+}
+input[type=submit] {
+  font-family: "Questrial";
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #222222;
   width: 30%;
   height: 3rem;
   cursor: pointer;
   transition: all 0.25s;
 }
-.formulario-botones input[type=submit]:hover {
-  background-color: #961316;
-  color: #F1E7E7;
-  border: 0.15rem solid #F1E7E7;
-  box-shadow: 3px 4px 0px 1px #F1E7E7;
+@media (min-width: 320px) {
+  .contenedor-formulario h1 {
+    font-size: 3rem;
+  }
+  .formulario-botones a, input[type=submit] {
+    font-size: 1.25rem;
+  }
 }
-
+@media (min-width: 1200px) {
+  .contenedor-formulario h1 {
+    font-size: 3.5rem;
+  }
+  .formulario-botones a, input[type=submit] {
+    font-size: 1.5rem;
+  }
+}
 @media (min-width: 320px) {
   body {
     padding-top: 5rem;

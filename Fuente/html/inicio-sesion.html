@@ -56,14 +56,19 @@
 
         <form class="inicio-formulario" action="" method="POST">
             <label for="correoUser">Correo</label>
-            <input type="email" id="correoUser" name="correoUser" placeholder="Escribe tu direccion de correo completa" required>
+            <input type="email" id="correoUser" name="correoUser" placeholder="Escribe tu direccion de correo" required>
 
             <label for="passUser">Contraseña</label>
             <input type="password" id="passUser" name="passUser" placeholder="Escribe tu contraseña" required>
 
+            <section class="formulario-checkbox">
+              <input type="checkbox" id="recordarme" name="recordarme">
+              <label for="recordarme">Recuérdame</label>
+            </section>
+
             <section class="formulario-botones">
-              <input  type="submit" value="Registrarse">
-              <input  type="submit" value="Entrar">
+              <a href="formulario-registro.html" class="none">Registrarse</a>
+              <input  type="submit" value="Aceptar">
             </section>
         </form>
     </section>

@@ -3,11 +3,25 @@
 @import '../utils/mixins';
 
 // Aqui voy a definir el estilo de la pagina incio-sesion.html
+%estilo-base {
+    background-color: $color-Neutro-Blanco;
+    border: 0.15rem solid $color-Neutro-Negro;
+    border-radius: 1rem;
+    box-shadow: 3px 4px 0px 1px $color-Terciario;
+}
+
+%estilo-hover {
+    background-color: $color-Principal;
+    color: $color-Neutro-Blanco;
+    border: 0.15rem solid $color-Neutro-Blanco;
+    box-shadow: 3px 4px 0px 1px $color-Neutro-Negro;
+}
+
 .contenedor-formulario {
     position: relative;
     margin: 5rem auto;
     width: 50%;
-    height: 30rem;
+    height: 32rem;
     background-color: $color-Secundario;
     border: 4px solid $color-Neutro-Marron;
     border-radius: 1rem;
@@ -27,49 +41,113 @@
     flex-direction: column;
     margin: auto;
     width: 80%;
-
+    
     label {
         font-family: $font-Secondary;
         font-size: 2rem;
         color: $color-Neutro-Blanco;
     }
+}
 
-    input {
+input[type="email"], input[type="password"] {
+    font-family: $font-Secondary;
+    font-size: 1.25rem;
+
+    width: 100%;
+    height: 2rem;
+    padding: 0.5rem;
+    margin: 0.5rem 0 2rem;
+
+    @extend %estilo-base;
+
+    &::placeholder {
         font-family: $font-Secondary;
-        font-size: 1.25rem;
-
-        width: 100%;
-        height: 2rem;
-        padding: 0.5rem;
-        margin: 0.5rem 0 2rem;
-
-        background-color: $color-Neutro-Blanco;
-        border: 0.15rem solid $color-Neutro-Negro;
-        border-radius: 1rem;
-        box-shadow: 3px 4px 0px 1px $color-Terciario;
-
-        &::placeholder {
-            font-family: $font-Secondary;
-        }
     }
 }
+
+.formulario-checkbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;
+    
+}
+
+input[type="checkbox"] {
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+    transition: all 0.25s;
+    
+    &:checked {
+        accent-color: $color-Principal;
+        box-shadow: 0px 0px 10px 2px $color-Terciario;
+    }
+}
+
 
 .formulario-botones {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-top: 1.5rem;
 
-    input[type="submit"] {
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: $font-Secondary;
+        font-weight: normal;
+        font-weight: bold;
+        font-size: 1.5rem;
+        color: $color-Neutro-Negro;
+        padding: 0;
+        text-transform: none;
+
         width: 30%;
         height: 3rem;
-        cursor: pointer;
+        @extend %estilo-base;
         transition: all 0.25s;
 
         &:hover {
-            background-color: $color-Principal;
-            color: $color-Neutro-Blanco;
-            border: 0.15rem solid $color-Neutro-Blanco;
-            box-shadow: 3px 4px 0px 1px $color-Neutro-Blanco;
+            @extend %estilo-hover;
         }
-    } 
+    }
+}
+
+input[type="submit"]{
+    font-family: $font-Secondary;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: $color-Neutro-Negro;
+    
+    width: 30%;
+    height: 3rem;
+    
+    cursor: pointer;
+    @extend %estilo-base;
+    transition: all 0.25s;
+
+    &:hover {
+        @extend %estilo-hover;
+    }
+} 
+
+// Aqui declaro las media-queries de incio-sesion.html
+@include media-queries(small) {
+    .contenedor-formulario h1 {
+        font-size: 3rem;
+    }
+    .formulario-botones a, input[type="submit"]{
+        font-size: 1.25rem;
+    }
+}
+
+@include media-queries(normal) {
+    .contenedor-formulario h1 {
+        font-size: 3.5rem;
+    }
+    .formulario-botones a, input[type="submit"]{
+        font-size: 1.5rem;
+    }
 }
