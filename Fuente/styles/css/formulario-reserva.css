@@ -284,14 +284,54 @@ footer {
   margin-top: 2rem;
 }
 
-input[type=submit], .formulario-botones a, input[type=email], input[type=password] {
+.introduccion {
+  position: relative;
+  width: 100%;
+  height: 32rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0.625rem 0.3125rem 0 rgba(34, 34, 34, 0.5);
+}
+
+.img-header-pred {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  filter: brightness(0.75) contrast(120%) saturate(110%) sepia(25%);
+}
+
+.intro-texto {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: #F1E7E7;
+}
+
+.intro-botones {
+  position: relative;
+  z-index: 1;
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-between;
+  width: 55%;
+}
+
+input[type=submit], input[type=text], input[type=number], input[type=email], input[type=tel], #horas, .calendar-butones {
   background-color: #F1E7E7;
   border: 0.15rem solid #222222;
   border-radius: 1rem;
   box-shadow: 3px 4px 0px 1px #F1A2A2;
 }
 
-input[type=submit]:hover, .formulario-botones a:hover {
+input[type=submit]:hover {
   background-color: #961316;
   color: #F1E7E7;
   border: 0.15rem solid #F1E7E7;
@@ -318,7 +358,7 @@ input[type=submit]:hover, .formulario-botones a:hover {
   display: flex;
   flex-direction: column;
   margin: auto;
-  width: 75%;
+  width: 85%;
   padding: 1rem;
 }
 .inicio-formulario label {
@@ -327,62 +367,111 @@ input[type=submit]:hover, .formulario-botones a:hover {
   color: #F1E7E7;
 }
 
-input[type=email], input[type=password] {
+.calendar-butones {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-self: center;
+  padding: 1rem;
+}
+
+#mesYear {
+  font-family: "Questrial";
+  font-size: 1.5rem;
+  color: #222222;
+  margin: 0 1rem;
+}
+
+#antMes, #sigMes {
+  font-size: 1.5rem;
+  color: #222222;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+#antMes:hover, #sigMes:hover {
+  color: #B03B3B;
+}
+
+#calendar {
+  align-self: center;
+  margin: 1rem 0 2rem;
+}
+
+table {
+  background-color: #F1E7E7;
+  color: #222222;
+  border: 0.15rem solid #222222;
+  box-shadow: 3px 4px 0px 1px #F1A2A2;
+  font-family: "Questrial";
+  border-collapse: collapse;
+}
+
+th, td {
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid #F1A2A2;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+th:hover, td:hover {
+  background-color: #961316;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.celdas-vacias {
+  color: #F1E7E7;
+  background-color: #B03B3B;
+}
+
+.celda-selec {
+  background-color: #F1A2A2;
+}
+
+.formulario-doble {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+
+#horas {
+  font-family: "Questrial";
+  font-size: 1.25rem;
+  width: 97%;
+  height: 3rem;
+  padding: 0.5rem;
+  margin: 0rem 0 2rem;
+  transition: all 0.25s;
+}
+#horas::placeholder {
+  font-family: "Questrial";
+}
+#horas:focus {
+  border: 0.15rem solid #F1A2A2;
+  box-shadow: 3px 4px 0px 1px #222222;
+}
+
+input[type=text], input[type=number], input[type=email], input[type=tel] {
   font-family: "Questrial";
   font-size: 1.25rem;
   width: 97%;
   height: 2rem;
   padding: 0.5rem;
-  margin: 0 0 2rem;
+  margin: 0rem 0 2rem;
   transition: all 0.25s;
 }
-input[type=email]::placeholder, input[type=password]::placeholder {
+input[type=text]::placeholder, input[type=number]::placeholder, input[type=email]::placeholder, input[type=tel]::placeholder {
   font-family: "Questrial";
 }
-input[type=email]:focus, input[type=password]:focus {
+input[type=text]:focus, input[type=number]:focus, input[type=email]:focus, input[type=tel]:focus {
   border: 0.15rem solid #F1A2A2;
   box-shadow: 3px 4px 0px 1px #222222;
 }
 
-.formulario-checkbox {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-input[type=checkbox] {
-  width: 1.5rem;
-  height: 1.5rem;
-  cursor: pointer;
-  transition: all 0.25s;
-}
-input[type=checkbox]:checked {
-  accent-color: #961316;
-  box-shadow: 0px 0px 10px 2px #F1A2A2;
-}
-
-.formulario-botones {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-top: 1.5rem;
-}
-.formulario-botones a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: "Questrial";
-  font-weight: normal;
-  font-weight: bold;
-  font-size: 1.5rem;
-  color: #222222;
-  padding: 0;
-  text-transform: none;
-  width: 30%;
-  height: 3rem;
-  transition: all 0.25s;
-}
 input[type=submit] {
   font-family: "Questrial";
   font-weight: bold;
@@ -390,50 +479,60 @@ input[type=submit] {
   color: #222222;
   width: 30%;
   height: 3rem;
+  margin-top: 1.5rem;
+  align-self: center;
   cursor: pointer;
   transition: all 0.25s;
 }
 @media (min-width: 320px) {
   .contenedor-formulario {
-    width: 80%;
+    width: 90%;
   }
   .contenedor-formulario h1 {
     font-size: 2.5rem;
   }
+  .inicio-formulario {
+    width: 75%;
+  }
   .inicio-formulario label {
     font-size: 1.5rem;
   }
-  input[type=email], input[type=password] {
+  .formulario-doble {
+    flex-direction: column;
+  }
+  #horas {
     font-size: 1rem;
   }
-  .formulario-botones {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+  input[type=text], input[type=number], input[type=email], input[type=tel] {
+    font-size: 1rem;
   }
-  .formulario-botones a, input[type=submit] {
+  input[type=submit] {
     width: 100%;
-  }
-}
-@media (min-width: 480px) {
-  .formulario-botones {
-    flex-direction: row;
-    gap: 0rem;
-  }
-  .formulario-botones a, input[type=submit] {
-    font-size: 1.25rem;
-    width: 40%;
   }
 }
 @media (min-width: 768px) {
   .contenedor-formulario {
-    width: 50%;
+    width: 70%;
+  }
+  .inicio-formulario {
+    width: 85%;
   }
   .inicio-formulario label {
     font-size: 2rem;
   }
-  input[type=email], input[type=password] {
+  input[type=text], input[type=number], input[type=email], input[type=tel] {
     font-size: 1.25rem;
+  }
+  #horas {
+    font-size: 1.25rem;
+  }
+  input[type=submit] {
+    width: 70%;
+  }
+}
+@media (min-width: 1024px) {
+  input[type=submit] {
+    width: 50%;
   }
 }
 @media (min-width: 1200px) {
@@ -443,9 +542,16 @@ input[type=submit] {
   .inicio-formulario label {
     font-size: 2rem;
   }
-  .formulario-botones a, input[type=submit] {
-    font-size: 1.5rem;
+  .formulario-doble {
+    flex-direction: row;
+  }
+  input[type=submit] {
     width: 30%;
+  }
+}
+@media (min-width: 1600px) {
+  .contenedor-formulario {
+    width: 50%;
   }
 }
 @media (min-width: 320px) {
@@ -671,5 +777,50 @@ input[type=submit] {
     width: 80%;
   }
 }
+.img-reserva {
+  filter: brightness(0.55) contrast(120%) saturate(110%);
+}
+@media (min-width: 0px) {
+  .img-reserva {
+    background-image: url("../../media/img/hero-image/webp/hero-Reserva-320px.webp");
+    background-image: url("../../media/img/hero-image/avif/hero-Reserva-320px.avif");
+    background-image: url("../../media/img/hero-image/jpg/hero-Reserva-320px.jpg");
+  }
+}
+@media (min-width: 320px) {
+  .img-reserva {
+    background-image: url("../../media/img/hero-image/webp/hero-Reserva-640px.webp");
+    background-image: url("../../media/img/hero-image/avif/hero-Reserva-640px.avif");
+    background-image: url("../../media/img/hero-image/jpg/hero-Reserva-640px.jpg");
+  }
+}
+@media (min-width: 640px) {
+  .img-reserva {
+    background-image: url("../../media/img/hero-image/webp/hero-Reserva-960px.webp");
+    background-image: url("../../media/img/hero-image/avif/hero-Reserva-960px.avif");
+    background-image: url("../../media/img/hero-image/jpg/hero-Reserva-960px.jpg");
+  }
+}
+@media (min-width: 960px) {
+  .img-reserva {
+    background-image: url("../../media/img/hero-image/webp/hero-Reserva-1600px.webp");
+    background-image: url("../../media/img/hero-image/avif/hero-Reserva-1600px.avif");
+    background-image: url("../../media/img/hero-image/jpg/hero-Reserva-1600px.jpg");
+  }
+}
+@media (min-width: 1600px) {
+  .img-reserva {
+    background-image: url("../../media/img/hero-image/webp/hero-Reserva-2240px.webp");
+    background-image: url("../../media/img/hero-image/avif/hero-Reserva-2240px.avif");
+    background-image: url("../../media/img/hero-image/jpg/hero-Reserva-2240px.jpg");
+  }
+}
+@media (min-width: 2240px) {
+  .img-reserva {
+    background-image: url("../../media/img/hero-image/webp/hero-Reserva-3200px.webp");
+    background-image: url("../../media/img/hero-image/avif/hero-Reserva-3200px.avif");
+    background-image: url("../../media/img/hero-image/jpg/hero-Reserva-3200px.jpg");
+  }
+}
 
-/*# sourceMappingURL=inicio-sesion.css.map */
+/*# sourceMappingURL=formulario-reserva.css.map */

@@ -1,0 +1,262 @@
+// Importo las Variables y los mixins para aplicar las media queries necesarias
+@import '../utils/variables';
+@import '../utils/mixins';
+
+// Aqui voy a definir el estilo de la pagina formulario-reserva.html
+%estilo-base {
+    background-color: $color-Neutro-Blanco;
+    border: 0.15rem solid $color-Neutro-Negro;
+    border-radius: 1rem;
+    box-shadow: 3px 4px 0px 1px $color-Terciario;
+}
+
+%estilo-hover {
+    background-color: $color-Principal;
+    color: $color-Neutro-Blanco;
+    border: 0.15rem solid $color-Neutro-Blanco;
+    box-shadow: 3px 4px 0px 1px $color-Neutro-Negro;
+}
+
+.contenedor-formulario {
+    margin: 5rem auto;
+    width: 50%;
+    background-color: $color-Secundario;
+    border: 4px solid $color-Neutro-Marron;
+    border-radius: 1rem;
+    box-shadow: 3px 4px 0px 1px $color-Terciario;
+
+    h1 {
+        font-size: 3.5rem;
+        font-style: italic;
+        text-align: center;
+        text-shadow: 4px 4px 5px $color-Neutro-Negro;
+        padding: 1rem 0.5rem 2rem;
+    }
+}
+
+.inicio-formulario {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 85%;
+    padding: 1rem;
+    
+    label {
+        font-family: $font-Secondary;
+        font-size: 2rem;
+        color: $color-Neutro-Blanco;
+    }
+}
+
+.calendar-butones {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+    padding: 1rem;
+    @extend %estilo-base;
+}   
+
+#mesYear {
+    font-family: $font-Secondary;
+    font-size: 1.5rem;
+    color: $color-Neutro-Negro;
+    margin: 0 1rem;
+}
+
+#antMes, #sigMes {
+    font-size: 1.5rem;
+    color: $color-Neutro-Negro;
+    cursor: pointer;
+    transition: all 0.25s;
+
+    &:hover {
+        color: $color-Secundario;
+    }
+}
+
+#calendar {
+    align-self: center;
+    margin: 1rem 0 2rem;
+}
+
+table {
+    background-color: $color-Neutro-Blanco;
+    color: $color-Neutro-Negro;
+    border: 0.15rem solid $color-Neutro-Negro;
+    box-shadow: 3px 4px 0px 1px $color-Terciario;
+    font-family: $font-Secondary;
+    border-collapse: collapse;
+}
+th, td {
+    width: 3rem;
+    height: 3rem;
+    border: 1px solid $color-Terciario;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.25s;
+
+    &:hover {
+        background-color: $color-Principal;
+    }
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.celdas-vacias {
+    color:  $color-Neutro-Blanco;
+    background-color: $color-Secundario;
+}
+
+.celda-selec {
+    background-color: $color-Terciario;
+}
+
+.formulario-doble {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1.25rem;
+}
+
+#horas {
+    font-family: $font-Secondary;
+    font-size: 1.25rem;
+
+    width: 97%;
+    height: 3rem;
+    padding: 0.5rem;
+    margin: 0rem 0 2rem;
+    transition: all 0.25s;
+
+    @extend %estilo-base;
+
+    &::placeholder {
+        font-family: $font-Secondary;
+    }
+
+    &:focus {
+        border: 0.15rem solid $color-Terciario;
+        box-shadow: 3px 4px 0px 1px $color-Neutro-Negro;
+    }
+}
+
+input[type="text"], input[type="number"], input[type="email"], input[type="tel"] {
+    font-family: $font-Secondary;
+    font-size: 1.25rem;
+
+    width: 97%;
+    height: 2rem;
+    padding: 0.5rem;
+    margin: 0rem 0 2rem;
+    transition: all 0.25s;
+
+    @extend %estilo-base;
+
+    &::placeholder {
+        font-family: $font-Secondary;
+    }
+
+    &:focus {
+        border: 0.15rem solid $color-Terciario;
+        box-shadow: 3px 4px 0px 1px $color-Neutro-Negro;
+    }
+}
+
+input[type="submit"]{
+    font-family: $font-Secondary;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: $color-Neutro-Negro;
+    
+    width: 30%;
+    height: 3rem;
+    margin-top: 1.5rem;
+    align-self: center;
+    
+    cursor: pointer;
+    @extend %estilo-base;
+    transition: all 0.25s;
+
+    &:hover {
+        @extend %estilo-hover;
+    }
+} 
+
+// Aqui declaro las media-queries de formulario-reserva.html
+@include media-queries(small) {
+    .contenedor-formulario {
+        width: 90%;
+    }
+    .contenedor-formulario h1 {
+        font-size: 2.5rem;
+    }
+    .inicio-formulario {
+        width: 75%;
+    }
+    .inicio-formulario label {
+        font-size: 1.5rem;
+    }
+    .formulario-doble {
+        flex-direction: column;
+    }
+    #horas {
+        font-size: 1rem;
+    }
+    input[type="text"], input[type="number"], input[type="email"], input[type="tel"] {
+        font-size: 1rem;
+    }
+    input[type="submit"] {
+        width: 100%;
+    }
+}
+
+@include media-queries(tablet) {
+    .contenedor-formulario {
+        width: 70%;
+    }
+    .inicio-formulario {
+        width: 85%;
+    }
+    .inicio-formulario label {
+        font-size: 2rem;
+    }
+    input[type="text"], input[type="number"], input[type="email"], input[type="tel"] {
+        font-size: 1.25rem;
+    }
+    #horas {
+        font-size: 1.25rem;
+    }
+    input[type="submit"] {
+        width: 70%;
+    }
+}
+
+@include media-queries(laptop) {
+    input[type="submit"] {
+        width: 50%;
+    }
+}
+
+@include media-queries(normal) {
+    .contenedor-formulario h1 {
+        font-size: 3.5rem;
+    }
+    .inicio-formulario label {
+        font-size: 2rem;
+    }
+    .formulario-doble {
+        flex-direction: row;
+    }
+    input[type="submit"] {
+        width: 30%;
+    }
+}
+
+@include media-queries(large) {
+    .contenedor-formulario {
+        width: 50%;
+    }
+}

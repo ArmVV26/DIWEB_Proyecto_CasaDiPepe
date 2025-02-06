@@ -2,7 +2,7 @@
 @import '../utils/variables';
 @import '../utils/mixins';
 
-// Aqui voy a definir el estilo de la pagina incio-sesion.html
+// Aqui voy a definir el estilo de la pagina formulario-registro.html
 %estilo-base {
     background-color: $color-Neutro-Blanco;
     border: 0.15rem solid $color-Neutro-Negro;
@@ -38,7 +38,7 @@
     display: flex;
     flex-direction: column;
     margin: auto;
-    width: 75%;
+    width: 85%;
     padding: 1rem;
     
     label {
@@ -48,14 +48,43 @@
     }
 }
 
-input[type="email"], input[type="password"] {
+.formulario-doble {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1.25rem;
+}
+
+#generoUser {
+    font-family: $font-Secondary;
+    font-size: 1.25rem;
+
+    width: 97%;
+    height: 3rem;
+    padding: 0.5rem;
+    margin: 0rem 0 2rem;
+    transition: all 0.25s;
+
+    @extend %estilo-base;
+
+    &::placeholder {
+        font-family: $font-Secondary;
+    }
+
+    &:focus {
+        border: 0.15rem solid $color-Terciario;
+        box-shadow: 3px 4px 0px 1px $color-Neutro-Negro;
+    }
+}
+
+input[type="text"], input[type="number"], input[type="email"], input[type="tel"], input[type="password"] {
     font-family: $font-Secondary;
     font-size: 1.25rem;
 
     width: 97%;
     height: 2rem;
     padding: 0.5rem;
-    margin: 0 0 2rem;
+    margin: 0rem 0 2rem;
     transition: all 0.25s;
 
     @extend %estilo-base;
@@ -75,7 +104,11 @@ input[type="email"], input[type="password"] {
     flex-direction: row;
     align-items: center;
     gap: 0.75rem;
-    
+    margin-top: 0.25rem;
+
+    label {
+        font-size: 1.25rem;
+    }
 }
 
 input[type="checkbox"] {
@@ -90,36 +123,6 @@ input[type="checkbox"] {
     }
 }
 
-
-.formulario-botones {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 1.5rem;
-
-    a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: $font-Secondary;
-        font-weight: normal;
-        font-weight: bold;
-        font-size: 1.5rem;
-        color: $color-Neutro-Negro;
-        padding: 0;
-        text-transform: none;
-
-        width: 30%;
-        height: 3rem;
-        @extend %estilo-base;
-        transition: all 0.25s;
-
-        &:hover {
-            @extend %estilo-hover;
-        }
-    }
-}
-
 input[type="submit"]{
     font-family: $font-Secondary;
     font-weight: bold;
@@ -128,6 +131,8 @@ input[type="submit"]{
     
     width: 30%;
     height: 3rem;
+    margin-top: 1.5rem;
+    align-self: center;
     
     cursor: pointer;
     @extend %estilo-base;
@@ -138,50 +143,77 @@ input[type="submit"]{
     }
 } 
 
-// Aqui declaro las media-queries de incio-sesion.html
+// Aqui declaro las media-queries de formulario-registro.html
 @include media-queries(small) {
     .contenedor-formulario {
-        width: 80%;
+        width: 90%;
     }
     .contenedor-formulario h1 {
         font-size: 2.5rem;
     }
+    .inicio-formulario {
+        width: 75%;
+    }
     .inicio-formulario label {
         font-size: 1.5rem;
     }
-    input[type="email"], input[type="password"] {
+    .formulario-doble {
+        flex-direction: column;
+    }
+    #generoUser {
         font-size: 1rem;
     }
-    .formulario-botones {
+    input[type="text"], input[type="number"], input[type="email"], input[type="tel"], input[type="password"] {
+        font-size: 1rem;
+    }
+    .formulario-checkbox {
         flex-direction: column;
-        align-items: center;
-        gap: 1rem;
+        text-align: center;
+        margin: 0 0 1rem;
     }
-    .formulario-botones a, input[type="submit"] {
-        width: 100%;
-    }
-}
-
-@include media-queries(medium) {
-    .formulario-botones {
-        flex-direction: row;
-        gap: 0rem;
-    }
-    .formulario-botones a, input[type="submit"] {
+    .formulario-checkbox label {
         font-size: 1.25rem;
-        width: 40%;
+    }
+    input[type="submit"] {
+        width: 100%;
     }
 }
 
 @include media-queries(tablet) {
     .contenedor-formulario {
-        width: 50%;
+        width: 70%;
+    }
+    .inicio-formulario {
+        width: 85%;
     }
     .inicio-formulario label {
         font-size: 2rem;
     }
-    input[type="email"], input[type="password"] {
+    input[type="text"], input[type="number"], input[type="email"], input[type="tel"], input[type="password"] {
         font-size: 1.25rem;
+    }
+    #generoUser {
+        font-size: 1.25rem;
+    }
+    .formulario-checkbox label {
+        font-size: 1.25rem;
+    }
+    input[type="submit"] {
+        width: 70%;
+    }
+}
+
+@include media-queries(laptop) {
+    .formulario-checkbox {
+        flex-direction: row;
+        text-align: left;
+        margin-top: 1.25rem;
+    }
+    .formulario-checkbox label {
+        font-size: 1.25rem;
+    }
+    input[type="submit"] {
+        width: 50%;
     }
 }
 
@@ -192,8 +224,19 @@ input[type="submit"]{
     .inicio-formulario label {
         font-size: 2rem;
     }
-    .formulario-botones a, input[type="submit"]{
-        font-size: 1.5rem;
+    .formulario-doble {
+        flex-direction: row;
+    }
+    .formulario-checkbox label {
+        font-size: 1.25rem;
+    }
+    input[type="submit"] {
         width: 30%;
+    }
+}
+
+@include media-queries(large) {
+    .contenedor-formulario {
+        width: 50%;
     }
 }

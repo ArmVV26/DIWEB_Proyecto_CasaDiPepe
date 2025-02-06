@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="icon" type="image/x-icon" href="../media/img/logotipo/logo-Web.ico">
-  <link rel="stylesheet" href="../styles/css/carta.css">
+  <link rel="stylesheet" href="../styles/css/formulario-registro.css">
   <script src="../scripts/js/menu-desplegable.js" defer></script>
   <script src="../scripts/js/img-adaptables.js" defer></script>
   <title>Casa di Pepe</title>
@@ -50,82 +50,69 @@
   </header>
 
   <main>
-    <!-- Sección Principal con Hero-Image, titulo, subtítulo y botones -->
-    <section class="introduccion">
-      <figure class="img-header-pred img-carta"></figure>
-      <div class="intro-texto">
-        <h1>CARTA DE CASA DI PEPE</h1>
-        <h3>COCINA CON EL CORAZÓN, SIRVE CON EL ALMA</h3>
-      </div>
+    <!-- Formulario de Registro -->
+    <section class="contenedor-formulario">
+        <h1>FORMULARIO DE REGISTRO</h1>
+
+        <form class="inicio-formulario" action="" method="POST">
+            <section class="formulario-doble">
+                <label for="nombreUser">Nombre
+                    <input type="text" id="nombreUser" name="nombreUser" placeholder="Escribe tu nombre" required>
+                </label>
+                <label for="apellidoUser">Apellidos
+                    <input type="text" id="apellidoUser" name="apellidoUser" placeholder="Escribe tus apellidos" required>
+                </label>
+            </section>
+
+            <section class="formulario-doble">
+                <label for="edadUser">Edad
+                    <input type="number" id="edadUser" name="edadUser" placeholder="Escribe tu edad" required>
+                </label>
+                <label for="generoUser">Genero
+                    <select name="generoUser" id="generoUser">
+                        <option value="" disabled>- Selecciona una opción</option>
+                        <option value="Masculino">Masculino</option>
+                        <option value="Femenino">Femenino</option>
+                        <option value="No-binario">No Binario</option>
+                        <option value="No-espec">Prefiero no responder</option>
+                        <option value="Italiano">Italiano</option>
+                    </select>
+                </label>
+            </section>
+
+            <label for="correoUser">Correo
+                <input type="email" id="correoUser" name="correoUser" placeholder="Escribe tu correo" required>
+            </label>
+
+            <label for="correo-confirmUser">Confirmar Correo
+                <input type="email" id="correo-confirmUser" name="correo-confirmUser" placeholder="Confirma tu correo" required>
+            </label>
+
+            <label for="telefonoUser">Teléfono
+                <input type="tel" id="telefonoUser" name="telefonoUser" placeholder="Escribe tu telefono" required>
+            </label>
+
+            <label for="passUser">Contraseña
+                <input type="password" id="passUser" name="passUser" placeholder="Escribe tu contraseña" required>
+            </label>
+
+            <label for="pass-confirmUser">Contraseña
+                <input type="password" id="pass-confirmUser" name="pass-confirmUser" placeholder="Confirma tu contraseña" required>
+            </label>
+
+            <section class="formulario-checkbox">
+              <input type="checkbox" id="notificaciones" name="notificaciones">
+              <label for="notificaciones">Deseo recibir noticias, promociones y actualizaciones por correo electrónico.</label>
+            </section>
+
+            <section class="formulario-checkbox">
+                <input type="checkbox" id="terminosycondiciones" name="terminosycondiciones">
+                <label for="terminosycondiciones">Aceptar Términos y Condiciones y la Política de Privacidad.</label>
+              </section>
+
+            <input  type="submit" value="Aceptar">
+        </form>
     </section>
-
-    <nav class="menu-carta-principal">
-      <!-- Opción Menu Entrantes -->
-      <figure class="img-prod-carta-menu"  id="contenedor-img" data-info='["producto-Carta-Entrante-1", "img-producto", "1"]'>
-        <picture>
-          <source id="sourceWebp" type="image/webp">
-          <source id="sourceJpg" type="image/jpg">              
-          <img class="img-main" id="imagen" loading="lazy" alt="Imagen de Producto">
-        </picture>
-          
-        <a class="enlace-carta" href="#">Entrantes</a>
-      </figure>
-
-      <!-- Opción Menu Vinos -->
-      <figure class="img-prod-carta-menu"  id="contenedor-img" data-info='["producto-Carta-Vinos-1", "img-producto", "1"]'>
-        <picture>
-          <source id="sourceWebp" type="image/webp">
-          <source id="sourceJpg" type="image/jpg">              
-          <img class="img-main" id="imagen" loading="lazy" alt="Imagen de Producto">
-        </picture>
-          
-        <a class="enlace-carta" href="#">Vinos</a>
-      </figure>
-
-      <!-- Opción Menu Ensaladas -->
-      <figure class="img-prod-carta-menu"  id="contenedor-img" data-info='["producto-Carta-Ensalada-1", "img-producto", "1"]'>
-        <picture>
-          <source id="sourceWebp" type="image/webp">
-          <source id="sourceJpg" type="image/jpg">              
-          <img class="img-main" id="imagen" loading="lazy" alt="Imagen de Producto">
-        </picture>
-          
-        <a class="enlace-carta" href="#">Ensaladas</a>
-      </figure>
-
-      <!-- Opción Menu Pastas -->
-      <figure class="img-prod-carta-menu"  id="contenedor-img" data-info='["producto-Carta-Pasta-1", "img-producto", "1"]'>
-        <picture>
-          <source id="sourceWebp" type="image/webp">
-          <source id="sourceJpg" type="image/jpg">              
-          <img class="img-main" id="imagen" loading="lazy" alt="Imagen de Producto">
-        </picture>
-          
-        <a class="enlace-carta" href="carta/pasta.html">Pastas</a>
-      </figure>
-
-      <!-- Opción Menu Pizza -->
-      <figure class="img-prod-carta-menu"  id="contenedor-img" data-info='["producto-Carta-Pizza-1", "img-producto", "1"]'>
-        <picture>
-          <source id="sourceWebp" type="image/webp">
-          <source id="sourceJpg" type="image/jpg">              
-          <img class="img-main" id="imagen" loading="lazy" alt="Imagen de Producto">
-        </picture>
-          
-        <a class="enlace-carta" href="#">Pizzas</a>
-      </figure>
-
-      <!-- Opción Menu Postre -->
-      <figure class="img-prod-carta-menu"  id="contenedor-img" data-info='["producto-Carta-Postre-1", "img-producto", "1"]'>
-        <picture>
-          <source id="sourceWebp" type="image/webp">
-          <source id="sourceJpg" type="image/jpg">              
-          <img class="img-main" id="imagen" loading="lazy" alt="Imagen de Producto">
-        </picture>
-          
-        <a class="enlace-carta" href="#">Postres</a>
-      </figure>
-    </nav>
 
   </main>
 
