@@ -1,0 +1,85 @@
+// Importo las Variables y los mixins para aplicar las media queries necesarias
+@import '../utils/variables';
+@import '../utils/mixins';
+
+// Aqui voy a definir el estilo de la pagina sobre_nosotros.html
+.contenedor-filosofias {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 5rem auto;
+    width: 95%;
+    height: auto;
+    background-color: $color-Secundario;
+    border: 0.15rem solid $color-Neutro-Marron;
+    border-radius: 1rem;
+    box-shadow:  0px 2px 8px 0px $color-Neutro-Negro-rgba;
+}
+
+.filosofia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 2rem;
+    width: 18rem;
+
+    h3 {
+        margin: 2rem 0 1rem;
+    }
+
+    p {
+        text-align: center;
+        color: $color-Neutro-Blanco;
+        width: 100%; 
+    }
+}
+
+.img-filosofia {
+    width: 15rem;
+    height: 15rem;
+    object-fit: cover;
+    border: 0.15rem solid $color-Neutro-Blanco;
+    border-radius: 10rem;
+}
+
+.contenedor-historia {
+    width: 70%;
+    margin: 0 auto 5rem;
+
+    h2 {
+        margin: 1rem 0 0.5rem;
+    }
+
+    p {
+        text-align: center;
+    }
+}
+
+.img-historia {
+    width: 100%;
+    height: 30rem;
+    object-fit: cover;
+    border: 0.15rem solid $color-Principal;
+    border-radius: 1rem;
+    box-shadow:  0px 2px 8px 0px $color-Neutro-Negro-rgba;
+}
+
+// Aqui declaro los media queries de sobre-nosotros.html
+@include media-queries(small) {
+    .contenedor-filosofias {
+        justify-content: center;
+    }
+    .contenedor-historia {
+        width: 90%;
+    }
+}
+
+@include media-queries(tablet) {
+    .contenedor-filosofias {
+        justify-content: space-between;
+    }
+    .contenedor-historia {
+        width: 70%;
+    }
+}

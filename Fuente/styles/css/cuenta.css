@@ -1,0 +1,710 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+  outline: none;
+}
+
+body {
+  background-color: #F1E7E7;
+  padding-top: 10rem;
+}
+
+a {
+  text-decoration: none;
+  font-family: "Lato";
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  color: #F1E7E7;
+  font-size: 1.5rem;
+  display: inline-block;
+  padding: 1.25rem;
+}
+a:hover {
+  color: #F1A2A2;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url(../../media/fonts/Lato-Regular.ttf);
+}
+@font-face {
+  font-family: "Questrial";
+  src: url(../../media/fonts/Questrial-Regular.ttf);
+}
+h1 {
+  font-family: "Lato";
+  font-size: 4.8rem;
+  color: #F1E7E7;
+  line-height: 1.2;
+}
+
+h2 {
+  font-family: "Lato";
+  font-size: 3.5rem;
+  font-style: italic;
+  color: #B03B3B;
+  line-height: 1.2;
+}
+
+h3 {
+  font-family: "Questrial";
+  font-size: 2rem;
+  color: #F1E7E7;
+  line-height: 1.2;
+}
+
+p {
+  font-family: "Questrial";
+  font-size: 1.25rem;
+  color: #222222;
+  text-align: justify;
+  text-indent: 2rem;
+}
+
+/* Hago herencia para la base de los botones */
+.boton-footer, .boton-pred, .boton-inicio {
+  display: inline-block;
+  border: 2px solid;
+  border-radius: 1rem;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.boton-footer:hover, .boton-pred:hover, .boton-inicio:hover {
+  transition: all 0.25s;
+}
+
+/* Boton de Iniciar Sesion */
+.boton-inicio {
+  background-color: #B03B3B;
+  border-color: #F1E7E7;
+  box-shadow: 0px 0px 5px 5px rgba(34, 34, 34, 0.5);
+}
+.boton-inicio:hover {
+  background-color: #362624;
+}
+
+/* Boton Predeterminado */
+.boton-pred {
+  background-color: #961316;
+  border-color: #F1E7E7;
+  box-shadow: 0px 0px 5px 5px rgba(34, 34, 34, 0.5);
+}
+.boton-pred:hover {
+  background-color: #362624;
+}
+
+/* Boton Footer */
+.boton-footer {
+  background-color: #961316;
+  border-color: #F1E7E7;
+  box-shadow: none;
+  padding: 0.75rem;
+  cursor: default;
+}
+.boton-footer:hover {
+  background-color: #F1E7E7;
+}
+.boton-footer:hover {
+  color: #222222;
+  border: 2px solid #961316;
+}
+
+header {
+  background-color: #961316;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  min-height: 10rem;
+  z-index: 5;
+  box-shadow: 0 0.625rem 0.3125rem 0 rgba(34, 34, 34, 0.5);
+  z-index: 10;
+}
+
+.img-logoHeader {
+  width: 9rem;
+  height: 9rem;
+  margin: 0.5rem 0 0.5rem 5rem;
+  transition: all 0.25s;
+}
+.img-logoHeader:hover {
+  width: 8.75rem;
+  height: 8.75rem;
+  margin: auto;
+}
+.img-logoHeader:active {
+  transform: scale(0.9) skew(-2deg);
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10rem;
+}
+
+.menu-desplegable {
+  display: none;
+  background: none;
+  border: none;
+  color: #F1E7E7;
+  font-size: 5rem;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.menu-desplegable:hover {
+  transform: scale(1, 0.75);
+  color: #F1A2A2;
+}
+
+.enlaces {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+.enlaces a {
+  position: relative;
+  text-decoration: none;
+}
+.enlaces a::after {
+  content: "";
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0.2rem;
+  background-color: #F1A2A2;
+  transition: width 0.3s ease;
+}
+.enlaces a:hover::after {
+  width: 85%;
+}
+
+.separado {
+  margin-right: 5rem;
+}
+
+footer {
+  background-color: #362624;
+  box-shadow: 0 -5px 5px 0 rgba(34, 34, 34, 0.5);
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.fila-superior {
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.img-logoFooter {
+  width: 9rem;
+  height: 9rem;
+  justify-self: start;
+}
+
+.img-logoPatrocinador {
+  width: 10rem;
+  height: 10rem;
+  justify-self: center;
+}
+
+.cta-redes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.img-redes {
+  display: flex;
+  justify-content: center;
+}
+
+.img-redes i.fab {
+  font-size: 2rem;
+  padding: 1rem;
+  background-color: #961316;
+  border: 0.2rem solid #F1E7E7;
+  border-radius: 2.5rem;
+  transition: all 0.25s ease;
+}
+
+.img-redes i.fab:hover {
+  color: #222222;
+  background-color: #F1E7E7;
+  border: 0.2rem solid #961316;
+}
+
+.fila-inferior {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column-reverse;
+  gap: 0.5rem;
+}
+
+.menu-footer ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 1.5rem;
+}
+.menu-footer ul a {
+  font-weight: normal;
+  font-size: 1rem;
+  text-transform: none;
+  text-align: center;
+  color: #F1E7E7;
+  display: inline-block;
+}
+.menu-footer ul a:hover {
+  color: #F1A2A2;
+}
+
+.copy {
+  align-self: flex-start;
+  color: #F1E7E7;
+  opacity: 60%;
+  margin-top: 2rem;
+}
+
+input[type=submit], input[type=text], input[type=email], input[type=password] {
+  background-color: #F1E7E7;
+  border: 0.15rem solid #222222;
+  border-radius: 1rem;
+  box-shadow: 3px 4px 0px 1px #F1A2A2;
+}
+
+input[type=submit]:hover {
+  background-color: #961316;
+  color: #F1E7E7;
+  border: 0.15rem solid #F1E7E7;
+  box-shadow: 3px 4px 0px 1px #222222;
+}
+
+.contenedor-cuenta {
+  display: flex;
+  justify-content: space-between;
+  margin: 5rem auto;
+  width: 95%;
+  height: auto;
+  background-color: #B03B3B;
+  border: 0.15rem solid #362624;
+  border-radius: 1rem;
+  box-shadow: 0px 2px 8px 0px rgba(34, 34, 34, 0.5);
+}
+
+.seccion-cuenta {
+  height: auto;
+  padding: 2rem;
+  border-right: 0.15rem solid #362624;
+}
+
+i.fa-regular {
+  font-size: 5rem;
+  padding: 2rem;
+  background-color: #F1E7E7;
+  border: 0.15rem solid #362624;
+  border-radius: 10rem;
+}
+
+.menu-cuenta {
+  margin: 2rem 0 0;
+  min-height: 22rem;
+  display: flex;
+  flex-direction: column;
+}
+.menu-cuenta h3 {
+  font-weight: normal;
+  margin: 0.25rem 0 0 0;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+.menu-cuenta h3:first-child {
+  text-decoration: underline;
+}
+.menu-cuenta h3:last-child {
+  margin-top: auto;
+}
+.menu-cuenta h3:hover {
+  color: #F1A2A2;
+  text-decoration: underline;
+}
+
+.contenedor-perfil {
+  width: 100%;
+  margin: 0 1rem 2rem;
+  text-align: left;
+}
+.contenedor-perfil h3 {
+  font-weight: normal;
+  border-bottom: 0.15rem solid #362624;
+}
+.contenedor-perfil h2 {
+  margin: 2rem 0 0.5rem;
+  text-align: left;
+  font-family: "Questrial";
+  font-size: 2rem;
+  color: #F1E7E7;
+  line-height: 1.2;
+}
+
+.inicio-formulario {
+  display: flex;
+  flex-direction: column;
+  margin: auto 5rem auto 0;
+}
+.inicio-formulario label {
+  font-family: "Questrial";
+  font-size: 2rem;
+  color: #F1E7E7;
+}
+
+input[type=text], input[type=email], input[type=password] {
+  font-family: "Questrial";
+  font-size: 1.25rem;
+  width: 97%;
+  height: 2rem;
+  padding: 0.5rem;
+  margin: 0 0 1rem;
+  transition: all 0.25s;
+}
+input[type=text]::placeholder, input[type=email]::placeholder, input[type=password]::placeholder {
+  font-family: "Questrial";
+}
+input[type=text]:focus, input[type=email]:focus, input[type=password]:focus {
+  border: 0.15rem solid #F1A2A2;
+  box-shadow: 3px 4px 0px 1px #222222;
+}
+
+input[type=submit] {
+  font-family: "Questrial";
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #222222;
+  width: 35%;
+  height: 3rem;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+@media (min-width: 320px) {
+  .seccion-cuenta {
+    padding: 0;
+  }
+  i.fa-regular {
+    font-size: 2rem;
+  }
+  .menu-cuenta h3 {
+    font-size: 1rem;
+  }
+  .contenedor-perfil h1 {
+    font-size: 2rem;
+  }
+  .contenedor-perfil h2 {
+    font-size: 1.5rem;
+  }
+  .contenedor-perfil h3 {
+    font-size: 1rem;
+  }
+  .inicio-formulario {
+    margin: auto 1rem auto 0;
+  }
+  .inicio-formulario label {
+    font-size: 1.5rem;
+  }
+  input[type=text], input[type=email], input[type=password] {
+    font-size: 1rem;
+  }
+  input[type=submit] {
+    width: 100%;
+    font-size: 1rem;
+  }
+}
+@media (min-width: 480px) {
+  .contenedor-perfil h1 {
+    font-size: 4.8rem;
+  }
+  .contenedor-perfil h2 {
+    font-size: 3.5rem;
+  }
+  .contenedor-perfil h3 {
+    font-size: 2rem;
+  }
+  .menu-cuenta h3 {
+    font-size: 2rem;
+  }
+  i.fa-regular {
+    font-size: 5rem;
+  }
+  input[type=submit] {
+    font-size: 1.25rem;
+  }
+}
+@media (min-width: 768px) {
+  .seccion-cuenta {
+    padding: 2rem;
+  }
+  .inicio-formulario label {
+    font-size: 2rem;
+  }
+  input[type=text], input[type=email], input[type=password] {
+    font-size: 1.25rem;
+  }
+  input[type=submit] {
+    width: 65%;
+  }
+}
+@media (min-width: 1024px) {
+  .inicio-formulario {
+    margin: auto 5rem auto 0;
+  }
+  input[type=submit] {
+    width: 35%;
+  }
+}
+@media (min-width: 1200px) {
+  .inicio-formulario label {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 320px) {
+  body {
+    padding-top: 5rem;
+  }
+  a {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+  h1 {
+    font-size: 3.8rem;
+  }
+  h2 {
+    text-align: center;
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  header {
+    position: absolute;
+    min-height: 5rem;
+  }
+  .img-logoHeader {
+    width: 4rem;
+    height: 4rem;
+    margin: 0;
+  }
+  a .img-logoHeader:hover {
+    width: 3.75rem;
+    height: 3.75rem;
+    margin: 0;
+  }
+  .menu {
+    height: 5rem;
+    align-items: none;
+  }
+  .menu-desplegable {
+    display: block;
+    margin-left: auto;
+    font-size: 3rem;
+    position: relative;
+  }
+  .enlaces {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    right: 0;
+    transform: translateY(-1rem);
+    visibility: hidden;
+  }
+  .enlaces.activo {
+    visibility: visible;
+    top: 5rem;
+    background-color: #961316;
+    box-shadow: inset 0 10px 5px 0 rgba(34, 34, 34, 0.5);
+    transform: translateY(0);
+    transition: all 0.5s;
+    z-index: 1;
+  }
+  .separado {
+    margin: 0 0.5rem 0 1rem;
+  }
+  .intro-botones {
+    width: 90%;
+  }
+  .fila-superior {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+  }
+  .img-redes i.fab {
+    font-size: 1.5rem;
+  }
+  .fila-inferior {
+    width: 90%;
+  }
+  .copy {
+    font-size: 0.55rem;
+  }
+}
+@media (min-width: 480px) {
+  body {
+    padding-top: 8rem;
+  }
+  a {
+    padding: 1rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  header {
+    min-height: 8rem;
+  }
+  .img-logoHeader {
+    width: 7rem;
+    height: 7rem;
+  }
+  a .img-logoHeader:hover {
+    width: 6.75rem;
+    height: 6.75rem;
+  }
+  .menu {
+    height: 8rem;
+  }
+  .menu-desplegable {
+    font-size: 4rem;
+  }
+  .enlaces.activo {
+    top: 8rem;
+  }
+  .img-redes i.fab {
+    font-size: 2rem;
+  }
+  .copy {
+    font-size: 0.75rem;
+  }
+}
+@media (min-width: 768px) {
+  a {
+    font-size: 1.25rem;
+  }
+  h1 {
+    font-size: 4.8rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  .menu-desplegable {
+    font-size: 5rem;
+  }
+  .enlaces.activo {
+    flex-direction: row;
+    width: 100%;
+  }
+  .fila-superior {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .copy {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1024px) {
+  h2 {
+    font-size: 3.5rem;
+  }
+  header {
+    position: fixed;
+  }
+  a .img-logoHeader:hover {
+    margin: 0.15rem;
+  }
+  .menu-desplegable {
+    display: none;
+  }
+  .enlaces {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    visibility: visible;
+    transform: none;
+  }
+  .enlaces.activo {
+    top: 0;
+    width: auto;
+    background-color: none;
+    box-shadow: none;
+    transition: none;
+  }
+  .fila-superior {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    gap: 0rem;
+  }
+}
+@media (min-width: 1200px) {
+  body {
+    padding-top: 10rem;
+  }
+  header {
+    min-height: 10rem;
+  }
+  .img-logoHeader {
+    width: 9rem;
+    height: 9rem;
+    margin: 0.5rem 0 0.5rem 5rem;
+  }
+  a .img-logoHeader:hover {
+    width: 8.75rem;
+    height: 8.75rem;
+    margin: 0.5rem 0.25rem 0.5rem 5rem;
+  }
+  .menu {
+    height: 10rem;
+  }
+  .separado {
+    margin-right: 5rem;
+  }
+  .intro-botones {
+    width: 55%;
+  }
+  .fila-superior {
+    gap: 1.5rem;
+  }
+  .fila-inferior {
+    width: 70%;
+  }
+  .copy {
+    font-size: 1.25rem;
+  }
+}
+@media (min-width: 1600px) {
+  a {
+    font-size: 1.5rem;
+  }
+  .fila-superior {
+    width: 80%;
+  }
+}
+
+/*# sourceMappingURL=cuenta.css.map */
