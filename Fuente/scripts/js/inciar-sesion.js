@@ -20,7 +20,4 @@ form.addEventListener("submit", (event) => {
     } else {
         alert("Error - Usuario o contraseña incorrectos");
     }
-
-
-
 });
