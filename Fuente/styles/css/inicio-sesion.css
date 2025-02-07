@@ -407,7 +407,7 @@ input[type=submit] {
     font-size: 1rem;
   }
   .formulario-botones {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
     gap: 1rem;
   }

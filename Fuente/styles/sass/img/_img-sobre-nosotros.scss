@@ -1,7 +1,7 @@
 // Importo los Mixins para generar los media queries
 @import '../utils/mixins';
 
-// Imagen del index
+// Imagen del Sobre Nosotros
 .img-sobre-nosotros {
     filter: brightness(0.55) contrast(120%) saturate(110%);
     @include media-img-principal("hero-SobreNosotros");

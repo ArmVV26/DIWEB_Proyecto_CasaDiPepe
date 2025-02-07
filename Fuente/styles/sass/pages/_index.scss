@@ -2,7 +2,7 @@
 @import '../utils/variables';
 @import '../utils/mixins';
 
-// Estilos para la pagina principal de la web (index.html)
+// Estilos para la pagina principal de la web index.html
 .contenido {
     width: 75%;
     margin: 2.5rem auto;
@@ -107,7 +107,7 @@
     z-index: 10;
 }
 
-// Aqui declaro las media-queries del index
+// Aqui declaro las media-queries del index.html
 @include media-queries(small) {
     // Index.html
     .contenido {

@@ -2,7 +2,7 @@
 @import '../utils/variables';
 @import '../utils/mixins';
 
-// Aqui voy a definir el estilo de la pagina incio-sesion.html
+// Aqui voy a definir el estilo de la pagina inicio-sesion.html
 %estilo-base {
     background-color: $color-Neutro-Blanco;
     border: 0.15rem solid $color-Neutro-Negro;
@@ -138,7 +138,7 @@ input[type="submit"]{
     }
 } 
 
-// Aqui declaro las media-queries de incio-sesion.html
+// Aqui declaro las media-queries de inicio-sesion.html
 @include media-queries(small) {
     .contenedor-formulario {
         width: 80%;
@@ -153,7 +153,7 @@ input[type="submit"]{
         font-size: 1rem;
     }
     .formulario-botones {
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
         gap: 1rem;
     }

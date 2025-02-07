@@ -326,10 +326,9 @@ footer {
 
 .contenedor-filosofias {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
   margin: 5rem auto;
-  width: 95%;
+  width: 80%;
   height: auto;
   background-color: #B03B3B;
   border: 0.15rem solid #362624;
@@ -346,9 +345,10 @@ footer {
   width: 18rem;
 }
 .filosofia h3 {
-  margin: 2rem 0 1rem;
+  margin: 1rem 0 0.5rem;
 }
 .filosofia p {
+  font-style: italic;
   text-align: center;
   color: #F1E7E7;
   width: 100%;
@@ -391,9 +391,6 @@ footer {
   }
 }
 @media (min-width: 768px) {
-  .contenedor-filosofias {
-    justify-content: space-between;
-  }
   .contenedor-historia {
     width: 70%;
   }

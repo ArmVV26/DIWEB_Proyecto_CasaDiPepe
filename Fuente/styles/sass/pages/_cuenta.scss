@@ -145,7 +145,7 @@ input[type="submit"]{
 // Aqui declaro las media-queries de cuenta.html
 @include media-queries(small) {
     .seccion-cuenta {
-        padding: 0;
+        padding: 0.15rem;
     }
     i.fa-regular {
         font-size: 2rem;
@@ -166,10 +166,11 @@ input[type="submit"]{
         margin: auto 1rem auto 0;
     }
     .inicio-formulario label {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
     input[type="text"], input[type="email"], input[type="password"] {
-        font-size: 1rem;
+        font-size: 0.75rem;
+        height: 1rem;
     }
     input[type="submit"] {
         width: 100%;
@@ -178,6 +179,21 @@ input[type="submit"]{
 }
 
 @include media-queries(medium) {
+    input[type="submit"] {
+        width: 65%;
+    }
+}
+ 
+@include media-queries(tablet) {
+    .seccion-cuenta {
+        padding: 2rem;
+    }
+    i.fa-regular {
+        font-size: 5rem;
+    }
+    .menu-cuenta h3 {
+        font-size: 2rem;
+    }
     .contenedor-perfil h1 {
         font-size: 4.8rem;
     }
@@ -187,29 +203,15 @@ input[type="submit"]{
     .contenedor-perfil h3 {
         font-size: 2rem;
     }
-    .menu-cuenta h3 {
-        font-size: 2rem;
-    }
-    i.fa-regular {
-        font-size: 5rem;
-    }
-    input[type="submit"] {
-        font-size: 1.25rem;
-    }
-}
- 
-@include media-queries(tablet) {
-    .seccion-cuenta {
-        padding: 2rem;
-    }
     .inicio-formulario label {
         font-size: 2rem;
     }
     input[type="text"], input[type="email"], input[type="password"] {
         font-size: 1.25rem;
+        height: 2rem;
     }
     input[type="submit"] {
-        width: 65%;
+        font-size: 1.25rem;
     }
 }
 
