@@ -19,7 +19,7 @@ Contiene todos los documentos explicativos del desarrollo de la página web. Inc
 Contiene todos los archivos necesarios para implementar el proyecto web. Esta carpeta está organizada de la siguiente manera:  
 
 ### 2.1. Estructura Interna 
-- `html/`: Contiene los archivos HTML correspondientes a cada página de la web. Páginas: ***carta/pasta.html***, ***carta.html***, ***cuenta-html***, ***formulario-registro.html***, ***formulario-reserva.html***, ***inicio-sesion.html***, ***sobre-nosotros.html*** y ***tienda.html***.
+- `html/`: Contiene los archivos HTML correspondientes a cada página de la web. Páginas: ***carta/pasta.html***, ***carta.html***, ***cuenta.html***, ***formulario-registro.html***, ***formulario-reserva.html***, ***inicio-sesion.html***, ***sobre-nosotros.html*** y ***tienda.html***.
 - `media/`: Carpeta que contiene las carpetas *img* y *fonts*.
   + `fonts/`: Incluye las tipografías usadas en el proyecto.
   + `img/`: Almacena todas las imágenes usadas en el proyecto, organizadas por tipo:
@@ -85,7 +85,7 @@ Los *scripts* que he usado para compilar, prefijar, minimizar y empaquetar el pr
 - ***dev:parcel***: *Script* que compila, prefija, minimiza y empaqueta los archivos indicados, generando una versión de desarrollo en la carpeta `dev/`, en la raíz del proyecto. Además, creará un servidor localhost donde podremos ver la web.
 - ***build:parcel***: *Script* similar al anterior, pero orientado a producción. Este *script* realiza la compilación, optimización y empaquetado final del sitio, generando una versión optimizada y minificada del proyecto en la carpeta `build/`.
 - ***limpia:dev***: Este *script* elimina la carpeta `dev/` y la caché de Parcel (`.parcel-cache/`).
-- ***limpia:build***: Este *script* elimina la carpeta `buiild/` y la caché de Parcel (`.parcel-cache/`).
+- ***limpia:build***: Este *script* elimina la carpeta `build/` y la caché de Parcel (`.parcel-cache/`).
 - ***copiarDev:media***: Este *script* espera 5 segundos para dar tiempo a que se generen los archivos `dev/` y luego copia recursivamente la carpeta `Fuente/media/` al directorio `dev/Fuente/media`. Esto asegura que todos los recursos multimedia estén disponibles en la versión de desarrollo.
 - ***copiarBuild:media***: Este *script* hace lo mismo que el anterior, pero para la carpeta `build/`, es decir, para el modo producción.
 - ***dev:todo***: Este *script* combina las tareas para facilitar el flujo de trabajo. Primero ejecuta ***limpia:dev***, y luego, en paralelo, ejecuta ***dev:parcel*** y ***copiarDev:media***, de forma que con solo un comando se levante todo lo necesario para trabajar en desarrollo.
