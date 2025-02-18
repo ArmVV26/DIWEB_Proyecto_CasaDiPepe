@@ -38,6 +38,14 @@
     z-index: 1;
     text-align: center;
     color: $color-Neutro-Blanco;
+
+    h2 {
+        font-family: $font-Secondary;
+        font-size: px-to-rem(32px);
+        font-style: none;
+        color: $color-Neutro-Blanco;
+        line-height: px-to-rem(19.2px);
+    }
 }
 
 .intro-botones {
