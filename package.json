@@ -10,7 +10,7 @@
     "limpia:dev": "rimraf dev .parcel-cache",
     "limpia:build": "rimraf build .parcel-cache",
     "copiarDev:media": "sleep 5 && cp -r Fuente/media/ dev/Fuente/media",
-    "copiarBuild:media": "sleep 15 && cp -r Fuente/media/ build/Fuente/media",
+    "copiarBuild:media": "sleep 30 && cp -r Fuente/media/ build/Fuente/media",
     "dev:todo": "run-s limpia:dev && run-p dev:parcel copiarDev:media",
     "build:todo": "run-s limpia:build && run-p build:parcel copiarBuild:media"
   },
