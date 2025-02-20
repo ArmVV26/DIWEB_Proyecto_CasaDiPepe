@@ -4,13 +4,13 @@
   "description": "Generar el CSS a partir de SCSS",
   "scripts": {
     "compile:sass": "sass Fuente/styles/sass/:styles/css/",
-    "watch:sass": "sass --watch Fuente/styles/sass/:styles/css/",
+    "watch:sass": "sass --watch Fuente/styles/sass/:Fuente/styles/css/",
     "dev:parcel": "parcel index.html Fuente/html/*.html --dist-dir dev",
     "build:parcel": "parcel build index.html Fuente/html/*.html --dist-dir build",
     "limpia:dev": "rimraf dev .parcel-cache",
     "limpia:build": "rimraf build .parcel-cache",
     "copiarDev:media": "sleep 5 && cp -r Fuente/media/ dev/Fuente/media",
-    "copiarBuild:media": "sleep 5 && cp -r Fuente/media/ build/Fuente/media",
+    "copiarBuild:media": "sleep 30 && cp -r Fuente/media/ build/Fuente/media",
     "dev:todo": "run-s limpia:dev && run-p dev:parcel copiarDev:media",
     "build:todo": "run-s limpia:build && run-p build:parcel copiarBuild:media"
   },

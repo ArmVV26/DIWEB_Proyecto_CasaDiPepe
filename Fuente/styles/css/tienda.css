@@ -314,6 +314,13 @@ footer {
   text-align: center;
   color: #F1E7E7;
 }
+.intro-texto h2 {
+  font-family: "Questrial";
+  font-size: 2rem;
+  font-style: none;
+  color: #F1E7E7;
+  line-height: 1.2rem;
+}
 
 .intro-botones {
   position: relative;
