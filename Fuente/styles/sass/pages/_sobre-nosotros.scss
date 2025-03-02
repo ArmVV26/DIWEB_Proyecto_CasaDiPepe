@@ -23,7 +23,11 @@
     margin: 1rem 2rem;
     width: 18rem;
 
-    h3 {
+    .titulo-filosofia {
+        font-family: $font-Secondary;
+        font-size: 2rem;
+        color: $color-Neutro-Blanco;
+        line-height: 1.2rem;
         margin: 1rem 0 0.5rem;
     }
 
@@ -70,12 +74,18 @@
     .contenedor-filosofias {
         justify-content: center;
     }
+    .titulo-filosofia {
+        font-size: 1.5rem;
+    }
     .contenedor-historia {
         width: 90%;
     }
 }
 
 @include media-queries(tablet) {
+    .titulo-filosofia {
+        font-size: 2rem;
+    }
     .contenedor-historia {
         width: 70%;
     }

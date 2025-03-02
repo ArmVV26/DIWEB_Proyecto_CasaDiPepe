@@ -1,5 +1,5 @@
 // Obtengo todos los contenedores de imagenes que tiene el id "contenedor-img"
-const contenedoresImg = document.querySelectorAll("#contenedor-img");
+const contenedoresImg = document.querySelectorAll(".contenedor-img");
 
 // Funcion que me genera una matriz de la imagen
 function generarImagenes(arrayDatos) {
@@ -194,11 +194,11 @@ contenedoresImg.forEach(contenedorImg => {
   const arrayDatos = JSON.parse(dataInfo);
 
   // Obtengo los sources del contenedor
-  const sourceWebp = contenedorImg.querySelector("#sourceWebp");
-  const sourcePng = contenedorImg.querySelector("#sourcePng");
-  const sourceJpg = contenedorImg.querySelector("#sourceJpg");
-  const sourceSvg = contenedorImg.querySelector("#sourceSvg");
-  const imagen = contenedorImg.querySelector("#imagen");
+  const sourceWebp = contenedorImg.querySelector(".sourceWebp");
+  const sourcePng = contenedorImg.querySelector(".sourcePng");
+  const sourceJpg = contenedorImg.querySelector(".sourceJpg");
+  const sourceSvg = contenedorImg.querySelector(".sourceSvg");
+  const imagen = contenedorImg.querySelector(".imagen");
 
   // Obtengo la matriz de la imgen
   const imagenes = generarImagenes(arrayDatos);

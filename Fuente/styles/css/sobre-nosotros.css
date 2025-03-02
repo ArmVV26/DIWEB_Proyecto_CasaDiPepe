@@ -351,7 +351,11 @@ footer {
   margin: 1rem 2rem;
   width: 18rem;
 }
-.filosofia h3 {
+.filosofia .titulo-filosofia {
+  font-family: "Questrial";
+  font-size: 2rem;
+  color: #F1E7E7;
+  line-height: 1.2rem;
   margin: 1rem 0 0.5rem;
 }
 .filosofia p {
@@ -393,11 +397,17 @@ footer {
   .contenedor-filosofias {
     justify-content: center;
   }
+  .titulo-filosofia {
+    font-size: 1.5rem;
+  }
   .contenedor-historia {
     width: 90%;
   }
 }
 @media (min-width: 768px) {
+  .titulo-filosofia {
+    font-size: 2rem;
+  }
   .contenedor-historia {
     width: 70%;
   }

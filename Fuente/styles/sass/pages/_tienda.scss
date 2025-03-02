@@ -84,9 +84,11 @@ i.fa-cart-shopping {
     flex-direction: column;
     border-right: 0.15rem solid $color-Neutro-Negro;
 
-    h3 {
+    .titulo-filtro {
+        font-family: $font-Secondary;
         text-align: center;
-        padding: 1rem 0 0 1rem;
+        padding: 1rem 0 0;
+        line-height: 1.2rem;
         font-size: 1.5rem;
         color: $color-Neutro-Negro;
         border-bottom: 0.15rem solid $color-Neutro-Negro;
@@ -210,7 +212,10 @@ input[type="range"]::-webkit-slider-thumb {
     text-align: center;
     transition: all 0.5s;
     
-    h3 {
+    .nombre-prod {
+        font-size: 2rem;
+        font-family: $font-Secondary;
+        list-style: 1.2rem;
         color: $color-Neutro-Negro;
     }
 

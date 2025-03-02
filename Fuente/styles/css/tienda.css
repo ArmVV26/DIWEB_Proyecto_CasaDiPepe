@@ -406,9 +406,11 @@ i.fa-cart-shopping:hover {
   flex-direction: column;
   border-right: 0.15rem solid #222222;
 }
-.menu-terciario h3 {
+.menu-terciario .titulo-filtro {
+  font-family: "Questrial";
   text-align: center;
-  padding: 1rem 0 0 1rem;
+  padding: 1rem 0 0;
+  line-height: 1.2rem;
   font-size: 1.5rem;
   color: #222222;
   border-bottom: 0.15rem solid #222222;
@@ -526,7 +528,10 @@ input[type=range]::-webkit-slider-thumb {
   text-align: center;
   transition: all 0.5s;
 }
-.img-desc h3 {
+.img-desc .nombre-prod {
+  font-size: 2rem;
+  font-family: "Questrial";
+  list-style: 1.2rem;
   color: #222222;
 }
 .img-desc p {
