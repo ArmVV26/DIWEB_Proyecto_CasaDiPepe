@@ -7,6 +7,32 @@
 >
 > Creado por: **Armando Vaquero Vargas**  
 
+## Índice
+- [DIWEB\_Proyecto\_CasaDiPepe](#diweb_proyecto_casadipepe)
+  - [Índice](#índice)
+  - [Organización del Proyecto](#organización-del-proyecto)
+    - [1. Docs](#1-docs)
+    - [2. Fuente](#2-fuente)
+      - [2.1. Estructura Interna](#21-estructura-interna)
+    - [3. Index.html](#3-indexhtml)
+    - [4. Package.json](#4-packagejson)
+      - [4.1. Herramientas](#41-herramientas)
+      - [4.2. Scripts](#42-scripts)
+      - [4.3. Funcionamiento](#43-funcionamiento)
+        - [4.3.1. Descargar el repositorio](#431-descargar-el-repositorio)
+        - [4.3.2. Instalar las dependencias](#432-instalar-las-dependencias)
+        - [4.3.3. Ejecución del Entorno de Desarrollo](#433-ejecución-del-entorno-de-desarrollo)
+        - [4.3.4 Ejecución del Entorno de Producción](#434-ejecución-del-entorno-de-producción)
+  - [Pruebas de Accesibilidad](#pruebas-de-accesibilidad)
+    - [1. Netlify](#1-netlify)
+    - [2. Herramientas](#2-herramientas)
+    - [3. Resultados Iniciales](#3-resultados-iniciales)
+      - [3.1. Resultados](#31-resultados)
+      - [3.2. Errores Encontrados](#32-errores-encontrados)
+    - [4. Análisis de Fallos y Solución](#4-análisis-de-fallos-y-solución)
+    - [5. Comprobación de las Soluciones](#5-comprobación-de-las-soluciones)
+      - [5.1. Resultados + Soluciones Errores](#51-resultados--soluciones-errores)
+
 ## Organización del Proyecto 
 El repositorio está estructurado en dos carpetas principales:  
 
@@ -18,7 +44,7 @@ Contiene todos los documentos explicativos del desarrollo de la página web. Inc
 ### 2. [Fuente](https://github.com/ArmVV26/CasaDiPepe/tree/main/Fuente)
 Contiene todos los archivos necesarios para implementar el proyecto web. Esta carpeta está organizada de la siguiente manera:  
 
-### 2.1. Estructura Interna 
+#### 2.1. Estructura Interna 
 - `html/`: Contiene los archivos HTML correspondientes a cada página de la web. Páginas: ***carta/pasta.html***, ***carta.html***, ***cuenta.html***, ***formulario-registro.html***, ***formulario-reserva.html***, ***inicio-sesion.html***, ***sobre-nosotros.html*** y ***tienda.html***.
 - `media/`: Carpeta que contiene las carpetas *img* y *fonts*.
   + `fonts/`: Incluye las tipografías usadas en el proyecto.
@@ -52,7 +78,7 @@ Archivo principal que actúa como punto de entrada a la web.
 ### 4. Package.json
 El archivo ***package.json*** centraliza la configuración del entorno de desarrollo del proyecto y automatiza diversas tareas. Voy a explicar las herramientas y los *scripts* usados, además de una explicación del funcionamiento que tiene este proyecto.
 
-### 4.1. Herramientas
+#### 4.1. Herramientas
 Para compilar, prefijar, minimizar y empaquetar en el proyecto he usado las siguientes herramientas:
 1. **npm-run-all**: Esto nos permite ejecutar comandos en paralelo (***run-p***) o de forma secuencial (***run-s***).
 2. **Parcel**: Es una herramienta que permite compilar, prefijar, minimizar y empaquetar todos los archivos del proyecto web, sin la necesidad de una configuración, rápida y escalable.
@@ -66,7 +92,7 @@ npm install --save-dev npm-run-all parcel rimraf sass
 > [!IMPORTANT]
 > He intentando usar el modulo **parcel-reporter-static-files-copy**, que sirve para compiar carpetas estáticas. Lo que pasa es que no funcionaba de forma correcta y al final lo he hecho de otra manera.
 
-### 4.2. Scripts
+#### 4.2. Scripts
 Los *scripts* que he usado para compilar, prefijar, minimizar y empaquetar el proyecto web son los siguientes:
 ```json
 "compile:sass": "sass Fuente/styles/sass/:styles/css/",
@@ -94,23 +120,23 @@ Los *scripts* que he usado para compilar, prefijar, minimizar y empaquetar el pr
 > [!CAUTION]
 > Si se ejecuta el script ***dev:parcel*** o ***build:parcel***, sin ejecutar ni ***copiarDev:media*** o ***copiarBuild:media***, ¡NO FUNCIONARÁ LA WEB DE FORMA CORRECTA!
 
-### 4.3. Funcionamiento
+#### 4.3. Funcionamiento
 En este apartado voy a explicar cómo descargar el repositorio, instalar las dependencias y utilizar los scripts de desarrollo y producción. 
 
-#### 4.3.1. Descargar el repositorio
+##### 4.3.1. Descargar el repositorio
 Para clonar el repositorio en tu equipo, abre: *Visual Studio Code*, una carpeta dentro de este y en una terminal pon el siguiente comando:
 ```bash
 git clone https://github.com/ArmVV26/DIWEB_Proyecto_CasaDiPepe.git
 ```
 
-#### 4.3.2. Instalar las dependencias
+##### 4.3.2. Instalar las dependencias
 Una vez clonado el repositorio, accede al directorio del proyecto y ejecuta:
 ```bash
 npm install
 ```
 Este comando instalará todas las dependencias necesarias que se indican en el fichero `package.json`.
 
-#### 4.3.3. Ejecución del Entorno de Desarrollo
+##### 4.3.3. Ejecución del Entorno de Desarrollo
 Para iniciar el entorno de desarrollo, ejecuta el siguiente script:
 ```bash
 npm run dev:todo
@@ -121,7 +147,7 @@ Al hacerlo se llevarán a cabo las siguientes acciones:
 3. Se copia la carpeta `Fuente/media` a `dev/Fuente/media` para que los archivos multimedia estén disponibles.
 Con esto, se levanta un servidor localhost (normalmente: `http://localhost:1234`) donde podrás ver y probar la web en tiempo real.
 
-#### 4.3.4 Ejecución del Entorno de Producción
+##### 4.3.4 Ejecución del Entorno de Producción
 Para generar una versión optimizada del sitio, ejecuta:
 ```bash
 npm run build:todo
@@ -149,3 +175,212 @@ Esto iniciará un servidor que servirá el contenido de la carpeta `build/` en u
    └──────────────────────────────────────────┘
 ```
 ---
+
+## Pruebas de Accesibilidad
+Este apartado el objetivo es garantizar que la página web cumpla con los criterios de accesibilidad del nivel AA de las *Pautas de Accesibilidad para el Contenido Web* (**WCAG**). Para ello, voy a usar distintas herramientas de validación, tanto en línea como locales, para indentificar los problemas y solucionarlos.
+
+### 1. Netlify
+Para usar estas herramientas es necesario subir el proyecto web a un dominio, para ello he usado [**Netlify**](https://www.netlify.com/). Los pasos que he seguido son los siguientes:
+1. Iniciar sesión con mi cuenta de **GitHub**.
+2. Asociar este repositorio como nuevo sitio.
+3. He indicar que al iniciar el lanzamiento del repositorio ejecute el comando:
+```bash
+npm run build:todo
+```
+Para que la web se muestre en modo producción.
+4. Además, se indica que la use como directorio público el que se genera con este comando (*build/*).
+*Configuración de Netlify*
+![Configuración Netlify](assets/Config-Netlifly.PNG)<br>
+
+5. Por último, tendremos que esperar a que se inicie el despliegue.
+<p style="text-align:center; font-style:italic">Web desplegada con Netlify</p>
+
+![Web Netlify](assets/Web-Netlify.PNG)<br>
+
+### 2. Herramientas
+Las herramientas que voy a usar para analizar la web son:
+- [Skynet Technologies](https://freeaccessibilitychecker.skynettechnologies.com/):
+  - Herramienta en línea que analiza la web, proporciona un procentaje de accesibilidad y una lista de errores.
+  - Para usarla simplemente congemos la dirección de la web desplegada con **Netlify**, la pegamos y esperamos a que el proceso de analisis finalice
+
+- [Accesibility Checker](https://www.accessibilitychecker.org/):
+  - Herramienta en línea que otorga una puntuación de accesibilidad y muestra los problemas de la web.
+  - Para usarla es igual que la anterior.
+
+- [Unlighthouse](https://next.unlighthouse.dev/):
+  - Es una herramienta local que combina **Lightohuse** con una interfaz de auditoría para múltiples páginas de una web. Aparte de la accesibilidad, genera un informe sobre: el rendimiento, las buenas práticas y el SEO.
+  - Para usarla es necesario seguir los siguientes pasos:
+    1. Instalar el paquete con **Node**.
+    2. Una vez instalado, ejecutar la web en modo producción (El en punto [4.3.4](#434-ejecución-del-entorno-de-producción) explico como hacerlo).
+    3. Y cuando la web sea funcional en local, usamos el siguiente comando, se nos abre un enlace en la web y esperamos a que el proceso de analisis finalice. 
+```bash
+npm install --save-dev unlighthouse
+npx unlighthouse --site http://localhost:XXXX/
+```
+
+### 3. Resultados Iniciales
+Para comprobar la accesibilidad de mi web, sigo el proceso comentado anteriormente para que las 3 herramientas me analicen la web y me muestren los resultados.
+
+#### 3.1. Resultados
+<p style="text-align:center; font-style:italic">Resultado Skynet Technologies</p>
+
+![Skynet 1º Intento](assets/Skynet-Primer-Intento.PNG)<br><br>
+
+<p style="text-align:center; font-style:italic">Resultado Accesibility Checker</p>
+
+![Accesibility Checker 1º Intento](assets/accessibilitychecker-Primer-Intento.PNG)<br><br>
+
+<p style="text-align:center; font-style:italic">Resultado Unlighthouse</p>
+
+![Unlighthouse 1º Intento](assets/unlighthouse-Primer-Intento.PNG)
+
+Las herramientas **Skynet** y  **Accesibility Checker** muestran las puntuaciones más bajas (68.10% y 69%, respectivamente), mientras que **Unlighthouse** sitúa la accesibilidad entre un 89% y 96%, en función de la página. Esto es normal debido a que cada herramienta realiza sus propias comprobaciones y aplica reglas distintas.
+
+#### 3.2. Errores Encontrados
+Estas herramientas también muestran los errores que tiene la web y como solucionarlos. Los errores que me muestra son:
+
+<p style="text-align:center; font-style:italic">Errores Skynet Technologies</p>
+
+![Skynet 1º Errores](assets/Skynet-Errores-Primero.PNG)<br><br>
+
+<p style="text-align:center; font-style:italic">Errores Accesibility Checker</p>
+
+![Accesibility Checker 1º Errores](assets/accessibilitychecker-Errores-Primer.PNG)<br><br>
+
+<p style="text-align:center; font-style:italic">Errores Unlighthouse</p>
+
+![Unlighthouse 1º Errores](assets//unlighthouse-Errores-Primero.PNG)
+
+Cada web muestra fallos o errores en función del criterio o reglas que usen para analizar la web. Pero si que muestran una serie de errores en común que voy a solucionar de la forma que me indican.
+- ***Errores Comunes***:
+  - **Error de Jerarquía de Encabezados**: En varias páginas se utiliza un *\<h1\>* seguido directamente de un *\<h3\>*, saltándose el nivel *\<h2\>*. Esto puede dificultar la correcta interpretación de la estructura del contenido por parte de los lectores de pantalla y otras tecnologías asistivas.
+  - **Links de las Redes Sociales del Footer sin un Nombre Discernible**: Los enlaces de las redes sociales del pie de página carecen de un nombre o descripción adecuada. Esto puede generar confusión en usuarios que depende de tecnologías de asistencia para navegar el sitio.
+
+- ***Errores No Comunes***:
+  - ***Skynet Technologies***:
+    - **Enlace sin "href"**: En el pie de página hay un enlace sin el atributo *href*, lo que impide que sean interpretados correctamente como enlaces interectivos.
+    - **IDs Duplicados**: Hay varios elementos que comparten el mismo ID. Esto puede generar conflictos en la identificación y manipulación de elementos, afectando a la accesibilidad y la usabilidad.
+
+> [!NOTE]
+> Algunos puntos no se detectan de manera automática por el analisis de estas herramientas y requieren una auditoría manual para confirmar o refinar la solución.
+
+### 4. Análisis de Fallos y Solución
+Para solucionar los fallos voy a ir 1 a 1 indicando la línea de código donde esta el error y la solución que me da la página o que yo he implementado.
+- **Enlace de Jerarquía de Encabezados**: Este error esta en algunas páginas que tienen una sección principal que son: `index.html`, `pasta.html`, `carta.html` y `formulario-reserva.html`. Por ejemplo el código de la sección principal de `index.html` es:
+```html
+<!-- Sección Principal con Hero-Image, titulo, subtítulo y botones -->
+<section class="introduccion">
+  <figure class="img-header-pred img-index"></figure>
+  <article class="intro-texto">
+    <h1>CASA DI PEPE</h1>
+    <h3>EL CORAZÓN DE LA TOSCANA</h3>
+  </article>  
+  <nav class="intro-botones">
+    <a href="tel:123123123" class="boton-pred">LLamanos</a>
+    <a href="mailto:casadipepe@gmail.com" class="boton-pred">Escribenos</a>
+  </nav>
+</section>
+```
+Para solucionarlo he modificado la etiqueta *\<h3\>* por una etiqueta *\<h2\>*. Quedaría de la siguiente manera:
+```html
+<!-- Sección Principal con Hero-Image, titulo, subtítulo y botones -->
+<section class="introduccion">
+  <figure class="img-header-pred img-index"></figure>
+  <article class="intro-texto">
+    <h1>CASA DI PEPE</h1>
+    <h2>EL CORAZÓN DE LA TOSCANA</h2>
+  </article>  
+  <nav class="intro-botones">
+    <a href="tel:123123123" class="boton-pred">LLamanos</a>
+    <a href="mailto:casadipepe@gmail.com" class="boton-pred">Escribenos</a>
+  </nav>
+</section>
+```
+
+- **Links de las Redes Sociales del Footer sin un Nombre Discernible**: Este error esta en todas las página, ya que todas las páginas tienen el pie de página. El código actual es:
+```html
+<!-- Sección de la Redes Sociales -->
+<nav class="img-redes">
+  <a href="https://www.tiktok.com/es/" target="_blank" >
+    <i class="fab fa-tiktok"></i>
+  </a>
+
+  <a href="https://www.instagram.com/" target="_blank" >
+    <i class="fab fa-instagram"></i>
+  </a>
+
+  <a href="https://www.youtube.com/" target="_blank" >
+    <i class="fab fa-youtube"></i>
+  </a>
+
+  <a href="https://www.facebook.com/" target="_blank" >
+    <i class="fab fa-facebook"></i>
+  </a>
+</nav>
+```
+Para solucionar he usado el atributo *aria-label* y *aria-hidden*, que sirven para ayudar a las tecnologías de asistencia. Es usado para cuando no es práctico o desable añadir una etiqueta *\<label\>*. El código quedaría de la siguiente manera:
+```html
+<nav class="img-redes">
+  <a href="https://www.tiktok.com/es/" target="_blank" aria-label="TikTok">
+    <i class="fab fa-tiktok" aria-hidden="true"></i>
+  </a>
+
+  <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
+    <i class="fab fa-instagram" aria-hidden="true"></i>
+  </a>
+
+  <a href="https://www.youtube.com/" target="_blank" aria-label="YouTube">
+    <i class="fab fa-youtube" aria-hidden="true"></i>
+  </a>
+
+  <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
+    <i class="fab fa-facebook" aria-hidden="true"></i>
+  </a>
+</nav>
+```
+
+- **Enlace sin "href"**: Este error también esta en todas las páginas, ya que este enlace se encuentra en el pie de página. Su código es:
+```html
+<a class="boton-footer">¡Síguenos en redes sociales!</a>
+```
+Para solucionarlo simplemente he añadido un valor temporarl al atributo *href*. Quedaría de la siguiente manera:
+```html
+<a class="boton-footer" href="#">¡Síguenos en redes sociales!</a>
+```
+
+- **IDs Duplicados**: Este error ocurre en todas las páginas, ya que para poder implementar las imagenes adaptables he usado **JavaScript** y para obtener los elementos he usaduo el atributo *id* en todas las imagenes. Un ejemplo de código es:
+```html
+<figure id="contenedor-img" data-info='["logo-Header", "logotipo", "0"]'>
+  <picture>
+    <source id="sourcePng" type="image/png">
+    <source id="sourceSvg" type="image/svg+xml">
+    <img class="img-logoHeader" id="imagen" loading="lazy" alt="Logo Cabecera">
+  </picture>
+</figure>
+```
+Para solucionar este error, lo que he hecho es modificar el atributo *id*, por el atributo *class*. También para que el script de **JavaScript** funcione he tenido que modificar que para que no busque por *id*, y busque por *class*. Quedaría de la siguiente manera:
+```html
+<figure class="contenedor-img" data-info='["logo-Header", "logotipo", "0"]'>
+  <picture>
+    <source class="sourcePng" type="image/png">
+    <source class="sourceSvg" type="image/svg+xml">
+    <img class="img-logoHeader imagen" loading="lazy" alt="Logo Cabecera">
+  </picture>
+</figure>
+```
+
+### 5. Comprobación de las Soluciones
+Tras aplicar las soluciones de los problemas o errores que me indicaban las herramientas, voy a ejecutar de nuevo las pruebas de accesibilidad.
+
+#### 5.1. Resultados + Soluciones Errores
+<p style="text-align:center; font-style:italic">Corrección Errores - Skynet Technologies</p>
+
+![Skynet Technologies Corrección Errores](assets/unlighthouse-Final.PNG)<br><br>
+
+<p style="text-align:center; font-style:italic">Corrección Errores - Accesibility Checker</p>
+
+![Accesibility Checker Corrección Errores](assets/accessibilitychecker-Final.PNG)<br><br>
+
+<p style="text-align:center; font-style:italic">Corrección Errores - Unlighthouse</p>
+
+![Unlighthouse Corrección Errores](assets/unlighthouse-Final.PNG)<br><br>
