@@ -177,13 +177,13 @@ Esto iniciará un servidor que servirá el contenido de la carpeta `build/` en u
 ---
 
 ## Pruebas de Accesibilidad
-Este apartado el objetivo es garantizar que la página web cumpla con los criterios de accesibilidad del nivel AA de las *Pautas de Accesibilidad para el Contenido Web* (**WCAG**). Para ello, voy a usar distintas herramientas de validación, tanto en línea como locales, para indentificar los problemas y solucionarlos.
+En este apartado, el objetivo es garantizar que la página web cumpla con los criterios de accesibilidad del nivel AA de las *Pautas de Accesibilidad para el Contenido Web* (**WCAG**). Para ello, voy a usar distintas herramientas de validación, tanto en línea como locales, para identificar los problemas y solucionarlos.
 
 ### 1. Netlify
 Para usar estas herramientas es necesario subir el proyecto web a un dominio, para ello he usado [**Netlify**](https://www.netlify.com/). Los pasos que he seguido son los siguientes:
 1. Iniciar sesión con mi cuenta de **GitHub**.
 2. Asociar este repositorio como nuevo sitio.
-3. He indicar que al iniciar el lanzamiento del repositorio ejecute el comando:
+3. Indicar que al iniciar el lanzamiento del repositorio, ejecute el comando:
 ```bash
 npm run build:todo
 ```
@@ -193,26 +193,26 @@ Para que la web se muestre en modo producción.
 ![Configuración Netlify](assets/Config-Netlifly.PNG)<br>
 
 5. Por último, tendremos que esperar a que se inicie el despliegue.
-<p style="text-align:center; font-style:italic">Web desplegada con Netlify</p>
+<p align="center"><em>Web desplegada con Netlify</em></p>
 
 ![Web Netlify](assets/Web-Netlify.PNG)<br>
 
 ### 2. Herramientas
 Las herramientas que voy a usar para analizar la web son:
 - [Skynet Technologies](https://freeaccessibilitychecker.skynettechnologies.com/):
-  - Herramienta en línea que analiza la web, proporciona un procentaje de accesibilidad y una lista de errores.
-  - Para usarla simplemente congemos la dirección de la web desplegada con **Netlify**, la pegamos y esperamos a que el proceso de analisis finalice
+  - Herramienta en línea que analiza la web, proporciona un porcentaje de accesibilidad y una lista de errores.
+  - Para usarla, simplemente cogemos la dirección de la web desplegada con **Netlify**, la pegamos y esperamos a que el proceso de análisis finalice.
 
 - [Accesibility Checker](https://www.accessibilitychecker.org/):
   - Herramienta en línea que otorga una puntuación de accesibilidad y muestra los problemas de la web.
   - Para usarla es igual que la anterior.
 
 - [Unlighthouse](https://next.unlighthouse.dev/):
-  - Es una herramienta local que combina **Lightohuse** con una interfaz de auditoría para múltiples páginas de una web. Aparte de la accesibilidad, genera un informe sobre: el rendimiento, las buenas práticas y el SEO.
+  - Es una herramienta local que combina **Lightohuse** con una interfaz de auditoría para múltiples páginas de una web. Aparte de la accesibilidad, genera un informe sobre: el rendimiento, las buenas prácticas y el SEO.
   - Para usarla es necesario seguir los siguientes pasos:
     1. Instalar el paquete con **Node**.
-    2. Una vez instalado, ejecutar la web en modo producción (El en punto [4.3.4](#434-ejecución-del-entorno-de-producción) explico como hacerlo).
-    3. Y cuando la web sea funcional en local, usamos el siguiente comando, se nos abre un enlace en la web y esperamos a que el proceso de analisis finalice. 
+    2. Una vez instalado, ejecutar la web en modo producción (en el punto [4.3.4](#434-ejecución-del-entorno-de-producción) explico cómo hacerlo).
+    3. Y cuando la web sea funcional en local, usamos el siguiente comando, se nos abre un enlace en la web y esperamos a que el proceso de análisis finalice. 
 ```bash
 npm install --save-dev unlighthouse
 npx unlighthouse --site http://localhost:XXXX/
@@ -222,51 +222,51 @@ npx unlighthouse --site http://localhost:XXXX/
 Para comprobar la accesibilidad de mi web, sigo el proceso comentado anteriormente para que las 3 herramientas me analicen la web y me muestren los resultados.
 
 #### 3.1. Resultados
-<p style="text-align:center; font-style:italic">Resultado Skynet Technologies</p>
+<p align="center"><em>Resultado Skynet Technologies</em></p>
 
 ![Skynet 1º Intento](assets/Skynet-Primer-Intento.PNG)<br><br>
 
-<p style="text-align:center; font-style:italic">Resultado Accesibility Checker</p>
+<p align="center"><em>Resultado Accesibility Checker</em></p>
 
 ![Accesibility Checker 1º Intento](assets/accessibilitychecker-Primer-Intento.PNG)<br><br>
 
-<p style="text-align:center; font-style:italic">Resultado Unlighthouse</p>
+<p align="center"><em>Resultado Unlighthouse</em></p>
 
 ![Unlighthouse 1º Intento](assets/unlighthouse-Primer-Intento.PNG)
 
 Las herramientas **Skynet** y  **Accesibility Checker** muestran las puntuaciones más bajas (68.10% y 69%, respectivamente), mientras que **Unlighthouse** sitúa la accesibilidad entre un 89% y 96%, en función de la página. Esto es normal debido a que cada herramienta realiza sus propias comprobaciones y aplica reglas distintas.
 
 #### 3.2. Errores Encontrados
-Estas herramientas también muestran los errores que tiene la web y como solucionarlos. Los errores que me muestra son:
+Estas herramientas también muestran los errores que tiene la web y cómo solucionarlos. Los errores que me muestra son:
 
-<p style="text-align:center; font-style:italic">Errores Skynet Technologies</p>
+<p align="center"><em>Errores Skynet Technologies</em></p>
 
 ![Skynet 1º Errores](assets/Skynet-Errores-Primero.PNG)<br><br>
 
-<p style="text-align:center; font-style:italic">Errores Accesibility Checker</p>
+<p align="center"><em>Errores Accesibility Checker</em></p>
 
 ![Accesibility Checker 1º Errores](assets/accessibilitychecker-Errores-Primer.PNG)<br><br>
 
-<p style="text-align:center; font-style:italic">Errores Unlighthouse</p>
+<p align="center"><em>Errores Unlighthouse</em></p>
 
 ![Unlighthouse 1º Errores](assets//unlighthouse-Errores-Primero.PNG)
 
-Cada web muestra fallos o errores en función del criterio o reglas que usen para analizar la web. Pero si que muestran una serie de errores en común que voy a solucionar de la forma que me indican.
+Cada web muestra fallos o errores en función del criterio o reglas que usen para analizar la web. Pero sí que muestran una serie de errores en común que voy a solucionar de la forma que me indican.
 - ***Errores Comunes***:
   - **Error de Jerarquía de Encabezados**: En varias páginas se utiliza un *\<h1\>* seguido directamente de un *\<h3\>*, saltándose el nivel *\<h2\>*. Esto puede dificultar la correcta interpretación de la estructura del contenido por parte de los lectores de pantalla y otras tecnologías asistivas.
-  - **Links de las Redes Sociales del Footer sin un Nombre Discernible**: Los enlaces de las redes sociales del pie de página carecen de un nombre o descripción adecuada. Esto puede generar confusión en usuarios que depende de tecnologías de asistencia para navegar el sitio.
+  - **Links de las Redes Sociales del Footer sin un Nombre Discernible**: Los enlaces de las redes sociales del pie de página carecen de un nombre o descripción adecuada. Esto puede generar confusión en usuarios que dependen de tecnologías de asistencia para navegar el sitio.
 
 - ***Errores No Comunes***:
   - ***Skynet Technologies***:
-    - **Enlace sin "href"**: En el pie de página hay un enlace sin el atributo *href*, lo que impide que sean interpretados correctamente como enlaces interectivos.
+    - **Enlace sin "href"**: En el pie de página hay un enlace sin el atributo *href*, lo que impide que sean interpretados correctamente como enlaces interactivos.
     - **IDs Duplicados**: Hay varios elementos que comparten el mismo ID. Esto puede generar conflictos en la identificación y manipulación de elementos, afectando a la accesibilidad y la usabilidad.
 
 > [!NOTE]
 > Algunos puntos no se detectan de manera automática por el analisis de estas herramientas y requieren una auditoría manual para confirmar o refinar la solución.
 
 ### 4. Análisis de Fallos y Solución
-Para solucionar los fallos voy a ir 1 a 1 indicando la línea de código donde esta el error y la solución que me da la página o que yo he implementado.
-- **Enlace de Jerarquía de Encabezados**: Este error esta en algunas páginas que tienen una sección principal que son: `index.html`, `pasta.html`, `carta.html` y `formulario-reserva.html`. Por ejemplo el código de la sección principal de `index.html` es:
+Para solucionar los fallos voy a ir 1 a 1, indicando la línea de código donde está el error y la solución que me da la página o que yo he implementado.
+- **Enlace de Jerarquía de Encabezados**: Este error está en algunas páginas que tienen una sección principal que son: `index.html`, `pasta.html`, `carta.html` y `formulario-reserva.html`. Por ejemplo, el código de la sección principal `index.html` es:
 ```html
 <!-- Sección Principal con Hero-Image, titulo, subtítulo y botones -->
 <section class="introduccion">
@@ -281,7 +281,7 @@ Para solucionar los fallos voy a ir 1 a 1 indicando la línea de código donde e
   </nav>
 </section>
 ```
-Para solucionarlo he modificado la etiqueta *\<h3\>* por una etiqueta *\<h2\>*. Quedaría de la siguiente manera:
+Para solucionarlo, he modificado la etiqueta *\<h3\>* por una etiqueta *\<h2\>*. Quedaría de la siguiente manera:
 ```html
 <!-- Sección Principal con Hero-Image, titulo, subtítulo y botones -->
 <section class="introduccion">
@@ -297,7 +297,7 @@ Para solucionarlo he modificado la etiqueta *\<h3\>* por una etiqueta *\<h2\>*. 
 </section>
 ```
 
-- **Links de las Redes Sociales del Footer sin un Nombre Discernible**: Este error esta en todas las página, ya que todas las páginas tienen el pie de página. El código actual es:
+- **Links de las Redes Sociales del Footer sin un Nombre Discernible**: Este error está en todas las páginas, ya que todas las páginas tienen el pie de página. El código actual es:
 ```html
 <!-- Sección de la Redes Sociales -->
 <nav class="img-redes">
@@ -318,7 +318,7 @@ Para solucionarlo he modificado la etiqueta *\<h3\>* por una etiqueta *\<h2\>*. 
   </a>
 </nav>
 ```
-Para solucionar he usado el atributo *aria-label* y *aria-hidden*, que sirven para ayudar a las tecnologías de asistencia. Es usado para cuando no es práctico o desable añadir una etiqueta *\<label\>*. El código quedaría de la siguiente manera:
+Para solucionar, he usado el atributo *aria-label* y *aria-hidden*, que sirven para ayudar a las tecnologías de asistencia. Es usado para cuando no es práctico o deseable añadir una etiqueta *\<label\>*. El código quedaría de la siguiente manera:
 ```html
 <nav class="img-redes">
   <a href="https://www.tiktok.com/es/" target="_blank" aria-label="TikTok">
@@ -339,16 +339,16 @@ Para solucionar he usado el atributo *aria-label* y *aria-hidden*, que sirven pa
 </nav>
 ```
 
-- **Enlace sin "href"**: Este error también esta en todas las páginas, ya que este enlace se encuentra en el pie de página. Su código es:
+- **Enlace sin "href"**: Este error también está en todas las páginas, ya que este enlace se encuentra en el pie de página. Su código es:
 ```html
 <a class="boton-footer">¡Síguenos en redes sociales!</a>
 ```
-Para solucionarlo simplemente he añadido un valor temporarl al atributo *href*. Quedaría de la siguiente manera:
+Para solucionarlo simplemente he añadido un valor temporal al atributo *href*. Quedaría de la siguiente manera:
 ```html
 <a class="boton-footer" href="#">¡Síguenos en redes sociales!</a>
 ```
 
-- **IDs Duplicados**: Este error ocurre en todas las páginas, ya que para poder implementar las imagenes adaptables he usado **JavaScript** y para obtener los elementos he usaduo el atributo *id* en todas las imagenes. Un ejemplo de código es:
+- **IDs Duplicados**: Este error ocurre en todas las páginas, ya que para poder implementar las imágenes adaptables he usado **JavaScript** y para obtener los elementos he usado el atributo *id* en todas las imágenes. Un ejemplo de código es:
 ```html
 <figure id="contenedor-img" data-info='["logo-Header", "logotipo", "0"]'>
   <picture>
@@ -358,7 +358,7 @@ Para solucionarlo simplemente he añadido un valor temporarl al atributo *href*.
   </picture>
 </figure>
 ```
-Para solucionar este error, lo que he hecho es modificar el atributo *id*, por el atributo *class*. También para que el script de **JavaScript** funcione he tenido que modificar que para que no busque por *id*, y busque por *class*. Quedaría de la siguiente manera:
+Para solucionar este error, lo que he hecho es modificar el atributo *id* por el atributo *class*. También para que el script de **JavaScript** funcione he tenido que modificarlo para que no busque por *id*, y busque por *class*. Quedaría de la siguiente manera:
 ```html
 <figure class="contenedor-img" data-info='["logo-Header", "logotipo", "0"]'>
   <picture>
@@ -373,14 +373,19 @@ Para solucionar este error, lo que he hecho es modificar el atributo *id*, por e
 Tras aplicar las soluciones de los problemas o errores que me indicaban las herramientas, voy a ejecutar de nuevo las pruebas de accesibilidad.
 
 #### 5.1. Resultados + Soluciones Errores
-<p style="text-align:center; font-style:italic">Corrección Errores - Skynet Technologies</p>
+<p align="center"><em>Corrección Errores - Skynet Technologies</em></p>
 
-![Skynet Technologies Corrección Errores](assets/unlighthouse-Final.PNG)<br><br>
+![Skynet Technologies Corrección Errores](assets/Skynet-Final.PNG)<br><br>
 
-<p style="text-align:center; font-style:italic">Corrección Errores - Accesibility Checker</p>
+<p align="center"><em>Corrección Errores - Accesibility Checker</em></p>
 
 ![Accesibility Checker Corrección Errores](assets/accessibilitychecker-Final.PNG)<br><br>
 
-<p style="text-align:center; font-style:italic">Corrección Errores - Unlighthouse</p>
+<p align="center"><em>Corrección Errores - Unlighthouse</em></p>
 
 ![Unlighthouse Corrección Errores](assets/unlighthouse-Final.PNG)<br><br>
+
+La puntuación de la accesibilidad de mi página ha aumentado considerablemente:
+- En ***Skynet Technologies***, la puntuación era de 68.10%. Ahora, con todos los cambios, la puntuación a pasado ha ser de 93.33%.
+- En ***Accesibility Checker***, la puntuación era 69. Ahora, con todos los cambios, la puntuación ha pasado a ser 95.
+- Y en ***Unlighthouse***, la puntuación estaba entre un 89% y un 96%. Ahora es de 100% en todas las páginas.

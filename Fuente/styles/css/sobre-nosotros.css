@@ -356,13 +356,16 @@ footer {
   font-size: 2rem;
   color: #F1E7E7;
   line-height: 1.2rem;
-  margin: 1rem 0 0.5rem;
+  margin: 1rem 0 1rem;
+  text-indent: 0;
+  font-weight: bolder;
 }
 .filosofia p {
   font-style: italic;
   text-align: center;
   color: #F1E7E7;
   width: 100%;
+  text-indent: 0;
 }
 
 .img-filosofia {
