@@ -389,3 +389,42 @@ La puntuación de la accesibilidad de mi página ha aumentado considerablemente:
 - En ***Skynet Technologies***, la puntuación era de 68.10%. Ahora, con todos los cambios, la puntuación a pasado ha ser de 93.33%.
 - En ***Accesibility Checker***, la puntuación era 69. Ahora, con todos los cambios, la puntuación ha pasado a ser 95.
 - Y en ***Unlighthouse***, la puntuación estaba entre un 89% y un 96%. Ahora es de 100% en todas las páginas.
+
+---
+
+## Pruebas de Usabilidad
+Este apartado tiene como objetivo evaluar cómo interactúan los usuarios con la página web. Para ello, voy a definir los usuarios objetivo, las pruebas que van a realizar y los resultados que se han obtenido.
+
+### 1. Descripción de los Usuarios
+He seleccionado 5 usuarios que representan a los clientes potenciales de la web:
+- **Carlos, 35 años – Diseñador Web**: Gracias a su experiencia es un posible cliente interesado en obtener información en accesibilidad para mejorar en su empresa.
+- **Laura, 28 años – Usuaria estándar**: Representa al usuario promedio sin conocimientos técnicos avanzados, evaluando la facilidad de navegación y la claridad de la información.
+- **Miguel, 42 años – Usuario con discapacidad visual moderada**: Utiliza lectores de pantalla y otras herramientas de asistencia, lo que le permite identificar problemas de accesibilidad y la correcta interpretación del contenido mediante tecnologías de asistencia. 
+- **Alessia, 60 años – Usuario con baja experiencia digital**: Representa a personas que utilizan internet para tareas básicas, evaluando si el diseño y la navegación son lo suficientemente intuitivos para usuarios con poca experiencia.
+- **Andrea, 21 años - Estudiante de Diseño y Tecnología**: Gracias a sus conocimientos nos ayudará a evaluar la web desde un punto de vista técnico y de usabilidad.
+
+### 2. Pruebas 
+A cada usuario se le ha pedido realizar una serie de pruebas para abarcar todas las funcionalidades de la web. Las pruebas son:
+- ***Navegar por la Página Principal***:
+  - *Objetivo*: Comprobar que el propósito de la web sea evidente desde el primer contacto.
+  - *Tarea*: navegar por la página principal e identificar de qué trata la web.
+- ***Buscar Información Específica***:
+  - *Objetivo*: Evaluar la efectividad del menú y la estructura de navegación.
+  - *Tarea*: Encontrar información sobre un servicio o producto concreto sin recibir ayuda directa.
+- ***Interactuar con el Formulario de Registro***:
+  - *Objetivo*: Verificar que el proceso de registro sea sencillo y sin errores.
+  - *Tarea*: Completar y enviar el formulario de registro, observando si se presentan dificultades en la interacción o en la validación de campos.
+- ***Evaluar la Versión Movil***:
+  - *Objetivo*: Confirmar que el diseño responsivo funcione adecuadamente en dispositivos móviles.
+  - *Tarea*: Acceder a la web desde un smartphone y repetir alguna de las tareas anteriores, analizando la claridad y funcionalidad en pantallas pequeñas.
+- ***Simular la búsqueda de un Plato de la Carta***:
+  - *Objetivo*: Determinar si el sistema de mostrar y organizar los productos de la carta facilita la localización de la información. 
+  - *Tarea*: Navegar por el menú de la carta en busca de un producto.
+
+### 3. Resultados de las Pruebas 
+Los resultados obtenidos son:
+- **Carlos**: Carlos completó satisfactoriamente todas las pruebas. La navegación, el uso del menú y el proceso de registro se realizaron de manera fluida y sin contratiempos. Su experiencia global indica que el sitio es intuitivo para usuarios con conocimientos en el área, ya que logró identificar rápidamente el propósito de la web y acceder a la información deseada.
+- **Laura**: Laura finalizó todas las pruebas asignadas, encontrando la mayoría de las secciones claras y accesibles. Aunque en algún momento tuvo una leve duda al ubicar ciertas áreas del menú, en términos generales la experiencia fue positiva y no se presentó ninguna dificultad importante en ninguna de las funcionalidades evaluadas.
+- **Miguel**: Miguel a través de su lector de pantalla, pudo completar todas las pruebas de forma satisfactoria. La estructura accesible del sitio facilitó la navegación. Sin embargo, destacó que la secuencia de encabezados podría optimizarse para una lectura más coherente por parte de las tecnologías de asistencia, lo cual se traduciría en una mejora global en la experiencia de usuario.
+- **Alessia**: Alessia completó las pruebas, aunque con mayor lentitud y cierta confusión en la orientación inicial. Encontró complicado identificar rápidamente el objetivo del sitio y acceder a la información sin una guía visual clara. Este perfil fue el que experimentó más dificultades, lo que sugiere la necesidad de incluir elementos orientativos o un breve tutorial en la página principal para facilitar la navegación a usuarios menos habituados a entornos digitales.
+- **Andrea**: Andrea realizó todas las pruebas con rapidez y precisión, valorando positivamente la coherencia visual y funcional del sitio. Su evaluación general fue muy favorable, aunque señaló pequeños detalles en la organización de algunos contenidos que, de ser ajustados, podrían optimizar aún más la experiencia del usuario.
