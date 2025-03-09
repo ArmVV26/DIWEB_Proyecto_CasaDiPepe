@@ -32,6 +32,10 @@
     - [4. Análisis de Fallos y Solución](#4-análisis-de-fallos-y-solución)
     - [5. Comprobación de las Soluciones](#5-comprobación-de-las-soluciones)
       - [5.1. Resultados + Soluciones Errores](#51-resultados--soluciones-errores)
+  - [Pruebas de Usabilidad](#pruebas-de-usabilidad)
+    - [1. Descripción de los Usuarios](#1-descripción-de-los-usuarios)
+    - [2. Pruebas](#2-pruebas)
+    - [3. Resultados de las Pruebas](#3-resultados-de-las-pruebas)
 
 ## Organización del Proyecto 
 El repositorio está estructurado en dos carpetas principales:  
